@@ -6,6 +6,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
 {
     //new var
     public GameObject upgradeMapTile;
+    [SerializeField] Transform parentForCells;
 
     //old var
     public Transform City;
@@ -128,7 +129,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                             curObject.GetComponent<Stats>().AddNeighborBonus();
                             curObject.GetComponent<Stats>().UpdateStats();
                             curObject.GetComponent<ClickTile>().setFix = true;
-                            curObject.GetComponent<ProductionStats>().Build(); // new 
+                            //curObject.GetComponent<ProductionStats>().Build(); // new 
                             sceneManager.GetComponent<GameManager>().hoverInfoEnabled = true;
                             Debug.Log("hover Info ON (tile was placed)");
 
@@ -157,7 +158,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                         {
                             upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
 
-                            Destroy(upgradeMapTile);
+                            Destroy(curObject);
                             onMousePrefab = null;
                         }
                     }
@@ -210,7 +211,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 Vector3 worldPosition = new Vector3(x: i - width/2, y: 0, z: j - height/2);
-                Transform obj = Instantiate(gridCellPrefab, worldPosition, Quaternion.identity);
+                Transform obj = Instantiate(gridCellPrefab, worldPosition, Quaternion.identity, parentForCells);
                 obj.name = "Cell" + name;
                 nodes[i, j] = new Node(isPlaceable: true, worldPosition, obj, activeFix: false);
                 //Debug.Log(nodes[i, j].cellPosition);
