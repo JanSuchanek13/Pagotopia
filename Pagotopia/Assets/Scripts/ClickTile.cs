@@ -42,6 +42,7 @@ public class ClickTile : MonoBehaviour
     private void OnMouseOver()
     // Liest Stats von MapTile beim Hovern aus 
     {
+        SceneManager.GetComponent<PlaceObjectsOnGrid>().upgradeMapTile = gameObject;
         //GameObject SceneManager = GameObject.Find("SceneManager");
         //if (SceneManager.GetComponent<GameManager>().usingContinuousValues) // can be deleted if we chose continous-effects for good
         //{

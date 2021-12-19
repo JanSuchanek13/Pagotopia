@@ -163,7 +163,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setFix: 0
   Over: {fileID: 0}
-  hoverInfoEnabled: 1
 --- !u!65 &-8990373004715435553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -175,8 +174,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.1, z: 1.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9, y: 0.1, z: 0.9}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1 &8607327466588609623
 GameObject:
   m_ObjectHideFlags: 0

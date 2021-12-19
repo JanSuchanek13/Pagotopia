@@ -22,6 +22,7 @@ TagManager:
   - happiness
   - environment
   - energy
+  - Upgrade
   layers:
   - Default
   - TransparentFX

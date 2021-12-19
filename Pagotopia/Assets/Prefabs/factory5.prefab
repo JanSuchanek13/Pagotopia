@@ -4243,7 +4243,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setFix: 0
   Over: {fileID: 0}
-  hoverInfoEnabled: 1
 --- !u!65 &3098522714260782274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4255,5 +4254,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.1, z: 1.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9, y: 0.1, z: 0.9}
+  m_Center: {x: 0, y: 0.05, z: 0}

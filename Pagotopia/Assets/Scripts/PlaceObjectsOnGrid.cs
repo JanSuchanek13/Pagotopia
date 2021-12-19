@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlaceObjectsOnGrid : MonoBehaviour
 {
+    //new var
+    public GameObject upgradeMapTile;
+
+    //old var
     public Transform City;
     public Transform gridCellPrefab;
     public Transform cube;
@@ -111,19 +115,20 @@ public class PlaceObjectsOnGrid : MonoBehaviour
 
             foreach (var node in nodes)
             {
-                
-                    if (node.cellPosition == mousePosition && node.isPlaceable)
+
+                if (node.cellPosition == mousePosition && node.isPlaceable)
+                {
+                    //Debug.Log("BBBB");
+                    if (Input.GetMouseButtonUp(0))
                     {
-                        //Debug.Log("BBBB");
-                        if (Input.GetMouseButtonUp(0))
+                        //Debug.Log("CCCC");
+                        if (onMousePrefab != null) // tile gets placed
                         {
-                            //Debug.Log("CCCC");
-                            if (onMousePrefab != null) // tile gets placed
-                            {
                             curObject.GetComponent<BoxCollider>().enabled = true;
                             curObject.GetComponent<Stats>().AddNeighborBonus();
                             curObject.GetComponent<Stats>().UpdateStats();
                             curObject.GetComponent<ClickTile>().setFix = true;
+                            curObject.GetComponent<ProductionStats>().Build(); // new 
                             sceneManager.GetComponent<GameManager>().hoverInfoEnabled = true;
                             Debug.Log("hover Info ON (tile was placed)");
 
@@ -136,15 +141,27 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                             onMousePrefab = null;
 
                             PlopSound.Play();
-                                if(curObject.GetComponent<Stats>().isCow == true)
-                                {
-                                    moohSound.Play();
-                                }
+                            if (curObject.GetComponent<Stats>().isCow == true)
+                            {
+                                moohSound.Play();
                             }
                         }
-                        
                     }
-                
+
+                }
+                else if (node.cellPosition == mousePosition && !node.isPlaceable)
+                {
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        if (onMousePrefab.CompareTag("Upgrade")) // Maptile gets upgrade
+                        {
+                            upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
+
+                            Destroy(upgradeMapTile);
+                            onMousePrefab = null;
+                        }
+                    }
+                }
             }
         }
     }

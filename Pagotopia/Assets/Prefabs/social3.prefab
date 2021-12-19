@@ -1531,6 +1531,11 @@ MonoBehaviour:
   randomStat1: 0
   randomStat2: 0
   isCow: 0
+  numberOfCows: 0
+  isFactory: 0
+  isForest: 0
+  isSchool: 0
+  isKlaerwerk: 0
   wasPlaced: 0
   prosperityBonus: 0
   happinessBonus: 0
@@ -1560,8 +1565,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.1, z: 1.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9, y: 0.1, z: 0.9}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1 &8607327466588609623
 GameObject:
   m_ObjectHideFlags: 0

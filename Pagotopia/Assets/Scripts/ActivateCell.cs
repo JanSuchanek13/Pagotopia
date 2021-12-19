@@ -6,6 +6,16 @@ using UnityEngine;
 
 public class ActivateCell : MonoBehaviour
 {
+    //new var
+    [SerializeField] MeshRenderer natureShader;
+    [SerializeField] MeshRenderer factoryShader;
+    [SerializeField] MeshRenderer socialShader;
+    public bool hasEnergy;
+    public bool hasFactory;
+    public bool hasSocial;
+    public bool hasNature;
+
+    //old var
     [SerializeField] Material placeable;
     public bool Active = false;
 
@@ -38,10 +48,70 @@ public class ActivateCell : MonoBehaviour
         gameObject.GetComponent<Renderer>().enabled = true;
 
         //liste aller benachbarten Zellen
-        if (other.gameObject.CompareTag("nature") || other.gameObject.CompareTag("factory") || other.gameObject.CompareTag("social") || other.gameObject.CompareTag("sustainable"))
+        string str = other.tag;
+        switch (str)
         {
-            neighbors.Add(other.gameObject);
-            
+            case "factory":
+                factoryShader.enabled = true;
+                hasFactory = true;
+                //Debug.Log("factory");
+
+
+                break;
+            case "social":
+                socialShader.enabled = true;
+                hasSocial = true;
+
+                break;
+            case "nature":
+                natureShader.enabled = true;
+                hasNature = true;
+
+                break;
+            case "energy":
+                factoryShader.enabled = true;
+                hasEnergy = true;
+
+
+                break;
+            default:
+                Debug.Log("Fehler");
+                break;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        //Debug.Log("hey");
+        Active = true;
+        //gameObject.GetComponent<Renderer>().material = placeable;
+        gameObject.GetComponent<Renderer>().enabled = true;
+
+        //liste aller benachbarten Zellen
+        string str = other.tag;
+        switch (str)
+        {
+            case "factory":
+                factoryShader.enabled = false;
+                Debug.Log("factory");
+
+
+                break;
+            case "social":
+                socialShader.enabled = false;
+
+                break;
+            case "nature":
+                natureShader.enabled = false;
+
+                break;
+            case "energy":
+
+
+                break;
+            default:
+                Debug.Log("Fehler");
+                break;
         }
     }
 
