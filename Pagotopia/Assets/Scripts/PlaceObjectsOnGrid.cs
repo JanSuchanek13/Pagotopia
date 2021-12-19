@@ -228,7 +228,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                 nodes[r_width, r_height].activeFix = true;
                 Debug.Log("im a rock");
             }
-            else
+            else //if cell is not placeable, set stone counter to before value
             {
                 i--;
             }
