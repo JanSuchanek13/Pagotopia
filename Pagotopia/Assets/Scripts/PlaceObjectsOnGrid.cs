@@ -152,14 +152,20 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                 }
                 else if (node.cellPosition == mousePosition && !node.isPlaceable)
                 {
-                    if (Input.GetMouseButtonUp(0))
-                    {
-                        if (onMousePrefab.CompareTag("Upgrade")) // Maptile gets upgrade
+                    if (upgradeMapTile.CompareTag("environment") || upgradeMapTile.CompareTag("energy") || upgradeMapTile.CompareTag("happiness"))
+                    { 
+                        if (Input.GetMouseButtonUp(0))
                         {
-                            upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
+                            //Debug.Log("CCCC");
+                            if (curObject.CompareTag("Upgrade")) // Maptile gets upgrade
+                            {
+                                //Debug.Log("DDDD");
+                                //upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
 
-                            Destroy(curObject);
-                            onMousePrefab = null;
+                                Destroy(curObject);
+
+                                onMousePrefab = null;
+                            }
                         }
                     }
                 }

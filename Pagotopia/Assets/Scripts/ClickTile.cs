@@ -42,7 +42,7 @@ public class ClickTile : MonoBehaviour
     private void OnMouseOver()
     // Liest Stats von MapTile beim Hovern aus 
     {
-        SceneManager.GetComponent<PlaceObjectsOnGrid>().upgradeMapTile = gameObject;
+        SceneManager.GetComponent<PlaceObjectsOnGrid>().upgradeMapTile = gameObject;//für upgrade funktion, damit man weiß welches GO geupdatet werden soll
         //GameObject SceneManager = GameObject.Find("SceneManager");
         //if (SceneManager.GetComponent<GameManager>().usingContinuousValues) // can be deleted if we chose continous-effects for good
         //{
@@ -110,6 +110,7 @@ public class ClickTile : MonoBehaviour
     private void OnMouseExit()
         //setzt die Angezeigten Stats auf null zurück
     {
+        SceneManager.GetComponent<PlaceObjectsOnGrid>().upgradeMapTile = null;//für upgrade funktion, damit man weiß welches GO geupdatet werden soll
         //Debug.Log("OnMouseExit");
         //statsDisplay.transform.GetChild(0).gameObject.SetActive(false);
         //statsDisplay = null;
