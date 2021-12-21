@@ -93,24 +93,23 @@ public class ActivateCell : MonoBehaviour
         {
             case "factory":
                 factoryShader.enabled = false;
-                Debug.Log("factory");
 
 
                 break;
-            case "social":
+            case "happiness":
                 socialShader.enabled = false;
 
                 break;
-            case "nature":
+            case "environment":
                 natureShader.enabled = false;
 
                 break;
             case "energy":
-
+                factoryShader.enabled = false;
 
                 break;
             default:
-                Debug.Log("Fehler");
+                //Debug.Log("Fehler");
                 break;
         }
     }

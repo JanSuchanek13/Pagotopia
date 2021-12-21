@@ -136,4 +136,35 @@ public class ClickTile : MonoBehaviour
             //Debug.Log("nachbar");
         }
     }*/
+
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (setFix == true)
+        {
+            Debug.Log(collision.gameObject.name);
+            string str = gameObject.tag;
+            switch (str)
+            {
+                case "energy":
+                    Debug.Log("treffer");
+                    collision.gameObject.GetComponent<VillageStats>().influencedByEnergy = true;
+
+                    break;
+                case "happiness":
+                    Debug.Log("treffer");
+                    collision.gameObject.GetComponent<VillageStats>().influencedByHappiness = true;
+
+                    break;
+                case "environment":
+                    Debug.Log("treffer");
+                    collision.gameObject.GetComponent<VillageStats>().influencedByNature = true;
+
+                    break;
+                default:
+                    Debug.Log("Fehler");
+                    break;
+            }
+        }
+    }
 }

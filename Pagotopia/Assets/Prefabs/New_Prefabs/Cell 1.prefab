@@ -211,6 +211,10 @@ MonoBehaviour:
   natureShader: {fileID: 42970415413675507}
   factoryShader: {fileID: 3924016604943526935}
   socialShader: {fileID: 7812803954786441618}
+  hasEnergy: 0
+  hasFactory: 0
+  hasSocial: 0
+  hasNature: 0
   placeable: {fileID: 2100000, guid: ea888df225f880e4da0fce5feeca7acb, type: 2}
   Active: 1
   neighbors: []
