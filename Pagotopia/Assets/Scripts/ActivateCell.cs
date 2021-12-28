@@ -58,12 +58,12 @@ public class ActivateCell : MonoBehaviour
 
 
                 break;
-            case "social":
+            case "happiness":
                 socialShader.enabled = true;
                 hasSocial = true;
 
                 break;
-            case "nature":
+            case "environment":
                 natureShader.enabled = true;
                 hasNature = true;
 

@@ -116,56 +116,56 @@ public class PlaceObjectsOnGrid : MonoBehaviour
 
             foreach (var node in nodes)
             {
-
-                if (node.cellPosition == mousePosition && node.isPlaceable)
+                if (Input.GetMouseButtonUp(0))
                 {
-                    //Debug.Log("BBBB");
-                    if (Input.GetMouseButtonUp(0))
+                    if (node.cellPosition == mousePosition && node.isPlaceable)
                     {
-                        //Debug.Log("CCCC");
-                        if (onMousePrefab != null) // tile gets placed
-                        {
-                            curObject.GetComponent<BoxCollider>().enabled = true;
-                            curObject.GetComponent<Stats>().AddNeighborBonus();
-                            curObject.GetComponent<Stats>().UpdateStats();
-                            curObject.GetComponent<ClickTile>().setFix = true;
-                            //curObject.GetComponent<ProductionStats>().Build(); // new 
-                            sceneManager.GetComponent<GameManager>().hoverInfoEnabled = true;
-                            Debug.Log("hover Info ON (tile was placed)");
-
-                            StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
-                            StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
-
-                            node.isPlaceable = false;
-                            isOnGrid = true;
-                            curObject.transform.position = node.cellPosition + new Vector3(x: 0, y: 0.1f, z: 0);
-                            onMousePrefab = null;
-
-                            PlopSound.Play();
-                            if (curObject.GetComponent<Stats>().isCow == true)
-                            {
-                                moohSound.Play();
-                            }
-                        }
-                    }
-
-                }
-                else if (node.cellPosition == mousePosition && !node.isPlaceable)
-                {
-                    if (upgradeMapTile.CompareTag("environment") || upgradeMapTile.CompareTag("energy") || upgradeMapTile.CompareTag("happiness"))
-                    { 
-                        if (Input.GetMouseButtonUp(0))
-                        {
+                        //Debug.Log("BBBB");
+                        
                             //Debug.Log("CCCC");
-                            if (curObject.CompareTag("Upgrade")) // Maptile gets upgrade
+                            if (onMousePrefab != null) // tile gets placed
                             {
-                                //Debug.Log("DDDD");
-                                //upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
+                                curObject.GetComponent<BoxCollider>().enabled = true;
+                                curObject.GetComponent<Stats>().AddNeighborBonus();
+                                curObject.GetComponent<Stats>().UpdateStats();
+                                curObject.GetComponent<ClickTile>().setFix = true;
+                                //curObject.GetComponent<ProductionStats>().Build(); // new 
+                                sceneManager.GetComponent<GameManager>().hoverInfoEnabled = true;
+                                Debug.Log("hover Info ON (tile was placed)");
 
-                                Destroy(curObject);
+                                StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
+                                StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
 
+                                node.isPlaceable = false;
+                                isOnGrid = true;
+                                curObject.transform.position = node.cellPosition + new Vector3(x: 0, y: 0.1f, z: 0);
                                 onMousePrefab = null;
+
+                                PlopSound.Play();
+                                if (curObject.GetComponent<Stats>().isCow == true)
+                                {
+                                    moohSound.Play();
+                                }
                             }
+                        
+
+                    }
+                    else if (node.cellPosition == mousePosition && !node.isPlaceable)
+                    {
+                        if (upgradeMapTile.CompareTag("environment") || upgradeMapTile.CompareTag("energy") || upgradeMapTile.CompareTag("happiness"))
+                        {
+                            
+                                //Debug.Log("CCCC");
+                                if (curObject.CompareTag("Upgrade") /*&& upgradeMapTile.GetComponent<ProductionStats>().tierLevel >= 2*/) // Maptile gets upgrade
+                                {
+                                    //Debug.Log("DDDD");
+                                    //upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
+
+                                    Destroy(curObject);
+
+                                    onMousePrefab = null;
+                                }
+                            
                         }
                     }
                 }

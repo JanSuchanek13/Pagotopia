@@ -21,7 +21,7 @@ public class ClickTile : MonoBehaviour
     {
         Object = gameObject;
         //SceneManager = GameObject.Find("SceneManager");
-        SceneManager.GetComponent<GameManager>().hoverInfoEnabled = false;
+        SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = false;
         Debug.Log("hover Info OFF");
         SceneManager.GetComponent<PlaceObjectsOnGrid>().OnMouse(Object);
 
@@ -46,7 +46,7 @@ public class ClickTile : MonoBehaviour
         //GameObject SceneManager = GameObject.Find("SceneManager");
         //if (SceneManager.GetComponent<GameManager>().usingContinuousValues) // can be deleted if we chose continous-effects for good
         //{
-            if (SceneManager.GetComponent<GameManager>().hoverInfoEnabled == true)
+            if (SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled == true)
             {
                 if (gameObject.CompareTag("happinness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city"))
                 {
@@ -60,19 +60,16 @@ public class ClickTile : MonoBehaviour
                     //Debug.Log(StatsDisplay);
                     //statsDisplay.transform.GetChild(0).gameObject.SetActive(true);
 
-                    float a = Over.GetComponent<Stats>().prosperityStat * SceneManager.GetComponent<GameManager>().statDisplayMultiplicator; //makes miniscule values visible
-                    float b = Over.GetComponent<Stats>().environmentStat * SceneManager.GetComponent<GameManager>().statDisplayMultiplicator; //makes miniscule values visible
-                    float c = Over.GetComponent<Stats>().happinessStat * SceneManager.GetComponent<GameManager>().statDisplayMultiplicator; //makes miniscule values visible
-
+                    
                     //if (hoverInfoEnabled) // only show stats while hovering if NOTHING is carried
                     //{
                         StatsDisplay.GetComponentInParent<StatUIDisplay>().CastStatsToUI(Over);
                     //}
 
                     // added by Felix to see numerical stats in dev mode while hovering
-                    if (SceneManager.GetComponent<GameManager>().developerMode)
+                    if (SceneManager.GetComponent<NewGameManager>().developerMode)
                     {
-                        SceneManager.GetComponent<GameManager>().ShowDevStats(a, b, c);
+                        //SceneManager.GetComponent<NewGameManager>().ShowDevStats(a, b, c);
                     }
                 }
             }
@@ -114,7 +111,7 @@ public class ClickTile : MonoBehaviour
         //Debug.Log("OnMouseExit");
         //statsDisplay.transform.GetChild(0).gameObject.SetActive(false);
         //statsDisplay = null;
-        if (SceneManager.GetComponent<GameManager>().hoverInfoEnabled == true)
+        if (SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled == true)
         {
             StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
         }
