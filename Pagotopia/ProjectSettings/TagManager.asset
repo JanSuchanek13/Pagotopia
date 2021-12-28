@@ -23,6 +23,7 @@ TagManager:
   - environment
   - energy
   - Upgrade
+  - village
   layers:
   - Default
   - TransparentFX

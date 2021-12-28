@@ -48,7 +48,7 @@ public class ClickTile : MonoBehaviour
         //{
             if (SceneManager.GetComponent<GameManager>().hoverInfoEnabled == true)
             {
-                if (gameObject.CompareTag("nature") || gameObject.CompareTag("factory") || gameObject.CompareTag("social") || gameObject.CompareTag("sustainable") || gameObject.CompareTag("city"))
+                if (gameObject.CompareTag("happinness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city"))
                 {
                     Over = gameObject;
                     tag = Over.tag;
@@ -66,7 +66,7 @@ public class ClickTile : MonoBehaviour
 
                     //if (hoverInfoEnabled) // only show stats while hovering if NOTHING is carried
                     //{
-                        StatsDisplay.GetComponentInParent<StatUIDisplay>().CastStatsToUI(Over, tag, a, b, c);
+                        StatsDisplay.GetComponentInParent<StatUIDisplay>().CastStatsToUI(Over);
                     //}
 
                     // added by Felix to see numerical stats in dev mode while hovering

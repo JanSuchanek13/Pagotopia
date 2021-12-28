@@ -15,6 +15,7 @@ public class StatUIDisplay : MonoBehaviour
     [SerializeField] Slider NEGenvironmentBar;
 
     [SerializeField] TextMeshProUGUI nameField;
+    [SerializeField] TextMeshProUGUI tagField;
 
     // this is to display changed STATS through the neihbor-effect:
     [SerializeField] Slider prosperityBonusBar;
@@ -37,37 +38,32 @@ public class StatUIDisplay : MonoBehaviour
         ResetBonusStatBars();
         SceneManager = GameObject.Find("SceneManager");
     }
-    public void CastStatsToUI(GameObject gO, string t, float a, float b, float c)
+    public void CastStatsToUI(GameObject gO)
     {
-        /*pS = gO.GetComponent<Stats>().prosperityStat;
-        hS = gO.GetComponent<Stats>().happinessStat;
-        eS = gO.GetComponent<Stats>().environmentStat;*/
-        pS = a; //gO.GetComponent<Stats>().prosperityStat;
-        hS = c; //gO.GetComponent<Stats>().happinessStat;
-        eS = b; //gO.GetComponent<Stats>().environmentStat;
-
-        if(t == "nature")
+        if(gO.CompareTag("environment"))
         {
-            nameField.text = "Nature";
+            nameField.text = gO.name;
+            tagField.text = "Natur";
         }
-        if (t == "factory")
+        if (gO.CompareTag("energy"))
         {
-            nameField.text = "Industry";
+            nameField.text = gO.name;
+            tagField.text = "Energie";
         }
-        if (t == "social")
+        if (gO.CompareTag("happiness"))
         {
-            nameField.text = "Living Space"; // or: "Village"?
-
-            // old:
-            //nameField.text = "Social";
+            nameField.text = gO.name;
+            tagField.text = "Versorgung"; // lebensqualitaet, Gemeinde, 
         }
-        if (t == "sustainable")
+        if (gO.CompareTag("village"))
         {
-            nameField.text = "Sustainable";
+            nameField.text = gO.name;
+            tagField.text = "Dorf";
         }
-        if (t == "city")
+        if (gO.CompareTag("city"))
         {
-            nameField.text = "Pagotopia"; // "\n" to add another line 
+            nameField.text = "Pagotopia";
+            tagField.text = "Dorf"; // "\n" to add another line 
         }
 
         // this displays Stats of Tiles that are hovered over
