@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class VillageStats : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class VillageStats : MonoBehaviour
     [SerializeField] GameObject TierIV;
     [SerializeField] GameObject TierV;
     [SerializeField] GameObject incomeDisplay;
+    [SerializeField] TextMesh _currentIncomeDisplay;
+    //[SerializeField] GameObject altDisplay;
+
 
     [Header("Tile Sounds:")]
     [SerializeField] AudioSource build_Sound;
@@ -108,6 +112,7 @@ public class VillageStats : MonoBehaviour
     {
         yield return new WaitForSeconds(_frequencyToPay);
         _sceneManager.GetComponent<StatsManager>().availableMoney += _taxesToPay;
+        _sceneManager.GetComponent<StatsManager>().IncomeFeedbackToPlayer();
         _sceneManager.GetComponent<StatsManager>().efficientlyPlaced += _tierLevel;
         StartCoroutine("DisplayIncome");
         StartCoroutine("GenerateIncome"); // restart money-generation-timer
@@ -117,15 +122,27 @@ public class VillageStats : MonoBehaviour
     IEnumerator DisplayIncome()
     {
         cashRegister_Sound.Play();
-        incomeDisplay.SetActive(true);
+        _currentIncomeDisplay.text = _taxesToPay.ToString();
+        //altDisplay.GetComponent<TextMesh>().text = _taxesToPay.ToString();
+
+        // turns all MeshRenderers in the children of "incomeDisplay" on & off:
+        // --> doesn't work if put into single "foreach" loop.
+        MeshRenderer[] _drawableObjects = incomeDisplay.GetComponentsInChildren<MeshRenderer>();
+        foreach (var r in _drawableObjects)
+        {
+            r.enabled = true;
+        }
         yield return new WaitForSeconds(1.5f);
-        incomeDisplay.SetActive(false);
+        foreach (var r in _drawableObjects)
+        {
+            r.enabled = false;
+        }
     }
 
     // called when being placed on grid:
     public void Build()
     {
-        Debug.Log("smallest resource value is: " + _sceneManager.GetComponent<StatsManager>().smallestAvailableValue);
+        //Debug.Log("smallest resource value is: " + _sceneManager.GetComponent<StatsManager>().smallestAvailableValue);
         if (_sceneManager.GetComponent<StatsManager>().smallestAvailableValue >= _constructionCost && !wasPlaced) // do you have enough resources?
         {
             _tierLevel++; // now: TierI
