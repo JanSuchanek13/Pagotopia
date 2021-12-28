@@ -138,30 +138,33 @@ public class ClickTile : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (setFix == true)
+        if (collision.CompareTag("village"))
         {
-            Debug.Log(collision.gameObject.name);
-            string str = gameObject.tag;
-            switch (str)
+            if (setFix == true)
             {
-                case "energy":
-                    Debug.Log("treffer");
-                    collision.gameObject.GetComponent<VillageStats>().influencedByEnergy = true;
+                Debug.Log(collision.gameObject.name);
+                string str = gameObject.tag;
+                switch (str)
+                {
+                    case "energy":
+                        Debug.Log("treffer");
+                        collision.gameObject.GetComponent<VillageStats>().influencedByEnergy = true;
 
-                    break;
-                case "happiness":
-                    Debug.Log("treffer");
-                    collision.gameObject.GetComponent<VillageStats>().influencedByHappiness = true;
+                        break;
+                    case "happiness":
+                        Debug.Log("treffer");
+                        collision.gameObject.GetComponent<VillageStats>().influencedByHappiness = true;
 
-                    break;
-                case "environment":
-                    Debug.Log("treffer");
-                    collision.gameObject.GetComponent<VillageStats>().influencedByNature = true;
+                        break;
+                    case "environment":
+                        Debug.Log("treffer");
+                        collision.gameObject.GetComponent<VillageStats>().influencedByNature = true;
 
-                    break;
-                default:
-                    Debug.Log("Fehler");
-                    break;
+                        break;
+                    default:
+                        Debug.Log("Fehler");
+                        break;
+                }
             }
         }
     }

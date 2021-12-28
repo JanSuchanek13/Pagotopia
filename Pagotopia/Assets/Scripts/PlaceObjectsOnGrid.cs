@@ -122,15 +122,16 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                     {
                         //Debug.Log("BBBB");
                         
-                            //Debug.Log("CCCC");
+                            
                             if (onMousePrefab != null) // tile gets placed
                             {
+                                Debug.Log("CCCC");
                                 curObject.GetComponent<BoxCollider>().enabled = true;
-                                curObject.GetComponent<Stats>().AddNeighborBonus();
-                                curObject.GetComponent<Stats>().UpdateStats();
+                                //curObject.GetComponent<Stats>().AddNeighborBonus();
+                                //curObject.GetComponent<Stats>().UpdateStats();
                                 curObject.GetComponent<ClickTile>().setFix = true;
                                 //curObject.GetComponent<ProductionStats>().Build(); // new 
-                                sceneManager.GetComponent<GameManager>().hoverInfoEnabled = true;
+                                sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
                                 Debug.Log("hover Info ON (tile was placed)");
 
                                 StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();

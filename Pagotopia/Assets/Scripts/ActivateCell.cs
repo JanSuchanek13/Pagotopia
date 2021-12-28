@@ -164,7 +164,7 @@ public class ActivateCell : MonoBehaviour
                         break;
                 }
             }
-            SceneManager.GetComponent<PlaceObjectsOnGrid>().curObject.GetComponent<Stats>().NeighborEffect(factory, social, nature, sustainable); // this casts the neighbor effect
+            //SceneManager.GetComponent<PlaceObjectsOnGrid>().curObject.GetComponent<Stats>().NeighborEffect(factory, social, nature, sustainable); // this casts the neighbor effect
             //Debug.Log("factory" + factory);
             //Debug.Log("social" + social);
             //Debug.Log("nature" + nature);
