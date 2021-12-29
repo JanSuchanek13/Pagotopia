@@ -74,9 +74,9 @@ public class StatUIDisplay : MonoBehaviour
             productionFacility_UI.SetActive(true);
             _productionTypeField.text = tagField.text;
             _productionTierField.text = gO.GetComponent<ProductionStats>().tierLevel + " / 3";
-            _productionValueField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionValue).ToString() + "    /Min.";
+            _productionValueField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionValue).ToString();
             environmentIcon.enabled = true;
-            _productionCostField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionCost).ToString() + "    /Min.";
+            _productionCostField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionCost).ToString();
         }
         if (gO.CompareTag("energy"))
         {
@@ -86,9 +86,9 @@ public class StatUIDisplay : MonoBehaviour
             productionFacility_UI.SetActive(true);
             _productionTypeField.text = tagField.text;
             _productionTierField.text = gO.GetComponent<ProductionStats>().tierLevel + " / 3";
-            _productionValueField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionValue).ToString() + "    /Min.";
+            _productionValueField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionValue).ToString();
             energyIcon.enabled = true;
-            _productionCostField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionCost).ToString() + "    /Min.";
+            _productionCostField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionCost).ToString();
         }
         if (gO.CompareTag("happiness"))
         {
@@ -98,9 +98,9 @@ public class StatUIDisplay : MonoBehaviour
             productionFacility_UI.SetActive(true);
             _productionTypeField.text = tagField.text;
             _productionTierField.text = gO.GetComponent<ProductionStats>().tierLevel + " / 3";
-            _productionValueField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionValue).ToString() + "    /Min.";
+            _productionValueField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionValue).ToString();
             happinessIcon.enabled = true;
-            _productionCostField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionCost).ToString() + "    /Min.";
+            _productionCostField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionCost).ToString();
         }
         if (gO.CompareTag("village"))
         {
@@ -109,7 +109,7 @@ public class StatUIDisplay : MonoBehaviour
 
             villageFacility_UI.SetActive(true);
             _villageTierField.text = gO.GetComponent<VillageStats>()._tierLevel + " / 5";
-            _villageIncomeField.text = (gO.GetComponent<VillageStats>()._taxesToPay).ToString() + "    /" + (gO.GetComponent<VillageStats>()._frequencyToPay).ToString() + "Sec.";
+            _villageIncomeField.text = (gO.GetComponent<VillageStats>()._taxesToPay).ToString()/* + "    /" + (gO.GetComponent<VillageStats>()._frequencyToPay).ToString() + "Sec."*/;
             _villageUpkeepField.text = (gO.GetComponent<VillageStats>()._costOfLiving * 50 * 60).ToString(); // calculations to revert math in Village Stats for UIDisplay.
             if (gO.GetComponent<VillageStats>().influencedByEnergy)
             {
