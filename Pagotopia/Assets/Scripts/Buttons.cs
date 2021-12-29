@@ -203,8 +203,8 @@ public class Buttons : MonoBehaviour
     bool nextSetButtonCooldown = false;
     public void GetNewSetOfTiles()
     {
+        Debug.Log("GetNewSetOfTiles_button was pressed");
         GameObject SceneManager = GameObject.Find("SceneManager");
-        //Debug.Log("GetNewSetOfTiles_button was pressed");
 
         if (nextSetButtonCooldown == false)
         {
@@ -213,13 +213,13 @@ public class Buttons : MonoBehaviour
             nextSetButtonCooldown = true;
             standardClick.Play();
             SceneManager.GetComponent<TileGenerator>().DestroyRemainingTiles();
-            SceneManager.GetComponent<GameManager>().hoverInfoEnabled = true;
+            SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
             SceneManager.GetComponent<PlaceObjectsOnGrid>().onMousePrefab = null;
             StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
-            StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
+            //StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
             SceneManager.GetComponent<TileGenerator>().NextSet();
-            getNewSetOfTiles_Button.GetComponent<Image>().color = new Color32(100, 100, 100, 100);
-            Invoke("ResetNextSetButtonCooldown", 5f);
+            //getNewSetOfTiles_Button.GetComponent<Image>().color = new Color32(100, 100, 100, 100);
+            Invoke("ResetNextSetButtonCooldown", 10f);
         }else
         {
             errorSound.Play();

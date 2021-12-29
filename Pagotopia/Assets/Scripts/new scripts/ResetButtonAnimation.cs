@@ -9,7 +9,9 @@ public class ResetButtonAnimation : MonoBehaviour
     {
         MoveButton();
         //call reset Funktion
-        Invoke("MoveButton", 1f);
+        GameObject _sceneManager = GameObject.Find("SceneManager");
+        _sceneManager.GetComponent<Buttons>().GetNewSetOfTiles();
+        Invoke("MoveButton", 10f);
     }
 
    

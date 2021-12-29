@@ -67,30 +67,58 @@ public class TileGenerator : MonoBehaviour
 
     public void DestroyRemainingTiles()
     {
-        if(tile1.GetComponent<VillageStats>().wasPlaced == false)
+        if(!tile1.CompareTag("Upgrade")) // am I an upgrade?
         {
-            if(tile1.GetComponent<ProductionStats>().wasPlaced == false)
+            if(tile1.GetComponent<VillageStats>() != null) // do i have village stats?
             {
-                Debug.Log("tile1 one was NOT placed");
-                Destroy(tile1);
+                if(tile1.GetComponent<VillageStats>().wasPlaced == false)
+                {
+                    Debug.Log("tile1 one was NOT placed");
+                    Destroy(tile1);
+                }
+            }else if(tile1.GetComponent<ProductionStats>().wasPlaced == false) // this can only get asked, if there is Prod.Stats
+            {
+                    Destroy(tile1);
             }
-        }
-        if (tile2.GetComponent<VillageStats>().wasPlaced == false)
+        }else
         {
-            if (tile2.GetComponent<ProductionStats>().wasPlaced == false)
+            Destroy(tile1);
+        }
+
+        if (!tile2.CompareTag("Upgrade")) // am I an upgrade?
+        {
+            if (tile2.GetComponent<VillageStats>() != null) // do i have village stats?
             {
-                Debug.Log("tile2 one was NOT placed");
+                if (tile2.GetComponent<VillageStats>().wasPlaced == false)
+                {
+                    Destroy(tile2);
+                }
+            }else if (tile2.GetComponent<ProductionStats>().wasPlaced == false) // this can only get asked, if there is Prod.Stats
+            {
                 Destroy(tile2);
             }
-        }
-        if (tile3.GetComponent<VillageStats>().wasPlaced == false)
+        }else
         {
-            if (tile3.GetComponent<ProductionStats>().wasPlaced == false)
+            Destroy(tile2);
+        }
+
+        if (!tile3.CompareTag("Upgrade")) // am I an upgrade?
+        {
+            if (tile3.GetComponent<VillageStats>() != null) // do i have village stats?
             {
-                Debug.Log("tile3 one was NOT placed");
+                if (tile3.GetComponent<VillageStats>().wasPlaced == false)
+                {
+                    Destroy(tile3);
+                }
+            }else if (tile3.GetComponent<ProductionStats>().wasPlaced == false) // this can only get asked, if there is Prod.Stats
+            {
                 Destroy(tile3);
             }
+        }else
+        {
+            Destroy(tile3);
         }
-        return;
+
+        NextSet();
     }
 }

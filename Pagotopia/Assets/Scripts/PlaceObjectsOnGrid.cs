@@ -170,8 +170,8 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                                 {
                                     //Debug.Log("DDDD");
                                     upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
-
-                                    Destroy(curObject);
+                                    sceneManager.GetComponent<TileGenerator>().DestroyRemainingTiles(); // test
+                                    //Destroy(curObject); //
 
                                     onMousePrefab = null;
                                 }

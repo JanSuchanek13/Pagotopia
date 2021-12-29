@@ -143,7 +143,7 @@ public class ClickTile : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("village"))
+        if (collision.CompareTag("village") || collision.CompareTag("city"))
         {
             if (setFix == true)
             {
