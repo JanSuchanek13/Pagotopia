@@ -112,7 +112,7 @@ public class CalculateHighscore : MonoBehaviour
             playtimeBonus = 2000f + (5000f - .54794521f * days);
         }
 
-        neighborCount = SceneManager.GetComponent<NeedsManager>().efficientlyPlaced;
+        neighborCount = SceneManager.GetComponent<StatsManager>().efficientlyPlaced;
         // every well placed neighbor (+.1) will grant 50 points
         // ex.: 1.2 (= neighborBonus received at least 12 times (12 * .1)) = 600 points
         float neighborEfficiencyBonus = neighborCount * 500f;

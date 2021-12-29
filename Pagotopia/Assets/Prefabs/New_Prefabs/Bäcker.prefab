@@ -152,6 +152,8 @@ MonoBehaviour:
   upgrade_Sound: {fileID: 0}
   wasPlaced: 0
   tierLevel: 0
+  thisTilesCurrentProductionValue: 0
+  thisTilesCurrentProductionCost: 0
 --- !u!65 &7960726360894085435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -179,6 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setFix: 0
   Over: {fileID: 0}
+  myPos: {x: 0, y: 0, z: 0}
 --- !u!54 &1237738447611903376
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -480,7 +483,7 @@ GameObject:
   - component: {fileID: 5115459642166596047}
   m_Layer: 0
   m_Name: sensor (4)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -576,7 +579,7 @@ GameObject:
   - component: {fileID: 7538045089703746130}
   m_Layer: 0
   m_Name: sensor (8)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,7 +675,7 @@ GameObject:
   - component: {fileID: 1880605391321455392}
   m_Layer: 0
   m_Name: sensor
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -768,7 +771,7 @@ GameObject:
   - component: {fileID: 3894294737243772046}
   m_Layer: 0
   m_Name: sensor (2)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -864,7 +867,7 @@ GameObject:
   - component: {fileID: 3291025202795280841}
   m_Layer: 0
   m_Name: sensor (9)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -994,7 +997,7 @@ GameObject:
   - component: {fileID: 4995807104426748174}
   m_Layer: 0
   m_Name: sensor (5)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1124,7 +1127,7 @@ GameObject:
   - component: {fileID: 8271446445324075186}
   m_Layer: 0
   m_Name: sensor (1)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1220,7 +1223,7 @@ GameObject:
   - component: {fileID: 6143308413578998249}
   m_Layer: 0
   m_Name: sensor (7)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1350,7 +1353,7 @@ GameObject:
   - component: {fileID: 5004467203746183319}
   m_Layer: 0
   m_Name: sensor (11)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1446,7 +1449,7 @@ GameObject:
   - component: {fileID: 4745388282225133351}
   m_Layer: 0
   m_Name: sensor (3)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1575,7 +1578,7 @@ GameObject:
   - component: {fileID: 8882507550283820104}
   m_Layer: 0
   m_Name: sensor (10)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1671,7 +1674,7 @@ GameObject:
   - component: {fileID: 8552794118107459560}
   m_Layer: 0
   m_Name: sensor (6)
-  m_TagString: factory
+  m_TagString: happiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

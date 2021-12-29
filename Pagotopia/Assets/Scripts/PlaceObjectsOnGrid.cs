@@ -130,7 +130,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                                 //curObject.GetComponent<Stats>().AddNeighborBonus();
                                 //curObject.GetComponent<Stats>().UpdateStats();
                                 curObject.GetComponent<ClickTile>().setFix = true;
-                                //curObject.GetComponent<ProductionStats>().Build(); // new 
+                                curObject.GetComponent<ProductionStats>().Build(); // new 
                                 sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
                                 Debug.Log("hover Info ON (tile was placed)");
 

@@ -40,7 +40,7 @@ public class ActivateCell : MonoBehaviour
         StatsDisplay = GameObject.Find("Stats_UI");
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         //Debug.Log("hey");
         Active = true;
