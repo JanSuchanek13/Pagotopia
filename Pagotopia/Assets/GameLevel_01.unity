@@ -11401,6 +11401,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7899099928202489408, guid: 75c50f1a67d135944b40763b35c8ab94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.056
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899099928202489408, guid: 75c50f1a67d135944b40763b35c8ab94, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.46
       objectReference: {fileID: 0}
@@ -20436,6 +20440,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1662315698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662315693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe5cdc04511a304aa245da9d4dd5ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1662315699
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662315693}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.003761263
+  m_Center: {x: -7.361174e-10, y: 0.020023435, z: 0.0015122151}
 --- !u!1 &1666699139
 GameObject:
   m_ObjectHideFlags: 0
@@ -22899,6 +22928,7 @@ MonoBehaviour:
   arrayOfAllTilePrefabs:
   - {fileID: 242112398924615454, guid: 03d27e24c808a52419d470b5b4c88b3f, type: 3}
   - {fileID: 242112398924615454, guid: c31589016f8831844ae19917813b67a6, type: 3}
+  - {fileID: 242112398924615454, guid: 9cda24057fa774c4f903b84b0bcc6407, type: 3}
   spawnPos1: {fileID: 1080299003}
   spawnPos2: {fileID: 2054591623}
   spawnPos3: {fileID: 672815498}

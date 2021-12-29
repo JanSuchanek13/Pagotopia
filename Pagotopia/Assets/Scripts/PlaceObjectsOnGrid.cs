@@ -157,10 +157,10 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                         {
                             
                                 //Debug.Log("CCCC");
-                                if (curObject.CompareTag("Upgrade") /*&& upgradeMapTile.GetComponent<ProductionStats>().tierLevel >= 2*/) // Maptile gets upgrade
+                                if (curObject.CompareTag("Upgrade") && upgradeMapTile.GetComponent<ProductionStats>().tierLevel <= 2) // Maptile gets upgrade
                                 {
                                     //Debug.Log("DDDD");
-                                    //upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
+                                    upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
 
                                     Destroy(curObject);
 
