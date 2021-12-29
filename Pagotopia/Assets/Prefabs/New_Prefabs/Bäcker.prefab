@@ -1153,7 +1153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 221494881117935506}
   m_Layer: 0
-  m_Name: Tier 1
+  m_Name: Tier 1 sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1283,7 +1283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7815494413130438300}
   m_Layer: 0
-  m_Name: Tier 3
+  m_Name: Tier 3 sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1509,7 +1509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 174027051961980539}
   m_Layer: 0
-  m_Name: Tier 2
+  m_Name: Tier 2 sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
