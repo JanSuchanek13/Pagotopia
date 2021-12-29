@@ -6,31 +6,57 @@ using TMPro;
 
 public class StatUIDisplay : MonoBehaviour
 {
-    [SerializeField] Slider prosperityBar;
-    [SerializeField] Slider happinessBar;
-    [SerializeField] Slider environmentBar;
+    #region variables:
+    [Header("Hover UI-Settings:")]
+    [SerializeField] GameObject productionFacility_UI;
+    [SerializeField] GameObject villageFacility_UI;
+    [Header("Production TMPro-Fields:")]
+    [SerializeField] TextMeshProUGUI _productionTypeField;
+    [SerializeField] TextMeshProUGUI _productionTierField;
+    [SerializeField] TextMeshProUGUI _productionValueField;
+    [SerializeField] TextMeshProUGUI _productionCostField;
+    [SerializeField] Image energyIcon;
+    [SerializeField] Image happinessIcon;
+    [SerializeField] Image environmentIcon;
+    [Header("village TMPro-Fields:")]
+    [SerializeField] TextMeshProUGUI _villageTierField;
+    [SerializeField] TextMeshProUGUI _villageIncomeField;
+    [SerializeField] TextMeshProUGUI _villageUpkeepField;
+    [SerializeField] GameObject _hasEnergyMark;
+    [SerializeField] GameObject _hasHappinessMark;
+    [SerializeField] GameObject _hasEnvironmentMark;
+    [SerializeField] GameObject _hasNeighborsMark;
 
-    [SerializeField] Slider NEGprosperityBar;
-    [SerializeField] Slider NEGhappinessBar;
-    [SerializeField] Slider NEGenvironmentBar;
+    // bool uebergabe next
+
+
+
+    //[SerializeField] Slider prosperityBar;
+    //[SerializeField] Slider happinessBar;
+    //[SerializeField] Slider environmentBar;
+
+    //[SerializeField] Slider NEGprosperityBar;
+    //[SerializeField] Slider NEGhappinessBar;
+    //[SerializeField] Slider NEGenvironmentBar;
 
     [SerializeField] TextMeshProUGUI nameField;
     [SerializeField] TextMeshProUGUI tagField;
 
     // this is to display changed STATS through the neihbor-effect:
-    [SerializeField] Slider prosperityBonusBar;
-    [SerializeField] Slider happinessBonusBar;
-    [SerializeField] Slider environmentBonusBar;
+    //[SerializeField] Slider prosperityBonusBar;
+    //[SerializeField] Slider happinessBonusBar;
+    //[SerializeField] Slider environmentBonusBar;
 
-    [SerializeField] Slider NEGprosperityBonusBar;
-    [SerializeField] Slider NEGhappinessBonusBar;
-    [SerializeField] Slider NEGenvironmentBonusBar;
+    //[SerializeField] Slider NEGprosperityBonusBar;
+    //[SerializeField] Slider NEGhappinessBonusBar;
+    //[SerializeField] Slider NEGenvironmentBonusBar;
 
     GameObject SceneManager;
 
-    float pS;
-    float hS;
-    float eS;
+    //float pS;
+    //float hS;
+    //float eS;
+    #endregion
 
     private void Start()
     {
@@ -44,33 +70,96 @@ public class StatUIDisplay : MonoBehaviour
         {
             nameField.text = gO.name;
             tagField.text = "Natur";
+
+            productionFacility_UI.SetActive(true);
+            _productionTypeField.text = tagField.text;
+            _productionTierField.text = gO.GetComponent<ProductionStats>().tierLevel + " / 3";
+            _productionValueField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionValue).ToString() + "    /Min.";
+            environmentIcon.enabled = true;
+            _productionCostField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionCost).ToString() + "    /Min.";
         }
         if (gO.CompareTag("energy"))
         {
             nameField.text = gO.name;
             tagField.text = "Energie";
+
+            productionFacility_UI.SetActive(true);
+            _productionTypeField.text = tagField.text;
+            _productionTierField.text = gO.GetComponent<ProductionStats>().tierLevel + " / 3";
+            _productionValueField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionValue).ToString() + "    /Min.";
+            energyIcon.enabled = true;
+            _productionCostField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionCost).ToString() + "    /Min.";
         }
         if (gO.CompareTag("happiness"))
         {
             nameField.text = gO.name;
             tagField.text = "Versorgung"; // lebensqualitaet, Gemeinde, 
+
+            productionFacility_UI.SetActive(true);
+            _productionTypeField.text = tagField.text;
+            _productionTierField.text = gO.GetComponent<ProductionStats>().tierLevel + " / 3";
+            _productionValueField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionValue).ToString() + "    /Min.";
+            happinessIcon.enabled = true;
+            _productionCostField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionCost).ToString() + "    /Min.";
         }
         if (gO.CompareTag("village"))
         {
             nameField.text = gO.name;
             tagField.text = "Dorf";
+
+            villageFacility_UI.SetActive(true);
+            _villageTierField.text = gO.GetComponent<VillageStats>()._tierLevel + " / 5";
+            _villageIncomeField.text = (gO.GetComponent<VillageStats>()._taxesToPay).ToString() + "    /" + (gO.GetComponent<VillageStats>()._frequencyToPay).ToString() + "Sec.";
+            _villageUpkeepField.text = (gO.GetComponent<VillageStats>()._costOfLiving * 50 * 60).ToString(); // calculations to revert math in Village Stats for UIDisplay.
+            if (gO.GetComponent<VillageStats>().influencedByEnergy)
+            {
+                _hasEnergyMark.SetActive(true);
+            }
+            if (gO.GetComponent<VillageStats>().influencedByHappiness)
+            {
+                _hasHappinessMark.SetActive(true);
+            }
+            if (gO.GetComponent<VillageStats>().influencedByNature)
+            {
+                _hasEnvironmentMark.SetActive(true);
+            }
+            if (gO.GetComponent<VillageStats>().influencedByNeighbors)
+            {
+                _hasNeighborsMark.SetActive(true);
+            }
         }
         if (gO.CompareTag("city"))
         {
             nameField.text = "Pagotopia";
-            tagField.text = "Dorf"; // "\n" to add another line 
+            tagField.text = ""; // "\n" to add another line 
+
+            villageFacility_UI.SetActive(true);
+            _villageTierField.text = gO.GetComponent<VillageStats>()._tierLevel + " / 5";
+            _villageIncomeField.text = (gO.GetComponent<VillageStats>()._taxesToPay).ToString() + " /" + (gO.GetComponent<VillageStats>()._frequencyToPay).ToString() + "Sec.";
+            _villageUpkeepField.text = (gO.GetComponent<VillageStats>()._costOfLiving * 50 * 60).ToString(); // calculations to revert math in Village Stats for UIDisplay.
+            if (gO.GetComponent<VillageStats>().influencedByEnergy)
+            {
+                _hasEnergyMark.SetActive(true);
+            }
+            if (gO.GetComponent<VillageStats>().influencedByHappiness)
+            {
+                _hasHappinessMark.SetActive(true);
+            }
+            if (gO.GetComponent<VillageStats>().influencedByNature)
+            {
+                _hasEnvironmentMark.SetActive(true);
+            }
+            if (gO.GetComponent<VillageStats>().influencedByNeighbors)
+            {
+                _hasNeighborsMark.SetActive(true);
+            }
         }
 
         // this displays Stats of Tiles that are hovered over
         //if (SceneManager.GetComponent<PlaceObjectsOnGrid>().onMousePrefab = null) // this should make it so it only displays old stats if nothing is being carried
-            //if (SceneManager.GetComponent<PlaceObjectsOnGrid>().onMousePrefab = null)
-            //{
-            if (hS > 0f) // show happiness
+        //if (SceneManager.GetComponent<PlaceObjectsOnGrid>().onMousePrefab = null)
+        //{
+        /*if (hS > 0f) // show happiness
             {
                 happinessBar.value = hS;
                 NEGhappinessBar.value = 0f;
@@ -101,7 +190,7 @@ public class StatUIDisplay : MonoBehaviour
             {
                 environmentBar.value = 0f;
                 NEGenvironmentBar.value = eS * -1;
-            }
+            }*/
         //}
 
         //test:
@@ -113,17 +202,43 @@ public class StatUIDisplay : MonoBehaviour
 
     public void ResetStatBars()
     {
-        prosperityBar.value = 0f;
-        happinessBar.value = 0f;
-        environmentBar.value = 0f;
-
-        NEGprosperityBar.value = 0f;
-        NEGhappinessBar.value = 0f;
-        NEGenvironmentBar.value = 0f;
-
         nameField.text = null;
+        tagField.text = null;
+        // reset all display Fields:
+        if (productionFacility_UI == isActiveAndEnabled)
+        {
+            _productionTypeField.text = null;
+            _productionTierField.text = null;
+            _productionValueField.text = null;
+            _productionCostField.text = null;
+            energyIcon.enabled = false;
+            happinessIcon.enabled = false;
+            environmentIcon.enabled = false;
+            productionFacility_UI.SetActive(false);
+        }
+        if (villageFacility_UI == isActiveAndEnabled)
+        {
+            _villageTierField.text = null;
+            _villageIncomeField.text = null;
+            _villageUpkeepField.text = null;
+            _hasEnergyMark.SetActive(false);
+            _hasHappinessMark.SetActive(false);
+            _hasEnvironmentMark.SetActive(false);
+            _hasNeighborsMark.SetActive(false);
+            villageFacility_UI.SetActive(false);
+        }
     }
 
+
+
+
+
+
+
+
+
+
+    // everything beyond here should be redundant
     public void CastNeighborEffectToUI(float prosperityStat, float happinessStat, float environmentStat, float prosperityBonus, float happinessBonus, float environmentBonus)
     {
         if (SceneManager.GetComponent<PlaceObjectsOnGrid>().onMousePrefab != null) // prob. redundant, as this only gets called in "ActivateCell" if this condition is true
@@ -133,7 +248,7 @@ public class StatUIDisplay : MonoBehaviour
             float newEnvironmentStat = environmentStat + environmentBonus;
 
             // calculate amount of static stat +/- neighboreffect
-            if (newHappinessStat > 0f) // show happiness
+            /*if (newHappinessStat > 0f) // show happiness
             {
                 happinessBonusBar.value = newHappinessStat;
                 NEGhappinessBonusBar.value = 0f;
@@ -205,12 +320,12 @@ public class StatUIDisplay : MonoBehaviour
     }
     public void ResetBonusStatBars()
     {
-        prosperityBonusBar.value = 0f;
-        happinessBonusBar.value = 0f;
-        environmentBonusBar.value = 0f;
+        //prosperityBonusBar.value = 0f;
+        //happinessBonusBar.value = 0f;
+        //environmentBonusBar.value = 0f;
 
-        NEGprosperityBonusBar.value = 0f;
-        NEGhappinessBonusBar.value = 0f;
-        NEGenvironmentBonusBar.value = 0f;
+        //NEGprosperityBonusBar.value = 0f;
+       //NEGhappinessBonusBar.value = 0f;
+       // NEGenvironmentBonusBar.value = 0f;
     }
 }

@@ -8,8 +8,8 @@ public class VictoryScript : MonoBehaviour
     // loosing early by dropping a stat to zero is called by "NeedsManager"-script
 
     GameObject SceneManager;
-    NeedsManager NeedsManager;
-    GameManager GameManager;
+    StatsManager StatsManager;
+    NewGameManager GameManager;
 
     // input Podest Models to deactivate them
     [SerializeField] GameObject podest1;
@@ -37,8 +37,8 @@ public class VictoryScript : MonoBehaviour
     void Awake()
     {
         SceneManager = GameObject.Find("SceneManager");
-        GameManager = SceneManager.GetComponent<GameManager>();
-        NeedsManager = SceneManager.GetComponent<NeedsManager>();
+        GameManager = SceneManager.GetComponent<NewGameManager>();
+        StatsManager = SceneManager.GetComponent<StatsManager>();
     }
 
 
@@ -46,7 +46,7 @@ public class VictoryScript : MonoBehaviour
     {
         // this whole IF statement is only for Quick Win while testing the game: --> winning by placing 1 tile
         // increased to 3 tiles to check for neighborEfficiencyBonus
-        if (GameManager.quickWin == true && NeedsManager.tileCounter == 3 && gameHasEnded == false)
+        if (GameManager.quickWin == true && StatsManager.tileCounter == 3 && gameHasEnded == false)
         {
             Winner();
             gameHasEnded = true;
@@ -72,7 +72,7 @@ public class VictoryScript : MonoBehaviour
         }
 
         // checks for real winning condition
-        if (NeedsManager.tileCounter == 48 && gameHasEnded == false)
+        if (StatsManager.tileCounter == 48 && gameHasEnded == false)
         {
             Winner();
             gameHasEnded = true;
@@ -180,9 +180,9 @@ public class VictoryScript : MonoBehaviour
 
     void FillDepleteStats()
     {
-        NeedsManager.prosperityDegenerationRate *= 10;
-        NeedsManager.happinessDegenerationRate *= 10;
-        NeedsManager.environmentDegenerationRate *= 10;
+        //StatsManager.prosperityDegenerationRate *= 10;
+        //StatsManager.happinessDegenerationRate *= 10;
+        //StatsManager.environmentDegenerationRate *= 10;
 
         // better would be filling them up in like 3 seconds
         // maxVal - currVal = openVal / 50 = X (how much Val per tic needed to fill openVal in 1 sec)

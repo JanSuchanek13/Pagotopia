@@ -35,7 +35,6 @@ public class NewGameManager : MonoBehaviour
     public float tier3ProductionValuePerMinute = 15f;
     public float tier3ProductionCostPerMinute = 15f;
 
-
     [Header("Testing:")]
     public bool developerMode = false;
     public bool quickWin = false;

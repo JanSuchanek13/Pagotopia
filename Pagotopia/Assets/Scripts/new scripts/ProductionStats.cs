@@ -20,6 +20,9 @@ public class ProductionStats : MonoBehaviour
     private float _productionValue = 0f;
     private float _constructionCost;
     private float _productionCostPerMinute;
+    // these are used by StatUIDisplay to display this particular tiles stats:
+    public float thisTilesCurrentProductionValue = 0f;
+    public float thisTilesCurrentProductionCost = 0f;
     #endregion
 
     void Awake()
@@ -41,6 +44,10 @@ public class ProductionStats : MonoBehaviour
             TierII.GetComponent<MeshRenderer>().enabled = true;
             upgrade_Sound.Play();
             Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
+            
+            // updating tile stats to report to StatUIDisplay:
+            thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().tier2ProductionValuePerMinute;
+            thisTilesCurrentProductionCost += _sceneManager.GetComponent<NewGameManager>().tier2ProductionCostPerMinute;
         }
         else if (tierLevel == 2)
         {
@@ -50,6 +57,10 @@ public class ProductionStats : MonoBehaviour
             TierIII.GetComponent<MeshRenderer>().enabled = true;
             upgrade_Sound.Play();
             Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
+            
+            // updating tile stats to report to StatUIDisplay:
+            thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().tier3ProductionValuePerMinute;
+            thisTilesCurrentProductionCost += _sceneManager.GetComponent<NewGameManager>().tier3ProductionCostPerMinute;
         }
     }
 
@@ -81,6 +92,10 @@ public class ProductionStats : MonoBehaviour
                 _sceneManager.GetComponent<StatsManager>().UpdateEnvironmentProduction(_productionValue);
             }
             tierLevel++; // now: tier I
+
+            // updating tile stats to report to StatUIDisplay:
+            thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().baseProductionValuePerMinute;
+            thisTilesCurrentProductionCost += _sceneManager.GetComponent<NewGameManager>().baseProductionCostPerMinute;
         }
     }
 }

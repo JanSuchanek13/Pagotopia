@@ -24,7 +24,7 @@ public class RotorRotator : MonoBehaviour
 
     private void Awake()
     {
-        if (rotateHeadRandomly)
+        if (rotateHeadRandomly /*&& stemOfTurbine != null*/)
         {
             StartCoroutine("FaceNewDirection");
         }
@@ -63,7 +63,7 @@ public class RotorRotator : MonoBehaviour
         }
 
         // turn head (if enabled) towards target degree of rotation:
-        if (Mathf.Round(transform.eulerAngles.z) != randomDegreesRotation)
+        if (rotateHeadRandomly && Mathf.Round(transform.eulerAngles.z) != randomDegreesRotation)
         {
             if(randomDegreesRotation <= 0f)
             {

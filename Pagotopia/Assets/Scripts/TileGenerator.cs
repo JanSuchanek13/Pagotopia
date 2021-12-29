@@ -52,7 +52,7 @@ public class TileGenerator : MonoBehaviour
 
         randomInt = Random.Range(0, arrayOfAllTilePrefabs.Length);
         tile1 = Instantiate(arrayOfAllTilePrefabs[randomInt], spawnPos1.position, Quaternion.Euler(rot));
-        tile1.GetComponent<Stats>().RandomizeStats(tile1, spawnPos1.position); // added ", spawnPos1.position" --> also in others
+        //tile1.GetComponent<Stats>().RandomizeStats(tile1, spawnPos1.position); // added ", spawnPos1.position" --> also in others
 
         // Debug.Log("a tile was created");
     }
@@ -64,7 +64,7 @@ public class TileGenerator : MonoBehaviour
 
         randomInt = Random.Range(0, arrayOfAllTilePrefabs.Length);
         tile2 = Instantiate(arrayOfAllTilePrefabs[randomInt], spawnPos2.position, Quaternion.Euler(rot));
-        tile2.GetComponent<Stats>().RandomizeStats(tile2, spawnPos2.position);
+        //tile2.GetComponent<Stats>().RandomizeStats(tile2, spawnPos2.position);
 
         // Debug.Log("a tile was created");
     }
@@ -76,7 +76,7 @@ public class TileGenerator : MonoBehaviour
 
         randomInt = Random.Range(0, arrayOfAllTilePrefabs.Length);
         tile3 = Instantiate(arrayOfAllTilePrefabs[randomInt], spawnPos3.position, Quaternion.Euler(rot));
-        tile3.GetComponent<Stats>().RandomizeStats(tile3, spawnPos3.position);
+        //tile3.GetComponent<Stats>().RandomizeStats(tile3, spawnPos3.position);
 
         // Debug.Log("a tile was created");
     }

@@ -50,7 +50,7 @@ public class ClickTile : MonoBehaviour
         //{
             if (SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled == true)
             {
-                if (gameObject.CompareTag("happinness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city"))
+                if (gameObject.CompareTag("happiness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city"))
                 {
                     Over = gameObject;
                     tag = Over.tag;

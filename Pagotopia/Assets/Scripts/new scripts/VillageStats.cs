@@ -32,12 +32,13 @@ public class VillageStats : MonoBehaviour
     public bool influencedByNeighbors = false;
     private bool _neighborsAccounted = false;
     private GameObject _sceneManager;
-    private float _costOfLiving;
-    private float _taxesToPay;
     private float _bonusTaxes;
-    private float _frequencyToPay;
-    private int _tierLevel;
     private float _constructionCost;
+    // these are public so StatUIDisplay can read them:
+    public float _frequencyToPay;
+    public float _costOfLiving;
+    public float _taxesToPay;
+    public int _tierLevel;
     #endregion
 
     void Awake()
