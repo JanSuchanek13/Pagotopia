@@ -125,17 +125,25 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                             
                             if (onMousePrefab != null) // tile gets placed
                             {
-                                Debug.Log("CCCC");
+                                //Debug.Log("CCCC");
                                 curObject.GetComponent<BoxCollider>().enabled = true;
                                 //curObject.GetComponent<Stats>().AddNeighborBonus();
                                 //curObject.GetComponent<Stats>().UpdateStats();
                                 curObject.GetComponent<ClickTile>().setFix = true;
+                                
+                            if(curObject.GetComponent<ProductionStats>() != null)
+                            {
                                 curObject.GetComponent<ProductionStats>().Build(); // new 
+                            }else
+                            {
+                                curObject.GetComponent<VillageStats>().Build(); // new 
+                            }
+
                                 sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
-                                Debug.Log("hover Info ON (tile was placed)");
+                                //Debug.Log("hover Info ON (tile was placed)");
 
                                 StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
-                                StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
+                                //StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
 
                                 node.isPlaceable = false;
                                 isOnGrid = true;
@@ -143,10 +151,11 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                                 onMousePrefab = null;
 
                                 PlopSound.Play();
-                                /*if (curObject.GetComponent<ProductionStats>().isCow == true)
-                                {
-                                    moohSound.Play();
-                                }*/
+                            /*if (curObject.GetComponent<ProductionStats>().isCow == true)
+                            {
+                                moohSound.Play();
+                            }*/
+                            sceneManager.GetComponent<TileGenerator>().DestroyRemainingTiles();
                             }
                         
 
@@ -245,13 +254,13 @@ public class PlaceObjectsOnGrid : MonoBehaviour
             int r_width = Random.Range(0, width);
             int r_height = Random.Range(0, height);
             //Node random_cell = nodes[Random.Range(0, width), Random.Range(0, height)];
-            Debug.Log(nodes[r_width, r_height].isPlaceable);
+            //Debug.Log(nodes[r_width, r_height].isPlaceable);
             if (nodes[r_width, r_height].isPlaceable)
             {
                 Instantiate(cube, (nodes[r_width, r_height].cellPosition), Quaternion.identity);
                 nodes[r_width, r_height].isPlaceable = false;
                 nodes[r_width, r_height].activeFix = true;
-                Debug.Log("im a rock");
+                //Debug.Log("im a rock");
             }
             else //if cell is not placeable, set stone counter to before value
             {

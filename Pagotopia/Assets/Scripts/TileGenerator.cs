@@ -67,17 +67,29 @@ public class TileGenerator : MonoBehaviour
 
     public void DestroyRemainingTiles()
     {
-        if(tile1.GetComponent<VillageStats>().wasPlaced == false && tile1.GetComponent<ProductionStats>().wasPlaced == false)
+        if(tile1.GetComponent<VillageStats>().wasPlaced == false)
         {
-            Destroy(tile1);
+            if(tile1.GetComponent<ProductionStats>().wasPlaced == false)
+            {
+                Debug.Log("tile1 one was NOT placed");
+                Destroy(tile1);
+            }
         }
-        if (tile1.GetComponent<VillageStats>().wasPlaced == false && tile1.GetComponent<ProductionStats>().wasPlaced == false)
+        if (tile2.GetComponent<VillageStats>().wasPlaced == false)
         {
-            Destroy(tile2);
+            if (tile2.GetComponent<ProductionStats>().wasPlaced == false)
+            {
+                Debug.Log("tile2 one was NOT placed");
+                Destroy(tile2);
+            }
         }
-        if (tile1.GetComponent<VillageStats>().wasPlaced == false && tile1.GetComponent<ProductionStats>().wasPlaced == false)
+        if (tile3.GetComponent<VillageStats>().wasPlaced == false)
         {
-            Destroy(tile3);
+            if (tile3.GetComponent<ProductionStats>().wasPlaced == false)
+            {
+                Debug.Log("tile3 one was NOT placed");
+                Destroy(tile3);
+            }
         }
         return;
     }

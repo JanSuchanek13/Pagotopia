@@ -24,7 +24,7 @@ public class ClickTile : MonoBehaviour
         Object = gameObject;
         //SceneManager = GameObject.Find("SceneManager");
         SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = false;
-        Debug.Log("hover Info OFF");
+        //Debug.Log("hover Info OFF");
         SceneManager.GetComponent<PlaceObjectsOnGrid>().OnMouse(Object);
 
         // Felix added this 9.10.21 to cast stats to UI while carrying:
@@ -113,9 +113,12 @@ public class ClickTile : MonoBehaviour
         //Debug.Log("OnMouseExit");
         //statsDisplay.transform.GetChild(0).gameObject.SetActive(false);
         //statsDisplay = null;
-        if (SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled == true)
+        if (gameObject.CompareTag("happiness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city"))
         {
-            StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
+            if (SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled == true)
+            {
+                StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
+            }
         }
         //StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars(); //reinstate this if aboce doesnt work
 

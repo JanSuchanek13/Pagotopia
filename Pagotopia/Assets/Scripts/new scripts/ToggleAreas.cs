@@ -17,7 +17,7 @@ public class ToggleAreas : MonoBehaviour
 
     void setList()
     {
-        Debug.Log("start");
+        //Debug.Log("start");
         foreach (Transform child in cells)
         {
             Children.Add(child.transform);
