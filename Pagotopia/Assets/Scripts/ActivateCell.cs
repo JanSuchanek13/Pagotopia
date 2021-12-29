@@ -75,7 +75,7 @@ public class ActivateCell : MonoBehaviour
 
                 break;
             default:
-                Debug.Log("Fehler");
+                //Debug.Log("Fehler");
                 break;
         }
     }

@@ -1403,7 +1403,7 @@ GameObject:
   - component: {fileID: 7627536010841981714}
   - component: {fileID: 4452195919522563056}
   - component: {fileID: -2193460728736934924}
-  - component: {fileID: 6301859393729582950}
+  - component: {fileID: 4154322185411160874}
   m_Layer: 0
   m_Name: city1
   m_TagString: city
@@ -1483,6 +1483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setFix: 1
   Over: {fileID: 0}
+  myPos: {x: 0, y: 0, z: 0}
 --- !u!65 &-2193460728736934924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1496,7 +1497,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1, y: 0.1, z: 1.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6301859393729582950
+--- !u!114 &4154322185411160874
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1505,21 +1506,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 5205196194216705319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd14bf52514a434479c562832764d949, type: 3}
+  m_Script: {fileID: 11500000, guid: 091dd00473297474fae2a073f5cd528b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPosition: {x: 0, y: 0, z: 0}
-  prosperityStat: 0
-  happinessStat: 0
-  environmentStat: 0
-  mainStat: 0
-  randomStat1: 0
-  randomStat2: 0
-  isCow: 0
+  TierII: {fileID: 0}
+  TierIII: {fileID: 0}
+  TierIV: {fileID: 0}
+  TierV: {fileID: 0}
+  incomeDisplay: {fileID: 0}
+  _currentIncomeDisplay: {fileID: 0}
+  build_Sound: {fileID: 0}
+  upgrade_Sound: {fileID: 0}
+  cashRegister_Sound: {fileID: 0}
   wasPlaced: 0
-  prosperityBonus: 0
-  happinessBonus: 0
-  environmentBonus: 0
+  influencedByEnergy: 0
+  influencedByHappiness: 0
+  influencedByNature: 0
+  influencedByNeighbors: 0
+  _frequencyToPay: 0
+  _costOfLiving: 0
+  _taxesToPay: 0
+  _tierLevel: 0
 --- !u!1 &5724523735169331730
 GameObject:
   m_ObjectHideFlags: 0

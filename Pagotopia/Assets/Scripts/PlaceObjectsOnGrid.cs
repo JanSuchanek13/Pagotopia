@@ -143,10 +143,10 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                                 onMousePrefab = null;
 
                                 PlopSound.Play();
-                                if (curObject.GetComponent<Stats>().isCow == true)
+                                /*if (curObject.GetComponent<ProductionStats>().isCow == true)
                                 {
                                     moohSound.Play();
-                                }
+                                }*/
                             }
                         
 
