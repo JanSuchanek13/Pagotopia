@@ -135,7 +135,7 @@ public class StatUIDisplay : MonoBehaviour
 
             villageFacility_UI.SetActive(true);
             _villageTierField.text = (gO.GetComponent<VillageStats>()._tierLevel).ToString() + " / 5";
-            _villageIncomeField.text = (gO.GetComponent<VillageStats>()._taxesToPay).ToString() + " /" + (gO.GetComponent<VillageStats>()._frequencyToPay).ToString() + "Sec.";
+            _villageIncomeField.text = (gO.GetComponent<VillageStats>()._taxesToPay).ToString()/* + " /" + (gO.GetComponent<VillageStats>()._frequencyToPay).ToString() + "Sec."*/;
             _villageUpkeepField.text = (gO.GetComponent<VillageStats>()._costOfLiving * 50 * 60).ToString(); // calculations to revert math in Village Stats for UIDisplay.
             if (gO.GetComponent<VillageStats>().influencedByEnergy)
             {

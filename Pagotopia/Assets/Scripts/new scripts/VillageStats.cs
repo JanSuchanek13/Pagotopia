@@ -49,6 +49,11 @@ public class VillageStats : MonoBehaviour
         _bonusTaxes = _sceneManager.GetComponent<NewGameManager>().bonusTaxes;
         _frequencyToPay = _sceneManager.GetComponent<NewGameManager>().taxationFrequency;
         _constructionCost = _sceneManager.GetComponent<NewGameManager>().baseVillageConstructionCost;
+
+        if (CompareTag("city") == true)
+        {
+            Invoke("Build", .5f);
+        }
     }
 
     void Update()
