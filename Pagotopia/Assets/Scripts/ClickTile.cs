@@ -8,6 +8,7 @@ public class ClickTile : MonoBehaviour
     public bool setFix = false;
     private GameObject StatsDisplay;
     public GameObject Over;
+    public Vector3 myPos;
 
     //public bool hoverInfoEnabled = true;
     GameObject SceneManager;
@@ -15,6 +16,7 @@ public class ClickTile : MonoBehaviour
     private void Awake()
     {
         SceneManager = GameObject.Find("SceneManager");
+        myPos = gameObject.transform.position;
     }
     public void OnMouseDown()
         //übergibt angeklicktes Object an OnMouse Funktion aus PlaceObjectsOnGrid

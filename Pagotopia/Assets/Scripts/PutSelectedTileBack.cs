@@ -23,15 +23,15 @@ public class PutSelectedTileBack : MonoBehaviour
             SceneManager.GetComponent<PlaceObjectsOnGrid>().isOnGrid = true;
 
             // added to reset stat-bars:
-            StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
-            StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
-            SceneManager.GetComponent<GameManager>().hoverInfoEnabled = true;
+            //StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
+            //StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
+            SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
             Debug.Log("hover Info ON (tile was put back)"); // turn off when redundant
 
             //Debug.Log(SceneManager);
             GameObject curMaptile = SceneManager.GetComponent<PlaceObjectsOnGrid>().curObject;
             curMaptile.GetComponent<BoxCollider>().enabled = true;
-            Vector3 myTrans = curMaptile.GetComponent<Stats>().myPosition;
+            Vector3 myTrans = curMaptile.GetComponent<ClickTile>().myPos;
             
             
             //Debug.Log(myTrans);
