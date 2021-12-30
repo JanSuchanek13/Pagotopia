@@ -195,7 +195,7 @@ public class StatUIDisplay : MonoBehaviour
     {
         nameField.text = null;
         tagField.text = null;
-        // reset all display Fields:
+
         if (productionFacility_UI == isActiveAndEnabled)
         {
             _productionTypeField.text = null;
@@ -217,7 +217,8 @@ public class StatUIDisplay : MonoBehaviour
             _hasEnvironmentMark.SetActive(false);
             _hasNeighborsMark.SetActive(false);
             villageFacility_UI.SetActive(false);
-        }else
+        }
+        if(upgrade_UI == isActiveAndEnabled)
         {
             upgrade_UI.SetActive(false);
         }

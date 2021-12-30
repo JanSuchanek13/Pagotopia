@@ -85,14 +85,22 @@ public class StatsManager : MonoBehaviour
     // this updates the game stats at a rate of 50/s:
     void FixedUpdate()
     {
-        energyValue += _energyProductionRate - _globalCostOfLiving;
-        happinessValue += _happinessProductionRate - _globalCostOfLiving;
-        environmentValue += _environmentProductionRate - _globalCostOfLiving;
-        float[] currentAvailableResources = {energyValue, happinessValue, environmentValue};
-        smallestAvailableValue = Mathf.Min(currentAvailableResources); // returns the lowest available resource value
-        availableMoney -= upkeep;
-        numericalMoneyDisplay.text = availableMoney.ToString("F0");
-        numericalTileCounterDisplay.text = (tileCounter + 1).ToString() + " / 43";
+        numericalTileCounterDisplay.text = tileCounter.ToString() + " / 43"; // victory condition is checked by VictoryScript
+
+        if (GetComponent<VictoryScript>().gameHasEnded == false)
+        {
+            energyValue += _energyProductionRate - _globalCostOfLiving;
+            happinessValue += _happinessProductionRate - _globalCostOfLiving;
+            environmentValue += _environmentProductionRate - _globalCostOfLiving;
+            availableMoney -= upkeep;
+            // checks if enough resources are available to build village:
+            float[] currentAvailableResources = { energyValue, happinessValue, environmentValue };
+            smallestAvailableValue = Mathf.Min(currentAvailableResources); // returns the lowest available resource value
+            // updates Displays for current available money and tiles placed:
+            numericalMoneyDisplay.text = availableMoney.ToString("F0");
+        }
+        
+
 
         //Debug.Log("energy Bar " + energyValue + " happiness Bar " + happinessValue + " and available money is: " + availableMoney);
         //Debug.Log("efficiency " + efficientlyPlaced);

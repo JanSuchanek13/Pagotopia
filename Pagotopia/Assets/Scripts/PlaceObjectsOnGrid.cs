@@ -144,7 +144,6 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                             sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
                             //Debug.Log("hover Info ON (tile was placed)");
 
-                            StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
                             //StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
 
                             node.isPlaceable = false;
@@ -157,9 +156,10 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                         {
                             moohSound.Play();
                         }*/
-                        sceneManager.GetComponent<TileGenerator>().DestroyRemainingTiles();
+                            sceneManager.GetComponent<TileGenerator>().DestroyRemainingTiles();
+                            StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
                         }
-                        
+
 
                     }
                     else if (node.cellPosition == mousePosition && !node.isPlaceable)

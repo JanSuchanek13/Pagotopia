@@ -2994,7 +2994,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
@@ -10611,7 +10610,7 @@ Canvas:
   m_GameObject: {fileID: 804294970}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 174159254}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -24988,6 +24987,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4041664130767293987, guid: 30553632c0d2950479a39bced867b4e2, type: 3}
   m_PrefabInstance: {fileID: 967746899}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1799904887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 75c50f1a67d135944b40763b35c8ab94, type: 3}
+  m_PrefabInstance: {fileID: 897001774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1801919766
 GameObject:
   m_ObjectHideFlags: 0
@@ -25470,6 +25474,7 @@ MonoBehaviour:
   podest1: {fileID: 548347951}
   podest2: {fileID: 3670370590636221191}
   podest3: {fileID: 356955246}
+  newSetButton: {fileID: 1799904887}
   stats_UI: {fileID: 6348358332207195063}
   game_UI: {fileID: 1450395180}
   enterName_UI: {fileID: 1472164155}

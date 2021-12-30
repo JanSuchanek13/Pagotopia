@@ -15,6 +15,7 @@ public class VictoryScript : MonoBehaviour
     [SerializeField] GameObject podest1;
     [SerializeField] GameObject podest2;
     [SerializeField] GameObject podest3;
+    [SerializeField] GameObject newSetButton;
     [SerializeField] GameObject stats_UI;
     [SerializeField] GameObject game_UI;
 
@@ -72,7 +73,7 @@ public class VictoryScript : MonoBehaviour
         }
 
         // checks for real winning condition
-        if (StatsManager.tileCounter == 48 && gameHasEnded == false)
+        if (StatsManager.tileCounter >= 43 && gameHasEnded == false)
         {
             Winner();
             gameHasEnded = true;

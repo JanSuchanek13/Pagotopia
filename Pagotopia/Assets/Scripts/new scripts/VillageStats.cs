@@ -49,10 +49,16 @@ public class VillageStats : MonoBehaviour
         _bonusTaxes = _sceneManager.GetComponent<NewGameManager>().bonusTaxes;
         _frequencyToPay = _sceneManager.GetComponent<NewGameManager>().taxationFrequency;
         _constructionCost = _sceneManager.GetComponent<NewGameManager>().baseVillageConstructionCost;
-
+    }
+    // build the first tile, "Pagotopia":
+    private void Start()
+    {
         if (CompareTag("city") == true)
         {
-            Invoke("Build", .5f);
+            float _saveVolume = build_Sound.volume;
+            build_Sound.volume = 0;
+            Build();
+            build_Sound.volume = _saveVolume;
         }
     }
 
@@ -117,11 +123,15 @@ public class VillageStats : MonoBehaviour
     IEnumerator GenerateIncome()
     {
         yield return new WaitForSeconds(_frequencyToPay);
-        _sceneManager.GetComponent<StatsManager>().availableMoney += _taxesToPay;
-        _sceneManager.GetComponent<StatsManager>().IncomeFeedbackToPlayer();
-        _sceneManager.GetComponent<StatsManager>().efficientlyPlaced += _tierLevel;
-        StartCoroutine("DisplayIncome");
-        StartCoroutine("GenerateIncome"); // restart money-generation-timer
+
+        if (_sceneManager.GetComponent<VictoryScript>().gameHasEnded == false)
+        {
+            _sceneManager.GetComponent<StatsManager>().availableMoney += _taxesToPay;
+            _sceneManager.GetComponent<StatsManager>().IncomeFeedbackToPlayer();
+            _sceneManager.GetComponent<StatsManager>().efficientlyPlaced += _tierLevel;
+            StartCoroutine("DisplayIncome");
+            StartCoroutine("GenerateIncome"); // restart money-generation-timer
+        }
     }
 
     // audiovisual feedback to player (about income):
