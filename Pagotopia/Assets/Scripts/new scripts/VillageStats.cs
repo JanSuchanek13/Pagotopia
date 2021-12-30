@@ -49,16 +49,20 @@ public class VillageStats : MonoBehaviour
         _bonusTaxes = _sceneManager.GetComponent<NewGameManager>().bonusTaxes;
         _frequencyToPay = _sceneManager.GetComponent<NewGameManager>().taxationFrequency;
         _constructionCost = _sceneManager.GetComponent<NewGameManager>().baseVillageConstructionCost;
+        if (CompareTag("city") == true)
+        {
+            Build();
+        }
     }
     // build the first tile, "Pagotopia":
     private void Start()
     {
         if (CompareTag("city") == true)
         {
-            float _saveVolume = build_Sound.volume;
-            build_Sound.volume = 0;
+            //float _saveVolume = build_Sound.volume;
+            //build_Sound.volume = 0;
             Build();
-            build_Sound.volume = _saveVolume;
+            //build_Sound.volume = _saveVolume;
         }
     }
 
@@ -96,25 +100,32 @@ public class VillageStats : MonoBehaviour
         {
             _tierLevel++; // now: tier II
             _taxesToPay += _bonusTaxes;
-            TierII.GetComponent<MeshRenderer>().enabled = true;
+            //TierII.GetComponent<MeshRenderer>().enabled = true;
+            TierII.SetActive(true);
             upgrade_Sound.Play();
         }else if (_tierLevel == 2)
         {
             _tierLevel++; // now: tier III
             _taxesToPay += _bonusTaxes;
-            TierIII.GetComponent<MeshRenderer>().enabled = true;
+            //TierIII.GetComponent<MeshRenderer>().enabled = true;
+            TierIII.SetActive(true);
+
             upgrade_Sound.Play();
         }else if (_tierLevel == 3)
         {
             _tierLevel++; // now: tier IV
             _taxesToPay += _bonusTaxes;
-            TierIV.GetComponent<MeshRenderer>().enabled = true;
+            //TierIV.GetComponent<MeshRenderer>().enabled = true;
+            TierIV.SetActive(true);
+
             upgrade_Sound.Play();
         }else if (_tierLevel == 4)
         {
             _tierLevel++; // now: tier V
             _taxesToPay += _bonusTaxes;
-            TierV.GetComponent<MeshRenderer>().enabled = true;
+            //TierV.GetComponent<MeshRenderer>().enabled = true;
+            TierV.SetActive(true);
+
             upgrade_Sound.Play();
         }
     }
@@ -168,7 +179,10 @@ public class VillageStats : MonoBehaviour
             _sceneManager.GetComponent<StatsManager>().happinessValue -= _constructionCost;
             _sceneManager.GetComponent<StatsManager>().environmentValue -= _constructionCost;
             // we could consider houses also costing MONEY instead or in addition to resources!
-            build_Sound.Play();
+            if (build_Sound != null)
+            {
+                build_Sound.Play();
+            }
             StartCoroutine("GenerateIncome"); // starts money generation
             _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
             neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor

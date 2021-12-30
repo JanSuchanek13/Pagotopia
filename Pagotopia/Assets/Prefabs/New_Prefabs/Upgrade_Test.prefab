@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4495307571945241402}
   - component: {fileID: 1237738447611903376}
   m_Layer: 0
-  m_Name: Upgrade
+  m_Name: Upgrade_Test
   m_TagString: Upgrade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242112398924615454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.65, y: 1.12, z: 0.648}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7095940068127618398}
@@ -49,6 +49,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TierII: {fileID: 0}
   TierIII: {fileID: 0}
+  SensorArray1: {fileID: 0}
+  SensorArray2: {fileID: 0}
+  SensorArray3: {fileID: 0}
   build_Sound: {fileID: 0}
   upgrade_Sound: {fileID: 0}
   wasPlaced: 0

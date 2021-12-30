@@ -44,7 +44,9 @@ public class ProductionStats : MonoBehaviour
             tierLevel++; // now: tier II
             _productionValue += _sceneManager.GetComponent<NewGameManager>().tier2ProductionValuePerMinute / 50f / 60f;
             _sceneManager.GetComponent<StatsManager>().upkeep += _sceneManager.GetComponent<NewGameManager>().tier2ProductionCostPerMinute / 50 / 60;
-            TierII.GetComponent<MeshRenderer>().enabled = true;
+            //TierII.GetComponent<MeshRenderer>().enabled = true;
+            TierII.SetActive(true);
+
             upgrade_Sound.Play();
             Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
             SensorArray2.SetActive(true);
@@ -58,7 +60,9 @@ public class ProductionStats : MonoBehaviour
             tierLevel++; // now: tier III
             _productionValue += _sceneManager.GetComponent<NewGameManager>().tier3ProductionValuePerMinute / 50f / 60f;
             _sceneManager.GetComponent<StatsManager>().upkeep += _sceneManager.GetComponent<NewGameManager>().tier3ProductionCostPerMinute / 50 / 60;
-            TierIII.GetComponent<MeshRenderer>().enabled = true;
+            //TierIII.GetComponent<MeshRenderer>().enabled = true;
+            TierIII.SetActive(true);
+
             upgrade_Sound.Play();
             Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
             SensorArray3.SetActive(true);

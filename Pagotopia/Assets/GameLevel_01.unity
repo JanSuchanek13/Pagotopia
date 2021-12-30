@@ -2994,7 +2994,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 1
+  m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -10704,9 +10704,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1865021645}
     m_Modifications:
+    - target: {fileID: 3336968711455269659, guid: ca824eaab2851074196d142d9305de38, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3458453905820999376, guid: ca824eaab2851074196d142d9305de38, type: 3}
       propertyPath: m_Name
       value: PagoLightSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458453905820999376, guid: ca824eaab2851074196d142d9305de38, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4546444428993327524, guid: ca824eaab2851074196d142d9305de38, type: 3}
       propertyPath: m_Intensity
@@ -10714,6 +10722,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4546444428993327524, guid: ca824eaab2851074196d142d9305de38, type: 3}
       propertyPath: m_BounceIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546444428993327525, guid: ca824eaab2851074196d142d9305de38, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6283553174112789233, guid: ca824eaab2851074196d142d9305de38, type: 3}
@@ -25244,6 +25256,8 @@ MonoBehaviour:
   - {fileID: 242112398924615454, guid: 03d27e24c808a52419d470b5b4c88b3f, type: 3}
   - {fileID: 242112398924615454, guid: c31589016f8831844ae19917813b67a6, type: 3}
   - {fileID: 242112398924615454, guid: 9cda24057fa774c4f903b84b0bcc6407, type: 3}
+  - {fileID: 242112398924615454, guid: 312c47236729026488f5a5f547f3e91c, type: 3}
+  - {fileID: 1780429837357758803, guid: 4d2d113763bae5b41abb6eb9c4ff4486, type: 3}
   spawnPos1: {fileID: 1080299003}
   spawnPos2: {fileID: 2054591623}
   spawnPos3: {fileID: 672815498}
@@ -25349,6 +25363,9 @@ MonoBehaviour:
   upkeep: 0
   smallestAvailableValue: 0
   tileCounter: 0
+  _energyProductionRate: 0
+  _happinessProductionRate: 0
+  _environmentProductionRate: 0
   cowCounter: 0
   efficientlyPlaced: 0
 --- !u!114 &1865021649
@@ -25381,7 +25398,7 @@ MonoBehaviour:
   tier3ProductionValuePerMinute: 15
   tier3ProductionCostPerMinute: 15
   developerMode: 0
-  quickWin: 1
+  quickWin: 0
   cameraZoomSpeed: 10
   cameraMaxZoom: 15
   cameraMinZoom: 70
