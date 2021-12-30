@@ -25,7 +25,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.185
+    m_Value: 0.076
     min: 0
     max: 1
   smoothness:
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: -6
+    m_Value: -16
     min: -100
     max: 100
   tint:
@@ -72,11 +72,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.167
+    m_Value: 0.072
     min: 0
     max: 1
 --- !u!114 &-6267575540716444660
@@ -166,7 +166,7 @@ MonoBehaviour:
     showEyeDropper: 1
   balance:
     m_OverrideState: 1
-    m_Value: -33
+    m_Value: -12
     min: -100
     max: 100
 --- !u!114 &-1483848994873383145
@@ -202,15 +202,15 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.56
+    m_Value: 0.6
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 2.4
+    m_Value: 1
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.147
+    m_Value: 0.168
     min: 0
     max: 1
   clamp:
@@ -510,7 +510,7 @@ MonoBehaviour:
     m_Value: 0.05
   contrast:
     m_OverrideState: 1
-    m_Value: 19
+    m_Value: 10
     min: -100
     max: 100
   colorFilter:
@@ -526,7 +526,7 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 14
+    m_Value: 19
     min: -100
     max: 100
 --- !u!114 &6400432190015652997
@@ -548,7 +548,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.08
+    m_Value: 0.208
     min: 0
     max: 1
   response:
