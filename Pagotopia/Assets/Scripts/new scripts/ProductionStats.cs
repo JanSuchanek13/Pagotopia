@@ -8,6 +8,9 @@ public class ProductionStats : MonoBehaviour
     [Header("Tile Settings:")]
     [SerializeField] GameObject TierII;
     [SerializeField] GameObject TierIII;
+    [SerializeField] GameObject SensorArray1;
+    [SerializeField] GameObject SensorArray2;
+    [SerializeField] GameObject SensorArray3;
 
     [Header("Tile Sounds:")]
     [SerializeField] AudioSource build_Sound;
@@ -44,7 +47,8 @@ public class ProductionStats : MonoBehaviour
             TierII.GetComponent<MeshRenderer>().enabled = true;
             upgrade_Sound.Play();
             Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
-            
+            SensorArray2.SetActive(true);
+
             // updating tile stats to report to StatUIDisplay:
             thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().tier2ProductionValuePerMinute;
             thisTilesCurrentProductionCost += _sceneManager.GetComponent<NewGameManager>().tier2ProductionCostPerMinute;
@@ -57,7 +61,8 @@ public class ProductionStats : MonoBehaviour
             TierIII.GetComponent<MeshRenderer>().enabled = true;
             upgrade_Sound.Play();
             Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
-            
+            SensorArray3.SetActive(true);
+
             // updating tile stats to report to StatUIDisplay:
             thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().tier3ProductionValuePerMinute;
             thisTilesCurrentProductionCost += _sceneManager.GetComponent<NewGameManager>().tier3ProductionCostPerMinute;
@@ -92,6 +97,12 @@ public class ProductionStats : MonoBehaviour
                 _sceneManager.GetComponent<StatsManager>().UpdateEnvironmentProduction(_productionValue);
             }
             tierLevel++; // now: tier I
+
+            // turn off all sensor-arrays when building, and turn only tier 1 back on:
+            SensorArray1.SetActive(false);
+            SensorArray2.SetActive(false);
+            SensorArray3.SetActive(false);
+            SensorArray1.SetActive(true);
 
             // updating tile stats to report to StatUIDisplay:
             thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().baseProductionValuePerMinute;

@@ -13,8 +13,8 @@ public class VillageStats : MonoBehaviour
     [SerializeField] GameObject TierV;
     [SerializeField] GameObject incomeDisplay;
     [SerializeField] TextMesh _currentIncomeDisplay;
+    [SerializeField] GameObject neighborSensorArray;
     //[SerializeField] GameObject altDisplay;
-
 
     [Header("Tile Sounds:")]
     [SerializeField] AudioSource build_Sound;
@@ -160,6 +160,7 @@ public class VillageStats : MonoBehaviour
             build_Sound.Play();
             StartCoroutine("GenerateIncome"); // starts money generation
             _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
+            neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor
         }
     }
 }

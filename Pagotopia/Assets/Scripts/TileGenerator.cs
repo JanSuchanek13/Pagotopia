@@ -32,6 +32,7 @@ public class TileGenerator : MonoBehaviour
 
     public void NextSet()
     {
+        DestroyRemainingTiles(); // should fix two sets spawning when pressing NewSetButton
         Invoke("GenerateTile1", respawnDelay);
         Invoke("GenerateTile2", respawnDelay);
         Invoke("GenerateTile3", respawnDelay);

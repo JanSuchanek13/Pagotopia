@@ -10,6 +10,9 @@ public class StatUIDisplay : MonoBehaviour
     [Header("Hover UI-Settings:")]
     [SerializeField] GameObject productionFacility_UI;
     [SerializeField] GameObject villageFacility_UI;
+    [SerializeField] GameObject upgrade_UI;
+    [SerializeField] TextMeshProUGUI nameField;
+    [SerializeField] TextMeshProUGUI tagField;
     [Header("Production TMPro-Fields:")]
     [SerializeField] TextMeshProUGUI _productionTypeField;
     [SerializeField] TextMeshProUGUI _productionTierField;
@@ -18,7 +21,7 @@ public class StatUIDisplay : MonoBehaviour
     [SerializeField] Image energyIcon;
     [SerializeField] Image happinessIcon;
     [SerializeField] Image environmentIcon;
-    [Header("village TMPro-Fields:")]
+    [Header("Village TMPro-Fields:")]
     [SerializeField] TextMeshProUGUI _villageTierField;
     [SerializeField] TextMeshProUGUI _villageIncomeField;
     [SerializeField] TextMeshProUGUI _villageUpkeepField;
@@ -26,47 +29,35 @@ public class StatUIDisplay : MonoBehaviour
     [SerializeField] GameObject _hasHappinessMark;
     [SerializeField] GameObject _hasEnvironmentMark;
     [SerializeField] GameObject _hasNeighborsMark;
-
-    // bool uebergabe next
-
-
-
-    //[SerializeField] Slider prosperityBar;
-    //[SerializeField] Slider happinessBar;
-    //[SerializeField] Slider environmentBar;
-
-    //[SerializeField] Slider NEGprosperityBar;
-    //[SerializeField] Slider NEGhappinessBar;
-    //[SerializeField] Slider NEGenvironmentBar;
-
-    [SerializeField] TextMeshProUGUI nameField;
-    [SerializeField] TextMeshProUGUI tagField;
-
-    // this is to display changed STATS through the neihbor-effect:
-    //[SerializeField] Slider prosperityBonusBar;
-    //[SerializeField] Slider happinessBonusBar;
-    //[SerializeField] Slider environmentBonusBar;
-
-    //[SerializeField] Slider NEGprosperityBonusBar;
-    //[SerializeField] Slider NEGhappinessBonusBar;
-    //[SerializeField] Slider NEGenvironmentBonusBar;
+    [Header("Upgrade TMPro-Fields:")]
+    //[SerializeField] TextMeshProUGUI _upgradeTypeField;
+    //[SerializeField] TextMeshProUGUI _upgradeDescriptionField;
+    //[SerializeField] TextMeshProUGUI _upgradeValueField;
+    [SerializeField] TextMeshProUGUI _upgradeCostField;
 
     GameObject SceneManager;
-
-    //float pS;
-    //float hS;
-    //float eS;
     #endregion
 
     private void Start()
     {
         ResetStatBars();
-        ResetBonusStatBars();
+        //ResetBonusStatBars();
         SceneManager = GameObject.Find("SceneManager");
     }
     public void CastStatsToUI(GameObject gO)
     {
-        if(gO.CompareTag("environment"))
+        if (gO.CompareTag("Upgrade"))
+        {
+            nameField.text = "Modernisierung";
+            tagField.text = "Upgrade";
+            upgrade_UI.SetActive(true);
+            //_upgradeTypeField.text = tagField.text;
+            //_upgradeDescriptionField.text = "\"Modernisiere eine Produktionsanlage\"";
+            //_upgradeValueField.text = "Platziere ein Upgrade auf Einer Energieanlage";
+            //environmentIcon.enabled = true;
+            _upgradeCostField.text = (SceneManager.GetComponent<NewGameManager>().upgradeCost).ToString();
+        }
+        if (gO.CompareTag("environment"))
         {
             nameField.text = gO.name;
             tagField.text = "Natur";
