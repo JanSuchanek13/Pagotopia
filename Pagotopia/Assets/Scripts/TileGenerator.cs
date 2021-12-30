@@ -77,7 +77,6 @@ public class TileGenerator : MonoBehaviour
             {
                 if(tile1.GetComponent<VillageStats>().wasPlaced == false)
                 {
-                    Debug.Log("tile1 one was NOT placed");
                     Destroy(tile1);
                 }
             }else if(tile1.GetComponent<ProductionStats>().wasPlaced == false) // this can only get asked, if there is Prod.Stats

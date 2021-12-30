@@ -149,7 +149,7 @@ public class ClickTile : MonoBehaviour
         {
             if (setFix == true)
             {
-                Debug.Log(collision.gameObject.name);
+                //Debug.Log(collision.gameObject.name);
                 string str = gameObject.tag;
                 switch (str)
                 {

@@ -30,7 +30,7 @@ public class VillageStats : MonoBehaviour
     public bool influencedByNature = false;
     private bool _natureAccounted = false; // prevents double-counts
     public bool influencedByNeighbors = false;
-    private bool _neighborsAccounted = false;
+    public bool _neighborsAccounted = false;
     private GameObject _sceneManager;
     private float _bonusTaxes;
     private float _constructionCost;
@@ -51,7 +51,21 @@ public class VillageStats : MonoBehaviour
         _constructionCost = _sceneManager.GetComponent<NewGameManager>().baseVillageConstructionCost;
         if (CompareTag("city") == true)
         {
-            Build();
+            _tierLevel++; // now: TierI
+            wasPlaced = true;
+            _sceneManager.GetComponent<StatsManager>().tileCounter++;
+            //_sceneManager.GetComponent<StatsManager>().energyValue -= _constructionCost;
+            //_sceneManager.GetComponent<StatsManager>().happinessValue -= _constructionCost;
+            //_sceneManager.GetComponent<StatsManager>().environmentValue -= _constructionCost;
+            // we could consider houses also costing MONEY instead or in addition to resources!
+            if (build_Sound != null)
+            {
+                build_Sound.Play();
+            }
+            StartCoroutine("GenerateIncome"); // starts money generation
+            _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
+            neighborSensorArray.SetActive(false);
+            neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor
         }
     }
     // build the first tile, "Pagotopia":
@@ -59,14 +73,25 @@ public class VillageStats : MonoBehaviour
     {
         if (CompareTag("city") == true)
         {
-            //float _saveVolume = build_Sound.volume;
-            //build_Sound.volume = 0;
-            Build();
-            //build_Sound.volume = _saveVolume;
+            _tierLevel++; // now: TierI
+            wasPlaced = true;
+            _sceneManager.GetComponent<StatsManager>().tileCounter++;
+            //_sceneManager.GetComponent<StatsManager>().energyValue -= _constructionCost;
+            //_sceneManager.GetComponent<StatsManager>().happinessValue -= _constructionCost;
+            //_sceneManager.GetComponent<StatsManager>().environmentValue -= _constructionCost;
+            // we could consider houses also costing MONEY instead or in addition to resources!
+            if (build_Sound != null)
+            {
+                build_Sound.Play();
+            }
+            StartCoroutine("GenerateIncome"); // starts money generation
+            _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
+            neighborSensorArray.SetActive(false);
+            neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(_tierLevel < 5)
         {
@@ -87,8 +112,11 @@ public class VillageStats : MonoBehaviour
             }
             if (influencedByNeighbors && !_neighborsAccounted)
             {
-                _neighborsAccounted = true; // stops counting it again
+                //_neighborsAccounted = true; // stops counting it again
+                Debug.Log(gameObject.name + " accounted for neighbor and is upgrading");
                 Upgrade();
+                _neighborsAccounted = true; // stops counting it again
+
             }
         }
     }
@@ -185,6 +213,7 @@ public class VillageStats : MonoBehaviour
             }
             StartCoroutine("GenerateIncome"); // starts money generation
             _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
+            neighborSensorArray.SetActive(false); 
             neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor
         }
     }

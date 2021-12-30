@@ -203,7 +203,7 @@ public class Buttons : MonoBehaviour
     bool nextSetButtonCooldown = false;
     public void GetNewSetOfTiles()
     {
-        Debug.Log("GetNewSetOfTiles_button was pressed");
+        //Debug.Log("GetNewSetOfTiles_button was pressed");
         GameObject SceneManager = GameObject.Find("SceneManager");
 
         if (nextSetButtonCooldown == false)
