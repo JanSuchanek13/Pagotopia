@@ -32,7 +32,7 @@ public class TileGenerator : MonoBehaviour
 
     public void NextSet()
     {
-        DestroyRemainingTiles(); // should fix two sets spawning when pressing NewSetButton
+        //DestroyRemainingTiles(); // should fix two sets spawning when pressing NewSetButton
         Invoke("GenerateTile1", respawnDelay);
         Invoke("GenerateTile2", respawnDelay);
         Invoke("GenerateTile3", respawnDelay);
@@ -68,7 +68,10 @@ public class TileGenerator : MonoBehaviour
 
     public void DestroyRemainingTiles()
     {
-        if(!tile1.CompareTag("Upgrade")) // am I an upgrade?
+        GameObject _sceneManager = GameObject.Find("SceneManager");
+        _sceneManager.GetComponent<PlaceObjectsOnGrid>().onMousePrefab = null;
+
+        if (!tile1.CompareTag("Upgrade")) // am I an upgrade?
         {
             if(tile1.GetComponent<VillageStats>() != null) // do i have village stats?
             {

@@ -214,10 +214,9 @@ public class Buttons : MonoBehaviour
             standardClick.Play();
             SceneManager.GetComponent<TileGenerator>().DestroyRemainingTiles();
             SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
-            SceneManager.GetComponent<PlaceObjectsOnGrid>().onMousePrefab = null;
+            //SceneManager.GetComponent<PlaceObjectsOnGrid>().onMousePrefab = null;
             StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
-            //StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
-            SceneManager.GetComponent<TileGenerator>().NextSet();
+            //SceneManager.GetComponent<TileGenerator>().NextSet();
             //getNewSetOfTiles_Button.GetComponent<Image>().color = new Color32(100, 100, 100, 100);
             Invoke("ResetNextSetButtonCooldown", 10f);
         }else

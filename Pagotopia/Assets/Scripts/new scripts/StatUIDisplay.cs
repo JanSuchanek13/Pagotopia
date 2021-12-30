@@ -217,6 +217,9 @@ public class StatUIDisplay : MonoBehaviour
             _hasEnvironmentMark.SetActive(false);
             _hasNeighborsMark.SetActive(false);
             villageFacility_UI.SetActive(false);
+        }else
+        {
+            upgrade_UI.SetActive(false);
         }
     }
 

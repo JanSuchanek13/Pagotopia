@@ -11,6 +11,7 @@ public class StatsManager : MonoBehaviour
     [Header("Stats Settings:")]
     [SerializeField] GameObject moneyDisplay;
     [SerializeField] TextMeshProUGUI numericalMoneyDisplay;
+    [SerializeField] TextMeshProUGUI tileCounterDisplay;
     [SerializeField] Slider energyBar;
     [SerializeField] Slider happinessBar;
     [SerializeField] Slider environmentBar;
@@ -36,6 +37,8 @@ public class StatsManager : MonoBehaviour
     Color proImgBaseColor;
     Color hapImgBaseColor;
     Color envImgBaseColor;
+    private bool giveIncomeFeedbackToPlayer = false;
+    private bool giveTileCounterFeedbackToPlayer = false;
 
     //float accelleratedDegenerationRate;
     //float degenerationThreshold;
@@ -88,6 +91,7 @@ public class StatsManager : MonoBehaviour
         smallestAvailableValue = Mathf.Min(currentAvailableResources); // returns the lowest available resource value
         availableMoney -= upkeep;
         numericalMoneyDisplay.text = availableMoney.ToString("F0");
+        tileCounterDisplay.text = (tileCounter + 1).ToString() + " / 43";
 
         //Debug.Log("energy Bar " + energyValue + " happiness Bar " + happinessValue + " and available money is: " + availableMoney);
         //Debug.Log("efficiency " + efficientlyPlaced);
@@ -140,7 +144,7 @@ public class StatsManager : MonoBehaviour
         }
 
         // call "VictoryScript"-script to end game if any stat value drops to 0 (or below)
-        if (energyValue <= 0f || happinessValue <= 0f || environmentValue <= 0f)
+        if (energyValue <= 0f || happinessValue <= 0f || environmentValue <= 0f || availableMoney <= 0f)
         {
             if (GetComponent<VictoryScript>().gameHasEnded == false)
             {
@@ -201,16 +205,13 @@ public class StatsManager : MonoBehaviour
         // futile attempt to use pingpong on income display
         if(giveIncomeFeedbackToPlayer == true)
         {
-            //float t = Mathf.PingPong(1 * Time.time, 1);
-            //Vector3 maxScale = moneyDisplay.transform.localScale * 1.5f;
-            //moneyDisplay.transform.localScale = Vector3.Lerp(moneyDisplay.transform.localScale, maxScale, t);
-
-            //Vector3 targetPosition = moneyDisplay.transform.localScale + Vector3.up * .1f * Mathf.PingPong(Time.time, 1f) * .1f;
-            //moneyDisplay.transform.localScale = targetPosition;
-
             float scale = 1 + Mathf.PingPong(Time.time * 0.2f, 1.5f - 1);
             moneyDisplay.transform.localScale = new Vector3(scale, scale, scale);
-            //moneyDisplay.transform.localScale = Mathf.PingPong(Time.time * 1, 1);
+        }
+        if (giveTileCounterFeedbackToPlayer == true)
+        {
+            float scale = 1 + Mathf.PingPong(Time.time * 0.2f, 1.5f - 1);
+            tileCounterDisplay.transform.localScale = new Vector3(scale, scale, scale);
         }
     }
     // this is supposed to update the degen. rates every 60 seconds - unless they already increased by placing tiles
@@ -246,21 +247,24 @@ public class StatsManager : MonoBehaviour
         degenerationWasIncreased = false;
         Debug.Log("increaser cooldown was reset");
     }*/
-    
-    
-    bool giveIncomeFeedbackToPlayer = false;
+
+    public void TileCounterFeedbackToPlayer()
+    {
+        giveTileCounterFeedbackToPlayer = true;
+        Invoke("ResetIncomeFeedbackToPlayer", 1f);
+    }
+    private void ResetTileCounterFeedbackToPlayer()
+    {
+        giveTileCounterFeedbackToPlayer = false;
+    }
     public void IncomeFeedbackToPlayer() 
     {
         giveIncomeFeedbackToPlayer = true;
-        //moneyDisplay.transform.localScale *= 1.5f;
-        //moneyDisplay.transform.localScale = Mathf.PingPong(Time.time, 1);
-        Invoke("ResetIncomeFeedbackToPlazer", 1f);
+        Invoke("ResetIncomeFeedbackToPlayer", 1f);
     }
-    private void ResetIncomeFeedbackToPlazer()
+    private void ResetIncomeFeedbackToPlayer()
     {
         giveIncomeFeedbackToPlayer = false;
-
-        //moneyDisplay.transform.localScale /= 1.5f;
     }
     public void UpdateCostOfLiving(float additionalCosts)
     {
