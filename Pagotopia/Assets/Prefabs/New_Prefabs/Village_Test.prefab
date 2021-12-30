@@ -211,6 +211,7 @@ MonoBehaviour:
   influencedByHappiness: 0
   influencedByNature: 0
   influencedByNeighbors: 0
+  _neighborsAccounted: 0
   _frequencyToPay: 0
   _costOfLiving: 0
   _taxesToPay: 0
@@ -1052,7 +1053,7 @@ Transform:
   m_GameObject: {fileID: 2231061064483599880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.79, y: 1, z: 0.76}
   m_Children:
   - {fileID: 6325551772823872574}
   - {fileID: 1833345161858690787}
@@ -1091,7 +1092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3361057452557208829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.65, y: -1.12, z: -0.648}
+  m_LocalPosition: {x: 0, y: 0.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4345874250518174186}

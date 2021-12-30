@@ -19,6 +19,8 @@ public class ResetButtonAnimation : MonoBehaviour
     {
         x = x * -1;
         gameObject.transform.position = gameObject.transform.position + new Vector3(0, x, 0);
-        
+        gameObject.GetComponent<SphereCollider>().enabled = !gameObject.GetComponent<SphereCollider>().enabled;
+
+
     }
 }

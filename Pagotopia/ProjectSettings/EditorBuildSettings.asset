@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sustainability_UI.unity
     guid: c8cd2d311335e05419e7e3b295c1ee68
+  - enabled: 1
+    path: Assets/GameLevel_01.unity
+    guid: 77604128aa7002b4ca5d99dddf7b792b
   m_configObjects: {}

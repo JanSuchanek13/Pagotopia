@@ -195,13 +195,13 @@ public class CalculateHighscore : MonoBehaviour
         scoreEntry = GameObject.Find("ScoreCount");
         scoreEntry.GetComponent<TextMeshProUGUI>().text = score.ToString();
 
-        ProsEntry = GameObject.Find("Pros Entry");
+        ProsEntry = GameObject.Find("Energy Entry");
         ProsEntry.GetComponent<TextMeshProUGUI>().text = detailPros.ToString("0.00") + " %";
 
-        EnvEntry = GameObject.Find("Env Entry");
+        EnvEntry = GameObject.Find("Environment Entry");
         EnvEntry.GetComponent<TextMeshProUGUI>().text = detailEnv.ToString("0.00") + " %";
 
-        HapEntry = GameObject.Find("Hap Entry");
+        HapEntry = GameObject.Find("Happiness Entry");
         HapEntry.GetComponent<TextMeshProUGUI>().text = detailHap.ToString("0.00") + " %";
 
     }

@@ -134,7 +134,7 @@ public class Buttons : MonoBehaviour
     public void StartGame()
     {
         standardClick.Play();
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene("GameLevel_01");
         Debug.Log("Start Button has been pressed");
         ResumeGame();
     }
