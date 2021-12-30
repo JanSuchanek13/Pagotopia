@@ -32,9 +32,9 @@ public class StatsManager : MonoBehaviour
     private float _baseStatValue;
     private float _globalCostOfLiving;
     private float _startingMoney;
-    private float _energyProductionRate;
-    private float _happinessProductionRate;
-    private float _environmentProductionRate;
+    public float _energyProductionRate;
+    public float _happinessProductionRate;
+    public float _environmentProductionRate;
     Color proImgBaseColor;
     Color hapImgBaseColor;
     Color envImgBaseColor;

@@ -47,14 +47,14 @@ public class CalculateHighscore : MonoBehaviour
         //Debug.Log("years " + years);
 
         SceneManager = GameObject.Find("SceneManager");
-        float pros = SceneManager.GetComponent<NeedsManager>().prosperityDegenerationRate;
-        float env = SceneManager.GetComponent<NeedsManager>().environmentDegenerationRate;
-        float hap = SceneManager.GetComponent<NeedsManager>().happinessDegenerationRate;
+        float ene = SceneManager.GetComponent<StatsManager>()._energyProductionRate;
+        float env = SceneManager.GetComponent<StatsManager>()._environmentProductionRate;
+        float hap = SceneManager.GetComponent<StatsManager>()._happinessProductionRate;
 
         // Values for Display:
         // takes degenRate * 50 (fixed Framerate/pS) * 60 seconds
         // = degenrate of 1 year (ingame) == player get annual growth value!
-        detailPros = ((pros * 50 * 60) * 10) * -1;
+        detailPros = ((ene * 50 * 60) * 10) * -1;
         detailEnv = ((env * 50 * 60) * 10) * -1;
         detailHap = ((hap * 50 * 60) * 10) * -1;
 
@@ -65,12 +65,16 @@ public class CalculateHighscore : MonoBehaviour
         // formula if good: 1000 + ((degRate * -1) * 1,000,000) && if bad: 1000 - (degRate * 1,000,000)
         // example degRates: @.003 = -2000 pt, @.0009 = 100 pt, @.0006 = 400 (starting value), @.0001 = 900 pte, @-.0002 = 1200 pt, @-.003 = 4000
 
-        if (pros > 0) // if UNBALANCED
+        Debug.Log(ene);
+        Debug.Log(env);
+        Debug.Log(hap);
+
+        if (ene > 0) // if UNBALANCED
         {
-            pros = 1000f - (pros * 1000000f);  
+            ene = 1000f - (ene * 1000000f);  
         }else // if BALANCED
         {
-            pros = 1000f + ((pros * -1) * 1000000f);
+            ene = 1000f + ((ene * -1) * 1000000f);
         }
 
         if (env > 0) // if UNBALANCED
@@ -97,7 +101,7 @@ public class CalculateHighscore : MonoBehaviour
         // if you finished the game (48 tiles) in 15 min you'd get 4000 points
         // .54794521 * days = points for time spent 
         float playtimeBonus;
-        if (SceneManager.GetComponent<NeedsManager>().tileCounter < 48)
+        if (SceneManager.GetComponent<StatsManager>().tileCounter < 48)
         {
             playtimeBonus = .54794521f * days;
         }
@@ -118,15 +122,15 @@ public class CalculateHighscore : MonoBehaviour
         float neighborEfficiencyBonus = neighborCount * 500f;
 
         // no points for cows - because technically they are not sustainable at all and shouldnt be saught after
-        cowCount = SceneManager.GetComponent<NeedsManager>().cowCounter; // just for fun
+        cowCount = SceneManager.GetComponent<StatsManager>().cowCounter; // just for fun
 
-        score = (int)pros + (int)env + (int)hap + (int)playtimeBonus + (int)neighborEfficiencyBonus;
+        score = (int)ene + (int)env + (int)hap + (int)playtimeBonus + (int)neighborEfficiencyBonus;
         // Debug.Log("prosperity score " + (int)pros); // testing
         // Debug.Log("environment score " + (int)env); // testing
         // Debug.Log("happiness score " + (int)hap); // testing
         // Debug.Log("time score " + (int)playtimeBonus); // testing
         // Debug.Log("neighbor score " + (int)neighborEfficiencyBonus); // testing
-        Debug.Log("prosScore " + pros);
+        Debug.Log("prosScore " + ene);
         Debug.Log("envScore " + env);
         Debug.Log("hapScore " + hap);
         Debug.Log("timeScore " + playtimeBonus);
