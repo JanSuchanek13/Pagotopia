@@ -19,12 +19,14 @@ public class ClickTile : MonoBehaviour
         myPos = gameObject.transform.position;
     }
     public void OnMouseDown()
-        //übergibt angeklicktes Object an OnMouse Funktion aus PlaceObjectsOnGrid
+        
     {
+        
         Object = gameObject;
         //SceneManager = GameObject.Find("SceneManager");
         SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = false;
         //Debug.Log("hover Info OFF");
+        //übergibt angeklicktes Object an OnMouse Funktion aus PlaceObjectsOnGrid
         SceneManager.GetComponent<PlaceObjectsOnGrid>().OnMouse(Object);
 
         // Felix added this 9.10.21 to cast stats to UI while carrying:

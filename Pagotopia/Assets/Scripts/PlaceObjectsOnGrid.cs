@@ -123,40 +123,42 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                         //Debug.Log("BBBB");
                         
                             
-                            if (onMousePrefab != null && !curObject.CompareTag("Upgrade")) // tile gets placed
+                        if (onMousePrefab != null && !curObject.CompareTag("Upgrade")) // tile gets placed
+                        {
+                            //Debug.Log("CCCC");
+                            curObject.GetComponent<BoxCollider>().enabled = true;
+                            //curObject.GetComponent<Stats>().AddNeighborBonus();
+                            //curObject.GetComponent<Stats>().UpdateStats();
+                            curObject.GetComponent<ClickTile>().setFix = true;
+
+                            
+
+                            if (curObject.GetComponent<ProductionStats>() != null)
                             {
-                                //Debug.Log("CCCC");
-                                curObject.GetComponent<BoxCollider>().enabled = true;
-                                //curObject.GetComponent<Stats>().AddNeighborBonus();
-                                //curObject.GetComponent<Stats>().UpdateStats();
-                                curObject.GetComponent<ClickTile>().setFix = true;
-                                
-                                if(curObject.GetComponent<ProductionStats>() != null)
-                                {
-                                    curObject.GetComponent<ProductionStats>().Build(); // new 
-                                }else
-                                {
-                                    curObject.GetComponent<VillageStats>().Build(); // new 
-                                }
-
-                                sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
-                                //Debug.Log("hover Info ON (tile was placed)");
-
-                                StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
-                                //StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
-
-                                node.isPlaceable = false;
-                                isOnGrid = true;
-                                curObject.transform.position = node.cellPosition + new Vector3(x: 0, y: 0.1f, z: 0);
-                                onMousePrefab = null;
-
-                                PlopSound.Play();
-                            /*if (curObject.GetComponent<ProductionStats>().isCow == true)
+                                curObject.GetComponent<ProductionStats>().Build(); // new 
+                            }else
                             {
-                                moohSound.Play();
-                            }*/
-                            sceneManager.GetComponent<TileGenerator>().DestroyRemainingTiles();
+                                curObject.GetComponent<VillageStats>().Build(); // new 
                             }
+
+                            sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
+                            //Debug.Log("hover Info ON (tile was placed)");
+
+                            StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
+                            //StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
+
+                            node.isPlaceable = false;
+                            isOnGrid = true;
+                            curObject.transform.position = node.cellPosition + new Vector3(x: 0, y: 0.1f, z: 0);
+                            onMousePrefab = null;
+
+                            PlopSound.Play();
+                        /*if (curObject.GetComponent<ProductionStats>().isCow == true)
+                        {
+                            moohSound.Play();
+                        }*/
+                        sceneManager.GetComponent<TileGenerator>().DestroyRemainingTiles();
+                        }
                         
 
                     }

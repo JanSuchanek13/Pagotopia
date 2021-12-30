@@ -1738,7 +1738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4615593670231806035}
   m_Layer: 0
-  m_Name: Areas factory
+  m_Name: Area Sensors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

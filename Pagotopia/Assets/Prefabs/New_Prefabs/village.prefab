@@ -404,6 +404,7 @@ MonoBehaviour:
   TierV: {fileID: 0}
   incomeDisplay: {fileID: 0}
   _currentIncomeDisplay: {fileID: 0}
+  neighborSensorArray: {fileID: 0}
   build_Sound: {fileID: 0}
   upgrade_Sound: {fileID: 0}
   cashRegister_Sound: {fileID: 0}
@@ -1503,7 +1504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4615593670231806035}
   m_Layer: 0
-  m_Name: Areas factory
+  m_Name: Area Sensors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
