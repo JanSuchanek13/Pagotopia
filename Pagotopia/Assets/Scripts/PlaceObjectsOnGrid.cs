@@ -123,7 +123,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                         //Debug.Log("BBBB");
                         
                             
-                            if (onMousePrefab != null) // tile gets placed
+                            if (onMousePrefab != null && !curObject.CompareTag("Upgrade")) // tile gets placed
                             {
                                 //Debug.Log("CCCC");
                                 curObject.GetComponent<BoxCollider>().enabled = true;
@@ -131,13 +131,13 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                                 //curObject.GetComponent<Stats>().UpdateStats();
                                 curObject.GetComponent<ClickTile>().setFix = true;
                                 
-                            if(curObject.GetComponent<ProductionStats>() != null)
-                            {
-                                curObject.GetComponent<ProductionStats>().Build(); // new 
-                            }else
-                            {
-                                curObject.GetComponent<VillageStats>().Build(); // new 
-                            }
+                                if(curObject.GetComponent<ProductionStats>() != null)
+                                {
+                                    curObject.GetComponent<ProductionStats>().Build(); // new 
+                                }else
+                                {
+                                    curObject.GetComponent<VillageStats>().Build(); // new 
+                                }
 
                                 sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
                                 //Debug.Log("hover Info ON (tile was placed)");
@@ -165,16 +165,17 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                         if (upgradeMapTile.CompareTag("environment") || upgradeMapTile.CompareTag("energy") || upgradeMapTile.CompareTag("happiness"))
                         {
                             
-                                //Debug.Log("CCCC");
-                                if (curObject.CompareTag("Upgrade") && upgradeMapTile.GetComponent<ProductionStats>().tierLevel <= 2) // Maptile gets upgrade
-                                {
-                                    //Debug.Log("DDDD");
-                                    upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
-                                    sceneManager.GetComponent<TileGenerator>().DestroyRemainingTiles(); // test
-                                    //Destroy(curObject); //
+                            //Debug.Log("CCCC");
+                            if (curObject.CompareTag("Upgrade") && upgradeMapTile.GetComponent<ProductionStats>().tierLevel <= 2) // Maptile gets upgrade
+                            {
+                                sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
+                                //Debug.Log("DDDD");
+                                upgradeMapTile.GetComponent<ProductionStats>().Upgrade();
+                                sceneManager.GetComponent<TileGenerator>().DestroyRemainingTiles(); // test
+                                //Destroy(curObject); //
 
-                                    onMousePrefab = null;
-                                }
+                                onMousePrefab = null;
+                            }
                             
                         }
                     }

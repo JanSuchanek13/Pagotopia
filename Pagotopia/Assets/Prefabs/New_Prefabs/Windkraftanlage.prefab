@@ -150,6 +150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TierII: {fileID: 242112399693310189}
   TierIII: {fileID: 242112398586510394}
+  SensorArray1: {fileID: 2231061064483599880}
+  SensorArray2: {fileID: 4095771296005394779}
+  SensorArray3: {fileID: 3400571695679600699}
   build_Sound: {fileID: 355026339863852423}
   upgrade_Sound: {fileID: 6965016217073895233}
   wasPlaced: 0

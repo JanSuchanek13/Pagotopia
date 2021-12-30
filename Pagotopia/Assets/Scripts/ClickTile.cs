@@ -50,7 +50,7 @@ public class ClickTile : MonoBehaviour
         //{
             if (SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled == true)
             {
-                if (gameObject.CompareTag("happiness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city"))
+                if (gameObject.CompareTag("happiness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city") || gameObject.CompareTag("Upgrade"))
                 {
                     Over = gameObject;
                     tag = Over.tag;
@@ -113,7 +113,7 @@ public class ClickTile : MonoBehaviour
         //Debug.Log("OnMouseExit");
         //statsDisplay.transform.GetChild(0).gameObject.SetActive(false);
         //statsDisplay = null;
-        if (gameObject.CompareTag("happiness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city"))
+        if (gameObject.CompareTag("happiness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city") || gameObject.CompareTag("Upgrade"))
         {
             if (SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled == true)
             {
@@ -164,6 +164,18 @@ public class ClickTile : MonoBehaviour
                     case "environment":
                         Debug.Log("treffer");
                         collision.gameObject.GetComponent<VillageStats>().influencedByNature = true;
+
+                        break;
+
+                    case "village":
+                        Debug.Log("treffer");
+                        collision.gameObject.GetComponent<VillageStats>().influencedByNeighbors = true;
+
+                        break;
+
+                    case "city":
+                        Debug.Log("treffer");
+                        collision.gameObject.GetComponent<VillageStats>().influencedByNeighbors = true;
 
                         break;
                     default:
