@@ -74,7 +74,7 @@ public class CalculateHighscore : MonoBehaviour
             ene = 1000f - (ene * 1000000f);  
         }else // if BALANCED
         {
-            ene = 1000f + ((ene * -1) * 1000000f);
+            ene = 1000f + ((ene * -1) * 10000f);
         }
 
         if (env > 0) // if UNBALANCED
@@ -82,7 +82,7 @@ public class CalculateHighscore : MonoBehaviour
             env = 1000f - (env * 1000000f);
         }else // if BALANCED
         {
-            env = 1000f + ((env * -1) * 1000000f);
+            env = 1000f + ((env * -1) * 10000f);
         }
 
         if (hap > 0) // if UNBALANCED
@@ -90,7 +90,7 @@ public class CalculateHighscore : MonoBehaviour
             hap = 1000f - (hap * 1000000f);
         }else // if BALANCED
         {
-            hap = 1000f + ((hap * -1) * 1000000f);
+            hap = 1000f + ((hap * -1) * 10000f);
         }
 
         // if you lose before placing 48 tiles:

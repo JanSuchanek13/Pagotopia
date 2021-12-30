@@ -3602,7 +3602,7 @@ GameObject:
   - component: {fileID: 3245033251443347491}
   m_Layer: 0
   m_Name: sensor (3)
-  m_TagString: village
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4641,8 +4641,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9, y: 0.1, z: 0.9}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!65 &-1099165977703478917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11258,7 +11258,7 @@ GameObject:
   - component: {fileID: 9089224290014015181}
   m_Layer: 0
   m_Name: sensor (6)
-  m_TagString: village
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12083,7 +12083,7 @@ GameObject:
   - component: {fileID: 7700490530961150609}
   m_Layer: 0
   m_Name: sensor (7)
-  m_TagString: village
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12260,7 +12260,7 @@ GameObject:
   - component: {fileID: 7959934651760794230}
   m_Layer: 0
   m_Name: sensor
-  m_TagString: village
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13200,7 +13200,7 @@ GameObject:
   - component: {fileID: 7063887585349833337}
   m_Layer: 0
   m_Name: sensor (2)
-  m_TagString: village
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14144,7 +14144,7 @@ GameObject:
   - component: {fileID: 5567864413036042473}
   m_Layer: 0
   m_Name: sensor (1)
-  m_TagString: village
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15538,7 +15538,7 @@ GameObject:
   - component: {fileID: 8325962111005358231}
   m_Layer: 0
   m_Name: sensor (4)
-  m_TagString: village
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15715,7 +15715,7 @@ GameObject:
   - component: {fileID: 6339121169443562725}
   m_Layer: 0
   m_Name: sensor (5)
-  m_TagString: village
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
