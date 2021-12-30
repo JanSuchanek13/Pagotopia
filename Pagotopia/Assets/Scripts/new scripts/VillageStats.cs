@@ -153,6 +153,7 @@ public class VillageStats : MonoBehaviour
         {
             _tierLevel++; // now: TierI
             wasPlaced = true;
+            _sceneManager.GetComponent<StatsManager>().tileCounter++;
             _sceneManager.GetComponent<StatsManager>().energyValue -= _constructionCost;
             _sceneManager.GetComponent<StatsManager>().happinessValue -= _constructionCost;
             _sceneManager.GetComponent<StatsManager>().environmentValue -= _constructionCost;

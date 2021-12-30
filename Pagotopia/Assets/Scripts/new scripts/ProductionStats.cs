@@ -80,6 +80,8 @@ public class ProductionStats : MonoBehaviour
 
             wasPlaced = true;
             build_Sound.Play();
+            _sceneManager.GetComponent<StatsManager>().tileCounter++;
+
             _sceneManager.GetComponent<StatsManager>().availableMoney -= _constructionCost;
             Debug.Log("construction cost were " + _constructionCost);
             _sceneManager.GetComponent<StatsManager>().upkeep += _productionCostPerMinute;

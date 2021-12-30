@@ -10,8 +10,9 @@ public class StatsManager : MonoBehaviour
     #region variables
     [Header("Stats Settings:")]
     [SerializeField] GameObject moneyDisplay;
+    [SerializeField] GameObject tileCounterDisplay;
     [SerializeField] TextMeshProUGUI numericalMoneyDisplay;
-    [SerializeField] TextMeshProUGUI tileCounterDisplay;
+    [SerializeField] TextMeshProUGUI numericalTileCounterDisplay;
     [SerializeField] Slider energyBar;
     [SerializeField] Slider happinessBar;
     [SerializeField] Slider environmentBar;
@@ -91,7 +92,7 @@ public class StatsManager : MonoBehaviour
         smallestAvailableValue = Mathf.Min(currentAvailableResources); // returns the lowest available resource value
         availableMoney -= upkeep;
         numericalMoneyDisplay.text = availableMoney.ToString("F0");
-        tileCounterDisplay.text = (tileCounter + 1).ToString() + " / 43";
+        numericalTileCounterDisplay.text = (tileCounter + 1).ToString() + " / 43";
 
         //Debug.Log("energy Bar " + energyValue + " happiness Bar " + happinessValue + " and available money is: " + availableMoney);
         //Debug.Log("efficiency " + efficientlyPlaced);
