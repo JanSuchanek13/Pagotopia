@@ -109,6 +109,7 @@ public class ProductionStats : MonoBehaviour
             // updating tile stats to report to StatUIDisplay:
             thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().baseProductionValuePerMinute;
             thisTilesCurrentProductionCost += _sceneManager.GetComponent<NewGameManager>().baseProductionCostPerMinute;
+            _sceneManager.GetComponent<ToggleAreas>().UpdateShaders();
         }
     }
 }

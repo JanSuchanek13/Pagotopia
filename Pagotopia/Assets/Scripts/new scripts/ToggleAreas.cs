@@ -33,16 +33,7 @@ public class ToggleAreas : MonoBehaviour
             }
             
         }
-
-        
-        
-            
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+     
     }
 
     public void toggle()
@@ -53,5 +44,15 @@ public class ToggleAreas : MonoBehaviour
             area.gameObject.active = !area.gameObject.active;
         }
 
+    }
+
+    public void UpdateShaders()
+    {
+        foreach (Transform area in GrandChildren)
+        {
+            //Debug.Log("geschafft");
+            area.gameObject.GetComponent<MeshRenderer>().enabled = false;
+
+        }
     }
 }
