@@ -49,41 +49,13 @@ public class VillageStats : MonoBehaviour
         _bonusTaxes = _sceneManager.GetComponent<NewGameManager>().bonusTaxes;
         _frequencyToPay = _sceneManager.GetComponent<NewGameManager>().taxationFrequency;
         _constructionCost = _sceneManager.GetComponent<NewGameManager>().baseVillageConstructionCost;
+        
+        // build Pagotopia:
         if (CompareTag("city") == true)
         {
             _tierLevel++; // now: TierI
             wasPlaced = true;
             _sceneManager.GetComponent<StatsManager>().tileCounter++;
-            //_sceneManager.GetComponent<StatsManager>().energyValue -= _constructionCost;
-            //_sceneManager.GetComponent<StatsManager>().happinessValue -= _constructionCost;
-            //_sceneManager.GetComponent<StatsManager>().environmentValue -= _constructionCost;
-            // we could consider houses also costing MONEY instead or in addition to resources!
-            if (build_Sound != null)
-            {
-                build_Sound.Play();
-            }
-            StartCoroutine("GenerateIncome"); // starts money generation
-            _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
-            neighborSensorArray.SetActive(false);
-            neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor
-        }
-    }
-    // build the first tile, "Pagotopia":
-    private void Start()
-    {
-        if (CompareTag("city") == true)
-        {
-            _tierLevel++; // now: TierI
-            wasPlaced = true;
-            _sceneManager.GetComponent<StatsManager>().tileCounter++;
-            //_sceneManager.GetComponent<StatsManager>().energyValue -= _constructionCost;
-            //_sceneManager.GetComponent<StatsManager>().happinessValue -= _constructionCost;
-            //_sceneManager.GetComponent<StatsManager>().environmentValue -= _constructionCost;
-            // we could consider houses also costing MONEY instead or in addition to resources!
-            if (build_Sound != null)
-            {
-                build_Sound.Play();
-            }
             StartCoroutine("GenerateIncome"); // starts money generation
             _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
             neighborSensorArray.SetActive(false);
@@ -112,7 +84,6 @@ public class VillageStats : MonoBehaviour
             }
             if (influencedByNeighbors && !_neighborsAccounted)
             {
-                //_neighborsAccounted = true; // stops counting it again
                 Debug.Log(gameObject.name + " accounted for neighbor and is upgrading");
                 Upgrade();
                 _neighborsAccounted = true; // stops counting it again
