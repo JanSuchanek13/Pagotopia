@@ -5895,7 +5895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &499397804
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24471,7 +24471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1734177283
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26494,7 +26494,7 @@ MonoBehaviour:
   youLostLogo: {fileID: 639592638}
   youLostSound: {fileID: 1231454517}
   ambienteSound: {fileID: 2141530435}
-  endGame_UI: {fileID: 499397803}
+  endGame_UI: {fileID: 1734177282}
   gameHasEnded: 0
   Highscore_carrying_GO: {fileID: 2007102013}
 --- !u!114 &1865021655
