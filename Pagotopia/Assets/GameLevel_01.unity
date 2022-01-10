@@ -26393,7 +26393,7 @@ MonoBehaviour:
   tier3ProductionCostPerMinute: 100
   developerMode: 0
   quickWin: 0
-  cameraZoomSpeed: 10
+  cameraZoomSpeed: 400
   cameraMaxZoom: 15
   cameraMinZoom: 70
   hoverInfoEnabled: 1
