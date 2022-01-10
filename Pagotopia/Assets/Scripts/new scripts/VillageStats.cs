@@ -173,8 +173,8 @@ public class VillageStats : MonoBehaviour
     public void Build()
     {
         //Debug.Log("smallest resource value is: " + _sceneManager.GetComponent<StatsManager>().smallestAvailableValue);
-        if (_sceneManager.GetComponent<StatsManager>().smallestAvailableValue >= _constructionCost && !wasPlaced) // do you have enough resources?
-        {
+        //if (_sceneManager.GetComponent<StatsManager>().smallestAvailableValue >= _constructionCost && !wasPlaced) // do you have enough resources?
+        //{
             _tierLevel++; // now: TierI
             wasPlaced = true;
 
@@ -191,6 +191,6 @@ public class VillageStats : MonoBehaviour
             _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
             neighborSensorArray.SetActive(false); 
             neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor
-        }
+        //}
     }
 }
