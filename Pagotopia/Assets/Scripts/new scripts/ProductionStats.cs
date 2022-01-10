@@ -82,20 +82,14 @@ public class ProductionStats : MonoBehaviour
     // called when being placed on grid:
     public void Build()
     {
-        Debug.Log("i want to build something");
-
-        if (_sceneManager.GetComponent<StatsManager>().availableMoney >= _constructionCost && !wasPlaced) // do you have enough money?
-        {
-            Debug.Log("available money " + _sceneManager.GetComponent<StatsManager>().availableMoney + " construction cost " + _constructionCost + ", so I have enough money!");
-
+            //Debug.Log("available money " + _sceneManager.GetComponent<StatsManager>().availableMoney + " construction cost " + _constructionCost + ", so I have enough money!");
             wasPlaced = true;
             build_Sound.Play();
             _sceneManager.GetComponent<StatsManager>().tileCounter++;
-
             _sceneManager.GetComponent<StatsManager>().availableMoney -= _constructionCost;
-            Debug.Log("construction cost were " + _constructionCost);
+            //Debug.Log("construction cost were " + _constructionCost);
             _sceneManager.GetComponent<StatsManager>().upkeep += _productionCostPerMinute;
-            Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
+            //Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
             if (CompareTag("energy"))
             {
                 _sceneManager.GetComponent<StatsManager>().UpdateEnergyProduction(_productionValue);
@@ -123,6 +117,6 @@ public class ProductionStats : MonoBehaviour
             thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().baseProductionValuePerMinute;
             thisTilesCurrentProductionCost += _sceneManager.GetComponent<NewGameManager>().baseProductionCostPerMinute;
             _sceneManager.GetComponent<ToggleAreas>().UpdateShaders();
-        }
+    
     }
 }
