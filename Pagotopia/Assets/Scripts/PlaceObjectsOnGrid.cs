@@ -94,6 +94,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         
+
         if (plane.Raycast(ray,out var enter) )        
         {
             //Debug.Log("AAAA");
@@ -125,6 +126,20 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                             
                         if (onMousePrefab != null && !curObject.CompareTag("Upgrade")) // tile gets placed
                         {
+                            //Kosten ermitteln
+                            float _constructionCost = sceneManager.GetComponent<NewGameManager>().baseProductionConstructionCost;
+
+                            if (sceneManager.GetComponent<StatsManager>().availableMoney <= _constructionCost && !curObject.CompareTag("village")) // do you have enough money?
+                            {
+                                Debug.Log("zu wenig geld");
+                                break;
+                            }
+                            if (sceneManager.GetComponent<StatsManager>().smallestAvailableValue <= _constructionCost && curObject.CompareTag("village")) // do you have enough resources?
+                            {
+                                Debug.Log("zu wenig stuff");
+                                break;
+                            }
+
                             //Debug.Log("CCCC");
                             curObject.GetComponent<BoxCollider>().enabled = true;
                             //curObject.GetComponent<Stats>().AddNeighborBonus();
@@ -166,9 +181,12 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                     {
                         if (upgradeMapTile.CompareTag("environment") || upgradeMapTile.CompareTag("energy") || upgradeMapTile.CompareTag("happiness"))
                         {
-                            
+                            //Kosten ermitteln
+                            float _upgradeCost = sceneManager.GetComponent<NewGameManager>().upgradeCost;
+
+
                             //Debug.Log("CCCC");
-                            if (curObject.CompareTag("Upgrade") && upgradeMapTile.GetComponent<ProductionStats>().tierLevel <= 2) // Maptile gets upgrade
+                            if (curObject.CompareTag("Upgrade") && upgradeMapTile.GetComponent<ProductionStats>().tierLevel <= 2 && sceneManager.GetComponent<StatsManager>().availableMoney >= _upgradeCost) // Maptile gets upgrade
                             {
                                 sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
                                 //Debug.Log("DDDD");
@@ -177,6 +195,10 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                                 //Destroy(curObject); //
 
                                 onMousePrefab = null;
+                            }
+                            else
+                            {
+                                Debug.Log("nicht upgradbar");
                             }
                             
                         }
