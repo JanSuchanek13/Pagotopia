@@ -16,18 +16,18 @@ public class NewGameManager : MonoBehaviour
 
     [Header("Village-Tile Settings:")]
     public float baseVillageConstructionCost = 10f;
-    public float upgradeCost = 300f;
     public float baseCostOfLivingPerMinute = 25f;
     public float baseTaxesGeneratedPerMinute = 100;
-    public float bonusTaxes = 50;
+    public float bonusTaxes = 50; // added per intervall per influence
     [Tooltip("(in seconds)")]
     public float taxationFrequency = 60f;
 
     [Header("Production-Tile Settings:")]
-    public float baseConstructionCost = 300;
-    public float baseProductionValuePerMinute = 20f;
-    public float baseProductionCostPerMinute = 35f;
-    
+    public float baseProductionConstructionCost = 500;
+    public float upgradeCost = 800f;
+    public float baseProductionOneTimePayOff = 20f;
+    public float baseProductionValuePerMinute = 50f;
+    public float baseProductionCostPerMinute = 200f;
     [Header("Tier-II Settings:")]
     public float tier2ProductionValuePerMinute = 10f;
     public float tier2ProductionCostPerMinute = 15f;

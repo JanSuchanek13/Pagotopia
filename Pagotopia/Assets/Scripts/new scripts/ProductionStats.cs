@@ -22,7 +22,9 @@ public class ProductionStats : MonoBehaviour
     private GameObject _sceneManager;
     private float _productionValue = 0f;
     private float _constructionCost;
+    private float _upgradeCost;
     private float _productionCostPerMinute;
+    private float _oneTimePayOff;
     // these are used by StatUIDisplay to display this particular tiles stats:
     public float thisTilesCurrentProductionValue = 0f;
     public float thisTilesCurrentProductionCost = 0f;
@@ -32,8 +34,10 @@ public class ProductionStats : MonoBehaviour
     {
         _sceneManager = GameObject.Find("SceneManager");
         _productionValue = _sceneManager.GetComponent<NewGameManager>().baseProductionValuePerMinute / 50f / 60f;
-        _constructionCost = _sceneManager.GetComponent<NewGameManager>().baseConstructionCost;
+        _constructionCost = _sceneManager.GetComponent<NewGameManager>().baseProductionConstructionCost;
+        _oneTimePayOff = _sceneManager.GetComponent<NewGameManager>().baseProductionOneTimePayOff;
         _productionCostPerMinute = _sceneManager.GetComponent<NewGameManager>().baseProductionCostPerMinute / 50 / 60;
+        _upgradeCost = _sceneManager.GetComponent<NewGameManager>().upgradeCost;
     }
 
     // called when Upgrade-Tile is placed onto this built tile:
@@ -41,6 +45,7 @@ public class ProductionStats : MonoBehaviour
     {
         if(tierLevel == 1)
         {
+            _sceneManager.GetComponent<StatsManager>().availableMoney -= _upgradeCost;
             tierLevel++; // now: tier II
             _productionValue += _sceneManager.GetComponent<NewGameManager>().tier2ProductionValuePerMinute / 50f / 60f;
             _sceneManager.GetComponent<StatsManager>().upkeep += _sceneManager.GetComponent<NewGameManager>().tier2ProductionCostPerMinute / 50 / 60;
@@ -57,6 +62,7 @@ public class ProductionStats : MonoBehaviour
         }
         else if (tierLevel == 2)
         {
+            _sceneManager.GetComponent<StatsManager>().availableMoney -= _upgradeCost;
             tierLevel++; // now: tier III
             _productionValue += _sceneManager.GetComponent<NewGameManager>().tier3ProductionValuePerMinute / 50f / 60f;
             _sceneManager.GetComponent<StatsManager>().upkeep += _sceneManager.GetComponent<NewGameManager>().tier3ProductionCostPerMinute / 50 / 60;
@@ -93,14 +99,17 @@ public class ProductionStats : MonoBehaviour
             if (CompareTag("energy"))
             {
                 _sceneManager.GetComponent<StatsManager>().UpdateEnergyProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().energyValue += _oneTimePayOff;
             }
             if (CompareTag("happiness"))
             {
                 _sceneManager.GetComponent<StatsManager>().UpdateHappinessProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().happinessValue += _oneTimePayOff;
             }
             if (CompareTag("environment"))
             {
                 _sceneManager.GetComponent<StatsManager>().UpdateEnvironmentProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().environmentValue += _oneTimePayOff;
             }
             tierLevel++; // now: tier I
 

@@ -22,6 +22,7 @@ public class VillageStats : MonoBehaviour
     [SerializeField] AudioSource cashRegister_Sound; // Ka-Ching!
 
     [Header("(handshakes - don't touch)")]
+    private LookAt _LookAtScript;
     public bool wasPlaced = false;
     public bool influencedByEnergy = false;
     private bool _energyAccounted = false; // prevents double-counts
@@ -45,11 +46,12 @@ public class VillageStats : MonoBehaviour
     {
         _sceneManager = GameObject.Find("SceneManager");
         _costOfLiving = _sceneManager.GetComponent<NewGameManager>().baseCostOfLivingPerMinute / 50f / 60f;
-        _taxesToPay = _sceneManager.GetComponent<NewGameManager>().baseTaxesGeneratedPerMinute;
+        _frequencyToPay = _sceneManager.GetComponent<NewGameManager>().taxationFrequency; // in seconds
+        _taxesToPay = _sceneManager.GetComponent<NewGameManager>().baseTaxesGeneratedPerMinute / (60 / _frequencyToPay);
         _bonusTaxes = _sceneManager.GetComponent<NewGameManager>().bonusTaxes;
-        _frequencyToPay = _sceneManager.GetComponent<NewGameManager>().taxationFrequency;
         _constructionCost = _sceneManager.GetComponent<NewGameManager>().baseVillageConstructionCost;
-        
+        incomeDisplay.SetActive(false);
+
         // build Pagotopia:
         if (CompareTag("city") == true)
         {
@@ -147,6 +149,8 @@ public class VillageStats : MonoBehaviour
     // audiovisual feedback to player (about income):
     IEnumerator DisplayIncome()
     {
+        incomeDisplay.SetActive(true);
+
         cashRegister_Sound.Play();
         _currentIncomeDisplay.text = _taxesToPay.ToString();
         //altDisplay.GetComponent<TextMesh>().text = _taxesToPay.ToString();
@@ -173,6 +177,7 @@ public class VillageStats : MonoBehaviour
         {
             _tierLevel++; // now: TierI
             wasPlaced = true;
+
             _sceneManager.GetComponent<StatsManager>().tileCounter++;
             _sceneManager.GetComponent<StatsManager>().energyValue -= _constructionCost;
             _sceneManager.GetComponent<StatsManager>().happinessValue -= _constructionCost;
