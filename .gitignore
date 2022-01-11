@@ -60,3 +60,11 @@ Pagotopia/crashlytics-build.properties
 
 Pagotopia/echo .DS_Store >> ~/.gitignore_global
 Pagotopia/git config --global core.excludesfile ~/.gitignore_global
+Pagotopia/Packages/manifest.json
+Pagotopia/Packages/packages-lock.json
+Pagotopia/ProjectSettings/ProjectSettings.asset
+Pagotopia/ProjectSettings/ProjectVersion.txt
+Pagotopia/ProjectSettings/ShaderGraphSettings.asset
+Pagotopia/ProjectSettings/URPProjectSettings.asset
+Pagotopia/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+Pagotopia/UserSettings/Layouts/default-2021.dwlt
