@@ -8,9 +8,12 @@ public class StatUIDisplay : MonoBehaviour
 {
     #region variables:
     [Header("Hover UI-Settings:")]
+    GameObject SceneManager;
     [SerializeField] GameObject productionFacility_UI;
     [SerializeField] GameObject villageFacility_UI;
     [SerializeField] GameObject upgrade_UI;
+    [SerializeField] GameObject cell_UI;
+    [SerializeField] GameObject mountain_UI;
     [SerializeField] TextMeshProUGUI nameField;
     [SerializeField] TextMeshProUGUI tagField;
     [Header("Production TMPro-Fields:")]
@@ -18,7 +21,6 @@ public class StatUIDisplay : MonoBehaviour
     [SerializeField] TextMeshProUGUI _productionTierField;
     [SerializeField] TextMeshProUGUI _productionValueField;
     [SerializeField] TextMeshProUGUI _productionCostField;
-    //[SerializeField] GameObject _preBuildDisplay;
     [SerializeField] GameObject _postBuildDisplay;
     [SerializeField] Image energyIcon;
     [SerializeField] Image happinessIcon;
@@ -32,12 +34,14 @@ public class StatUIDisplay : MonoBehaviour
     [SerializeField] GameObject _hasEnvironmentMark;
     [SerializeField] GameObject _hasNeighborsMark;
     [Header("Upgrade TMPro-Fields:")]
-    //[SerializeField] TextMeshProUGUI _upgradeTypeField;
-    //[SerializeField] TextMeshProUGUI _upgradeDescriptionField;
-    //[SerializeField] TextMeshProUGUI _upgradeValueField;
     [SerializeField] TextMeshProUGUI _upgradeCostField;
+    [Header("Cell TMPro-Fields:")]
+    [SerializeField] Image _energyInfluenceIcon;
+    [SerializeField] Image _happinessInfluenceIcon;
+    [SerializeField] Image _environmentInfluenceIcon;
+    [SerializeField] Image _neighborInfluenceIcon;
+    [SerializeField] GameObject _noneTextField;
 
-    GameObject SceneManager;
     #endregion
 
     private void Start()
@@ -54,6 +58,44 @@ public class StatUIDisplay : MonoBehaviour
             tagField.text = "Upgrade";
             upgrade_UI.SetActive(true);
             _upgradeCostField.text = (SceneManager.GetComponent<NewGameManager>().upgradeCost).ToString();
+        }
+        if (gO.CompareTag("mountain"))
+        {
+            nameField.text = "Berg";
+            tagField.text = "";
+            mountain_UI.SetActive(true);
+        }
+        if (gO.CompareTag("cell"))
+        {
+            nameField.text = "Baugrund";
+            tagField.text = "";
+            Transform _energyInfluence = gO.transform.Find("Energy_Icon");
+            Transform _happinessInfluence = gO.transform.Find("Happiness_Icon");
+            Transform _environmentInfluence = gO.transform.Find("Environment_Icon");
+            Transform _neighborInfluence = gO.transform.Find("Neighbor_Icon");
+            cell_UI.SetActive(true);
+
+            if (_energyInfluence.GetComponent<MeshRenderer>().enabled)
+            {
+                _energyInfluenceIcon.enabled = true;
+            }
+            if (_happinessInfluence.GetComponent<MeshRenderer>().enabled)
+            {
+                _happinessInfluenceIcon.enabled = true;
+            }
+            if (_environmentInfluence.GetComponent<MeshRenderer>().enabled)
+            {
+                _environmentInfluenceIcon.enabled = true;
+            }
+            if (_neighborInfluence.GetComponent<MeshRenderer>().enabled)
+            {
+                _neighborInfluenceIcon.enabled = true;
+            }
+            if(!_energyInfluence.GetComponent<MeshRenderer>().enabled && !_happinessInfluence.GetComponent<MeshRenderer>().enabled && !_environmentInfluence.GetComponent<MeshRenderer>().enabled && !_neighborInfluence.GetComponent<MeshRenderer>().enabled)
+            {
+                // show, that no influences are present
+                _noneTextField.SetActive(true);
+            }
         }
         if (gO.CompareTag("environment"))
         {
@@ -171,59 +213,28 @@ public class StatUIDisplay : MonoBehaviour
                     _hasNeighborsMark.SetActive(true);
                 }
             }
+    }
 
-            // this displays Stats of Tiles that are hovered over
-            //if (SceneManager.GetComponent<PlaceObjectsOnGrid>().onMousePrefab = null) // this should make it so it only displays old stats if nothing is being carried
-            //if (SceneManager.GetComponent<PlaceObjectsOnGrid>().onMousePrefab = null)
-            //{
-            /*if (hS > 0f) // show happiness
-                {
-                    happinessBar.value = hS;
-                    NEGhappinessBar.value = 0f;
-                }
-                else
-                {
-                    happinessBar.value = 0f;
-                    NEGhappinessBar.value = hS * -1;
-                }
+    public void ResetStatBars()
+    {
+        nameField.text = null;
+        tagField.text = null;
 
-                if (pS > 0f) // show prosperity
-                {
-                    prosperityBar.value = pS;
-                    NEGprosperityBar.value = 0f;
-                }
-                else
-                {
-                    prosperityBar.value = 0f;
-                    NEGprosperityBar.value = pS * -1;
-                }
-
-                if (eS > 0f) // show environment
-                {
-                    environmentBar.value = eS;
-                    NEGenvironmentBar.value = 0f;
-                }
-                else
-                {
-                    environmentBar.value = 0f;
-                    NEGenvironmentBar.value = eS * -1;
-                }*/
-            //}
-
-            /*test:
-            if (SceneManager.GetComponent<GameManager>().hoverInfoEnabled == false)
-            {
-                Debug.Log("CastStatsToUI is being called, even though it shouldnt");
-            }*/
-        }
-
-        public void ResetStatBars()
+        if(cell_UI == isActiveAndEnabled)
         {
-            nameField.text = null;
-            tagField.text = null;
-
-            if (productionFacility_UI == isActiveAndEnabled)
-            {
+            _energyInfluenceIcon.enabled = false;
+            _happinessInfluenceIcon.enabled = false;
+            _environmentInfluenceIcon.enabled = false;
+            _neighborInfluenceIcon.enabled = false;
+            _noneTextField.SetActive(false);
+            cell_UI.SetActive(false);
+        }
+        if (mountain_UI == isActiveAndEnabled)
+        {
+            mountain_UI.SetActive(false);
+        }
+        if (productionFacility_UI == isActiveAndEnabled)
+        {
                 _productionTypeField.text = null;
                 _productionTierField.text = null;
                 _productionValueField.text = null;
@@ -231,12 +242,11 @@ public class StatUIDisplay : MonoBehaviour
                 energyIcon.enabled = false;
                 happinessIcon.enabled = false;
                 environmentIcon.enabled = false;
-                //_preBuildDisplay.SetActive(false);
                 _postBuildDisplay.SetActive(false);
                 productionFacility_UI.SetActive(false);
-            }
-            if (villageFacility_UI == isActiveAndEnabled)
-            {
+        }
+        if (villageFacility_UI == isActiveAndEnabled)
+        {
                 _villageTierField.text = null;
                 _villageIncomeField.text = null;
                 _villageUpkeepField.text = null;
@@ -245,12 +255,12 @@ public class StatUIDisplay : MonoBehaviour
                 _hasEnvironmentMark.SetActive(false);
                 _hasNeighborsMark.SetActive(false);
                 villageFacility_UI.SetActive(false);
-            }
-            if (upgrade_UI == isActiveAndEnabled)
-            {
-                upgrade_UI.SetActive(false);
-            }
         }
+        if (upgrade_UI == isActiveAndEnabled)
+        {
+                upgrade_UI.SetActive(false);
+        }
+    }
 
 
 

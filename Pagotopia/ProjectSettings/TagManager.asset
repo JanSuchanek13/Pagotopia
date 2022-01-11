@@ -25,6 +25,8 @@ TagManager:
   - Upgrade
   - village
   - influence_icon
+  - cell
+  - mountain
   layers:
   - Default
   - TransparentFX
