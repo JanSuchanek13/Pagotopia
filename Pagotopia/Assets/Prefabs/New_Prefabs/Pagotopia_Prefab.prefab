@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4572510618219320088}
   m_Layer: 2
   m_Name: Icosphere (1)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2340306872081568697}
   m_Layer: 2
   m_Name: Cube.019
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 2534487617844504770}
   m_Layer: 2
   m_Name: Icosphere.005
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 1822951167069039374}
   m_Layer: 2
   m_Name: boobs.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 4595642119791481720}
   m_Layer: 0
   m_Name: Sensor-Array
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 8214819323621198420}
   m_Layer: 2
   m_Name: Cube.009
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 7921967323555168067}
   m_Layer: 2
   m_Name: Cube.020
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 8333086762675163156}
   m_Layer: 2
   m_Name: Cube.017
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 2087110614070607251}
   m_Layer: 2
   m_Name: Cube.024
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: 2506576850897019312}
   m_Layer: 2
   m_Name: Cube.018
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 318536282636928511}
   m_Layer: 2
   m_Name: ears.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: 8668729019699173318}
   m_Layer: 2
   m_Name: Cone
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -968,7 +968,7 @@ GameObject:
   - component: {fileID: 6420969723705953899}
   m_Layer: 2
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 6654233167559685628}
   m_Layer: 2
   m_Name: Cube.011
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 8221087180840986546}
   m_Layer: 2
   m_Name: Cube.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1217,7 +1217,7 @@ GameObject:
   - component: {fileID: 5007503669709999566}
   m_Layer: 2
   m_Name: body.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1300,7 +1300,7 @@ GameObject:
   - component: {fileID: 7940711261254022340}
   m_Layer: 2
   m_Name: mouth.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1383,7 +1383,7 @@ GameObject:
   - component: {fileID: 847425000440147025}
   m_Layer: 2
   m_Name: Cube.015
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1466,7 +1466,7 @@ GameObject:
   - component: {fileID: 9061213811785017938}
   m_Layer: 2
   m_Name: Cube.002
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1549,7 +1549,7 @@ GameObject:
   - component: {fileID: 3727293057447174073}
   m_Layer: 2
   m_Name: acker_senk1
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1630,7 +1630,7 @@ GameObject:
   - component: {fileID: 6227729261137354431}
   m_Layer: 2
   m_Name: Haus
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1689,7 +1689,7 @@ GameObject:
   - component: {fileID: 93712222624778442}
   m_Layer: 2
   m_Name: Cube.005
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1772,7 +1772,7 @@ GameObject:
   - component: {fileID: 1661713026513297858}
   m_Layer: 2
   m_Name: mouth.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1855,7 +1855,7 @@ GameObject:
   - component: {fileID: 8008847196902609280}
   m_Layer: 2
   m_Name: eyes.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1938,7 +1938,7 @@ GameObject:
   - component: {fileID: 8868073434571622259}
   m_Layer: 2
   m_Name: blatt.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2021,7 +2021,7 @@ GameObject:
   - component: {fileID: 554359700670404966}
   m_Layer: 2
   m_Name: Cube.016
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2104,7 +2104,7 @@ GameObject:
   - component: {fileID: 7731996128852566055}
   m_Layer: 2
   m_Name: Icosphere
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2190,7 +2190,7 @@ GameObject:
   - component: {fileID: 8401309956976814796}
   m_Layer: 2
   m_Name: Icosphere
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2276,7 +2276,7 @@ GameObject:
   - component: {fileID: 4927543637634668093}
   m_Layer: 2
   m_Name: boobs.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2359,7 +2359,7 @@ GameObject:
   - component: {fileID: 543614900449279005}
   m_Layer: 2
   m_Name: body.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2442,7 +2442,7 @@ GameObject:
   - component: {fileID: 396435660443871683}
   m_Layer: 2
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2525,7 +2525,7 @@ GameObject:
   - component: {fileID: 3749156279945813133}
   m_Layer: 2
   m_Name: Cube.012
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2608,7 +2608,7 @@ GameObject:
   - component: {fileID: 8351079778172627560}
   m_Layer: 2
   m_Name: kopf.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2691,7 +2691,7 @@ GameObject:
   - component: {fileID: 1239796379887199924}
   m_Layer: 2
   m_Name: Cube.002
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2774,7 +2774,7 @@ GameObject:
   - component: {fileID: 8632023273616212799}
   m_Layer: 2
   m_Name: Icosphere.005
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2857,7 +2857,7 @@ GameObject:
   - component: {fileID: 3462428014344709123}
   m_Layer: 2
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2939,7 +2939,7 @@ GameObject:
   - component: {fileID: 1962166657086773092}
   m_Layer: 2
   m_Name: cow (1)
-  m_TagString: cow
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2994,7 +2994,7 @@ GameObject:
   - component: {fileID: 6263745552069780559}
   m_Layer: 2
   m_Name: Cylinder.002
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3077,7 +3077,7 @@ GameObject:
   - component: {fileID: 4685149023837452679}
   m_Layer: 2
   m_Name: eyes.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3160,7 +3160,7 @@ GameObject:
   - component: {fileID: 5480567921741639638}
   m_Layer: 2
   m_Name: Cube.010
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3243,7 +3243,7 @@ GameObject:
   - component: {fileID: 4396421088728601249}
   m_Layer: 2
   m_Name: kopf.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3326,7 +3326,7 @@ GameObject:
   - component: {fileID: 1716149875359932098}
   m_Layer: 2
   m_Name: Cube.007
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3409,7 +3409,7 @@ GameObject:
   - component: {fileID: 1148170107764050419}
   m_Layer: 2
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3490,7 +3490,7 @@ GameObject:
   - component: {fileID: 1605083576179977021}
   m_Layer: 2
   m_Name: acker
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3523,7 +3523,7 @@ GameObject:
   - component: {fileID: 548145328878086641}
   m_Layer: 2
   m_Name: Cube.010
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3606,7 +3606,7 @@ GameObject:
   - component: {fileID: 287992589340587952}
   m_Layer: 2
   m_Name: Torus
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3787,7 +3787,7 @@ GameObject:
   - component: {fileID: 4196703618798536374}
   m_Layer: 2
   m_Name: Cube.006
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3870,7 +3870,7 @@ GameObject:
   - component: {fileID: 478433578260184608}
   m_Layer: 2
   m_Name: tail_horns.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3953,7 +3953,7 @@ GameObject:
   - component: {fileID: 871984987336942440}
   m_Layer: 2
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4036,7 +4036,7 @@ GameObject:
   - component: {fileID: 697537976543071260}
   m_Layer: 2
   m_Name: blatt.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4119,7 +4119,7 @@ GameObject:
   - component: {fileID: 2367395431634647146}
   m_Layer: 2
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4202,7 +4202,7 @@ GameObject:
   - component: {fileID: 8095010338763145276}
   m_Layer: 2
   m_Name: Cube.005
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4285,7 +4285,7 @@ GameObject:
   - component: {fileID: 1898944307111669228}
   m_Layer: 2
   m_Name: Cube.013
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4368,7 +4368,7 @@ GameObject:
   - component: {fileID: 1391459442882048887}
   m_Layer: 2
   m_Name: kopf.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4452,7 +4452,7 @@ GameObject:
   - component: {fileID: 9016885949063443112}
   m_Layer: 0
   m_Name: Erde
-  m_TagString: social
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4548,7 +4548,7 @@ GameObject:
   - component: {fileID: 5001452973186214721}
   m_Layer: 2
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4629,7 +4629,7 @@ GameObject:
   - component: {fileID: 3408176669083702357}
   m_Layer: 2
   m_Name: baumlowpoly (1)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4667,7 +4667,7 @@ GameObject:
   - component: {fileID: 2279173796022998214}
   - component: {fileID: 3695086574789231756}
   m_Layer: 0
-  m_Name: Pagotopia
+  m_Name: Pagotopia_Prefab
   m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5087,7 +5087,7 @@ GameObject:
   - component: {fileID: 2185525093878577409}
   m_Layer: 2
   m_Name: acker_senk2
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5170,7 +5170,7 @@ GameObject:
   - component: {fileID: 8866698591910713148}
   m_Layer: 2
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5253,7 +5253,7 @@ GameObject:
   - component: {fileID: 5637735500674044362}
   m_Layer: 2
   m_Name: Cube.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5336,7 +5336,7 @@ GameObject:
   - component: {fileID: 7534627067862939558}
   m_Layer: 2
   m_Name: Icosphere.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5422,7 +5422,7 @@ GameObject:
   - component: {fileID: 2809259145865132195}
   m_Layer: 2
   m_Name: base
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5506,7 +5506,7 @@ GameObject:
   - component: {fileID: 8324020856678169789}
   m_Layer: 2
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5589,7 +5589,7 @@ GameObject:
   - component: {fileID: 8843486627506620408}
   m_Layer: 2
   m_Name: ears.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5672,7 +5672,7 @@ GameObject:
   - component: {fileID: 4495068175291636486}
   m_Layer: 2
   m_Name: Cube.014
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5755,7 +5755,7 @@ GameObject:
   - component: {fileID: 506747517637447455}
   m_Layer: 2
   m_Name: tail_horns.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5880,7 +5880,7 @@ GameObject:
   - component: {fileID: 911765472109758839}
   m_Layer: 2
   m_Name: kopf.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5963,7 +5963,7 @@ GameObject:
   - component: {fileID: 1263105470223472882}
   m_Layer: 2
   m_Name: Cube.004
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6046,7 +6046,7 @@ GameObject:
   - component: {fileID: 5922450560912206341}
   m_Layer: 2
   m_Name: Cube.016
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6129,7 +6129,7 @@ GameObject:
   - component: {fileID: 3416641890724141000}
   m_Layer: 0
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6301,7 +6301,7 @@ GameObject:
   - component: {fileID: 3416641890885654721}
   m_Layer: 0
   m_Name: numerical current income
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6398,7 +6398,7 @@ GameObject:
   - component: {fileID: 3416641892388108361}
   m_Layer: 0
   m_Name: IncomeDisplay
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6460,7 +6460,7 @@ GameObject:
   - component: {fileID: 1233543716627186101}
   m_Layer: 2
   m_Name: Cube.009
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6543,7 +6543,7 @@ GameObject:
   - component: {fileID: 425596620297006715}
   m_Layer: 2
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6626,7 +6626,7 @@ GameObject:
   - component: {fileID: 1772331777506849507}
   m_Layer: 2
   m_Name: Cube.020
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6709,7 +6709,7 @@ GameObject:
   - component: {fileID: 6637948586945068233}
   m_Layer: 2
   m_Name: Icosphere (2)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6795,7 +6795,7 @@ GameObject:
   - component: {fileID: 2433071752095477566}
   m_Layer: 2
   m_Name: Cube.017
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6878,7 +6878,7 @@ GameObject:
   - component: {fileID: 4866869171459554834}
   m_Layer: 2
   m_Name: body.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6959,7 +6959,7 @@ GameObject:
   - component: {fileID: 1244655490612938271}
   m_Layer: 2
   m_Name: baumlowpoly (4)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6996,7 +6996,7 @@ GameObject:
   - component: {fileID: 1275807990951982384}
   m_Layer: 2
   m_Name: Cylinder.002
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7078,7 +7078,7 @@ GameObject:
   - component: {fileID: 5860778484647441619}
   m_Layer: 2
   m_Name: cow (2)
-  m_TagString: cow
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7133,7 +7133,7 @@ GameObject:
   - component: {fileID: 6494312610759829923}
   m_Layer: 2
   m_Name: Cube.015
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7216,7 +7216,7 @@ GameObject:
   - component: {fileID: 3928322736146519773}
   m_Layer: 2
   m_Name: Blade_01
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7297,7 +7297,7 @@ GameObject:
   - component: {fileID: 4423378392692612959}
   m_Layer: 2
   m_Name: nur_haus
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7356,7 +7356,7 @@ GameObject:
   - component: {fileID: 8595889557151333709}
   m_Layer: 2
   m_Name: Icosphere.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7442,7 +7442,7 @@ GameObject:
   - component: {fileID: 8235374444182666290}
   m_Layer: 2
   m_Name: Icosphere.005 (2)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7525,7 +7525,7 @@ GameObject:
   - component: {fileID: 1457583875168139935}
   m_Layer: 2
   m_Name: tail_horns.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7609,7 +7609,7 @@ GameObject:
   - component: {fileID: 978996994139892407}
   m_Layer: 2
   m_Name: Rotor
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7694,6 +7694,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbfbd09dee64ee7409ec71319d624c69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  X_Axis: 0
+  Y_Axis: 1
+  Z_Axis: 0
   minRotationSpeed: 0
   maxRotationSpeed: 200
   minDelayBeforeNewSpeed: 5
@@ -7717,7 +7720,7 @@ GameObject:
   - component: {fileID: 3752620743267804310}
   m_Layer: 2
   m_Name: Cube.008
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7800,7 +7803,7 @@ GameObject:
   - component: {fileID: 1678615859987979275}
   m_Layer: 2
   m_Name: body.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7883,7 +7886,7 @@ GameObject:
   - component: {fileID: 4731630224475999551}
   m_Layer: 2
   m_Name: tail_horns.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7966,7 +7969,7 @@ GameObject:
   - component: {fileID: 7052287758333990052}
   m_Layer: 2
   m_Name: body.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8049,7 +8052,7 @@ GameObject:
   - component: {fileID: 2376347976747470427}
   m_Layer: 2
   m_Name: mouth.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8130,7 +8133,7 @@ GameObject:
   - component: {fileID: 3501168245803572926}
   m_Layer: 2
   m_Name: baumlowpoly (2)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8167,7 +8170,7 @@ GameObject:
   - component: {fileID: 1466694719546270347}
   m_Layer: 2
   m_Name: Cube.012
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8288,7 +8291,7 @@ GameObject:
   - component: {fileID: 6170598650836432687}
   m_Layer: 2
   m_Name: eyes.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8371,7 +8374,7 @@ GameObject:
   - component: {fileID: 3519786939180783474}
   m_Layer: 2
   m_Name: fussweg
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8454,7 +8457,7 @@ GameObject:
   - component: {fileID: 3278286491739328526}
   m_Layer: 2
   m_Name: boobs.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8537,7 +8540,7 @@ GameObject:
   - component: {fileID: 7108868180377017827}
   m_Layer: 2
   m_Name: Cube.008
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8619,7 +8622,7 @@ GameObject:
   - component: {fileID: 4251841443119608992}
   m_Layer: 2
   m_Name: cow (3)
-  m_TagString: cow
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8672,7 +8675,7 @@ GameObject:
   - component: {fileID: 7414441184201839169}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8707,7 +8710,7 @@ GameObject:
   - component: {fileID: 7835428214632613709}
   m_Layer: 2
   m_Name: blatt
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8790,7 +8793,7 @@ GameObject:
   - component: {fileID: 6824904590136282749}
   m_Layer: 2
   m_Name: Torus
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8873,7 +8876,7 @@ GameObject:
   - component: {fileID: 6397733550667625910}
   m_Layer: 2
   m_Name: stamm
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8956,7 +8959,7 @@ GameObject:
   - component: {fileID: 6142346688040292847}
   m_Layer: 2
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9039,7 +9042,7 @@ GameObject:
   - component: {fileID: 1052922293604928762}
   m_Layer: 2
   m_Name: acker_waag1
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9122,7 +9125,7 @@ GameObject:
   - component: {fileID: 5859218929652046501}
   m_Layer: 2
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9205,7 +9208,7 @@ GameObject:
   - component: {fileID: 7454696119017406331}
   m_Layer: 2
   m_Name: Cube.006
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9288,7 +9291,7 @@ GameObject:
   - component: {fileID: 7360092409282001461}
   m_Layer: 2
   m_Name: Icosphere.005
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9371,7 +9374,7 @@ GameObject:
   - component: {fileID: 731662407919490959}
   m_Layer: 2
   m_Name: Icosphere.005 (1)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9454,7 +9457,7 @@ GameObject:
   - component: {fileID: 838938710607912322}
   m_Layer: 2
   m_Name: Cylinder.002
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9537,7 +9540,7 @@ GameObject:
   - component: {fileID: 1245010377932609051}
   m_Layer: 2
   m_Name: Cube.010
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9620,7 +9623,7 @@ GameObject:
   - component: {fileID: 3043608984290953436}
   m_Layer: 2
   m_Name: Cube.007
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9703,7 +9706,7 @@ GameObject:
   - component: {fileID: 5375384888578828047}
   m_Layer: 2
   m_Name: Cube.007
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9823,7 +9826,7 @@ GameObject:
   - component: {fileID: 7873640992920182222}
   m_Layer: 2
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9906,7 +9909,7 @@ GameObject:
   - component: {fileID: 9156201215285602271}
   m_Layer: 2
   m_Name: top
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9990,7 +9993,7 @@ GameObject:
   - component: {fileID: 6397826210534739982}
   m_Layer: 2
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10071,7 +10074,7 @@ GameObject:
   - component: {fileID: 5159900966105192187}
   m_Layer: 2
   m_Name: windturbine 1
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10105,7 +10108,7 @@ GameObject:
   - component: {fileID: 2158502325061106167}
   m_Layer: 2
   m_Name: Cube.013
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10188,7 +10191,7 @@ GameObject:
   - component: {fileID: 95792653964568906}
   m_Layer: 2
   m_Name: blaetter (4)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10271,7 +10274,7 @@ GameObject:
   - component: {fileID: 7824102834330914001}
   m_Layer: 2
   m_Name: blaetter (3)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10354,7 +10357,7 @@ GameObject:
   - component: {fileID: 5511681461443059577}
   m_Layer: 2
   m_Name: Cube.002
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10437,7 +10440,7 @@ GameObject:
   - component: {fileID: 6588561798538168220}
   m_Layer: 2
   m_Name: acker_waag2
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10520,7 +10523,7 @@ GameObject:
   - component: {fileID: 7588113398635619648}
   m_Layer: 2
   m_Name: Cube.012
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10603,7 +10606,7 @@ GameObject:
   - component: {fileID: 4834164989300768698}
   m_Layer: 0
   m_Name: Gras
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -10686,7 +10689,7 @@ GameObject:
   - component: {fileID: 1926598708885253113}
   m_Layer: 2
   m_Name: Cube.024 (1)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10769,7 +10772,7 @@ GameObject:
   - component: {fileID: 4005558089156536451}
   m_Layer: 2
   m_Name: Cube.004
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10852,7 +10855,7 @@ GameObject:
   - component: {fileID: 6630749931478921479}
   m_Layer: 2
   m_Name: Cube.005
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10935,7 +10938,7 @@ GameObject:
   - component: {fileID: 389975524471496569}
   m_Layer: 2
   m_Name: kopf.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11018,7 +11021,7 @@ GameObject:
   - component: {fileID: 1885602792162834933}
   m_Layer: 2
   m_Name: ears.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11101,7 +11104,7 @@ GameObject:
   - component: {fileID: 311334254260696998}
   m_Layer: 2
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11184,7 +11187,7 @@ GameObject:
   - component: {fileID: 3575700765353457723}
   m_Layer: 2
   m_Name: Icosphere
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11270,7 +11273,7 @@ GameObject:
   - component: {fileID: 5261651960448066473}
   m_Layer: 2
   m_Name: Icosphere
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11356,7 +11359,7 @@ GameObject:
   - component: {fileID: 76944803057814577}
   m_Layer: 2
   m_Name: Cube.011
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11439,7 +11442,7 @@ GameObject:
   - component: {fileID: 7745674703669563734}
   m_Layer: 2
   m_Name: Blade_03
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11620,7 +11623,7 @@ GameObject:
   - component: {fileID: 4655066206097832801}
   m_Layer: 2
   m_Name: "m\xF6hren.001"
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11703,7 +11706,7 @@ GameObject:
   - component: {fileID: 3511033533962864270}
   m_Layer: 2
   m_Name: Cube.020
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11786,7 +11789,7 @@ GameObject:
   - component: {fileID: 3407306879861420953}
   m_Layer: 2
   m_Name: Cube.009
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11869,7 +11872,7 @@ GameObject:
   - component: {fileID: 5662288166384369886}
   m_Layer: 2
   m_Name: Icosphere.005 (3)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11952,7 +11955,7 @@ GameObject:
   - component: {fileID: 3381318668483160537}
   m_Layer: 2
   m_Name: Cube.017
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12035,7 +12038,7 @@ GameObject:
   - component: {fileID: 8790655296053752030}
   m_Layer: 2
   m_Name: Icosphere.005
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12118,7 +12121,7 @@ GameObject:
   - component: {fileID: 9187606533804497021}
   m_Layer: 2
   m_Name: Cube.018
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12201,7 +12204,7 @@ GameObject:
   - component: {fileID: 9021758541966699124}
   m_Layer: 2
   m_Name: Cube.019
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12284,7 +12287,7 @@ GameObject:
   - component: {fileID: 3802193879256062062}
   m_Layer: 2
   m_Name: Blade_02
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12465,7 +12468,7 @@ GameObject:
   - component: {fileID: 8061429666821637607}
   m_Layer: 2
   m_Name: mouth.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12646,7 +12649,7 @@ GameObject:
   - component: {fileID: 3088228927689897482}
   m_Layer: 2
   m_Name: Cube.018
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12729,7 +12732,7 @@ GameObject:
   - component: {fileID: 5397314166217087748}
   m_Layer: 2
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12812,7 +12815,7 @@ GameObject:
   - component: {fileID: 8514770669174819664}
   m_Layer: 2
   m_Name: Cube.014
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12895,7 +12898,7 @@ GameObject:
   - component: {fileID: 6070302996410427946}
   m_Layer: 2
   m_Name: Torus
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12976,7 +12979,7 @@ GameObject:
   - component: {fileID: 7657320711445284514}
   m_Layer: 2
   m_Name: baumlowpoly
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13013,7 +13016,7 @@ GameObject:
   - component: {fileID: 2897506585452750556}
   m_Layer: 2
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13096,7 +13099,7 @@ GameObject:
   - component: {fileID: 4740725378958854999}
   m_Layer: 2
   m_Name: ears.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13179,7 +13182,7 @@ GameObject:
   - component: {fileID: 1502155156226432150}
   m_Layer: 2
   m_Name: fussweg (1)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13262,7 +13265,7 @@ GameObject:
   - component: {fileID: 7591438964610555227}
   m_Layer: 2
   m_Name: Cube.008
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13345,7 +13348,7 @@ GameObject:
   - component: {fileID: 1572302288627719095}
   m_Layer: 2
   m_Name: zaun
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13428,7 +13431,7 @@ GameObject:
   - component: {fileID: 6951322512033084155}
   m_Layer: 2
   m_Name: blaetter (2)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13609,7 +13612,7 @@ GameObject:
   - component: {fileID: 850088501224713921}
   m_Layer: 2
   m_Name: eyes.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13691,7 +13694,7 @@ GameObject:
   - component: {fileID: 8090731969584015163}
   m_Layer: 2
   m_Name: cow
-  m_TagString: cow
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13795,7 +13798,7 @@ GameObject:
   - component: {fileID: 6639345497583218237}
   m_Layer: 2
   m_Name: Icosphere.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13881,7 +13884,7 @@ GameObject:
   - component: {fileID: 534142483160584302}
   m_Layer: 2
   m_Name: Cube.015
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13964,7 +13967,7 @@ GameObject:
   - component: {fileID: 4003213142176602940}
   m_Layer: 2
   m_Name: Cube.019
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14045,7 +14048,7 @@ GameObject:
   - component: {fileID: 6929691950408951442}
   m_Layer: 2
   m_Name: nur_haus (3)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14104,7 +14107,7 @@ GameObject:
   - component: {fileID: 6386611096592996278}
   m_Layer: 2
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14187,7 +14190,7 @@ GameObject:
   - component: {fileID: 3285478627335038289}
   m_Layer: 2
   m_Name: Icosphere.001
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14273,7 +14276,7 @@ GameObject:
   - component: {fileID: 8794347041748293492}
   m_Layer: 2
   m_Name: "m\xF6hren.002"
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14356,7 +14359,7 @@ GameObject:
   - component: {fileID: 6716246708184730125}
   m_Layer: 2
   m_Name: Cube.011
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14575,7 +14578,7 @@ GameObject:
   - component: {fileID: 1085507604132956061}
   m_Layer: 2
   m_Name: tail_horns.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14658,7 +14661,7 @@ GameObject:
   - component: {fileID: 1337967938682959541}
   m_Layer: 2
   m_Name: ears.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14741,7 +14744,7 @@ GameObject:
   - component: {fileID: 7514722071157993125}
   m_Layer: 2
   m_Name: mouth.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14824,7 +14827,7 @@ GameObject:
   - component: {fileID: 7770732371044250021}
   m_Layer: 2
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14907,7 +14910,7 @@ GameObject:
   - component: {fileID: 8461080281244040613}
   m_Layer: 2
   m_Name: boobs.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14990,7 +14993,7 @@ GameObject:
   - component: {fileID: 1114935866572837832}
   m_Layer: 2
   m_Name: Cube.016
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15073,7 +15076,7 @@ GameObject:
   - component: {fileID: 5534566123113242943}
   m_Layer: 2
   m_Name: Cube.004
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15156,7 +15159,7 @@ GameObject:
   - component: {fileID: 2585774618626869199}
   m_Layer: 2
   m_Name: stem
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15240,7 +15243,7 @@ GameObject:
   - component: {fileID: 7145094519442989771}
   m_Layer: 2
   m_Name: Cube.014
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15323,7 +15326,7 @@ GameObject:
   - component: {fileID: 7240611676321626368}
   m_Layer: 2
   m_Name: blaetter (1)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15406,7 +15409,7 @@ GameObject:
   - component: {fileID: 3465767147734423988}
   m_Layer: 2
   m_Name: Cube.006
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15489,7 +15492,7 @@ GameObject:
   - component: {fileID: 8524743791607168692}
   m_Layer: 2
   m_Name: blaetter (5)
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15572,7 +15575,7 @@ GameObject:
   - component: {fileID: 5346781255075861589}
   m_Layer: 2
   m_Name: "m\xF6hren.003"
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15655,7 +15658,7 @@ GameObject:
   - component: {fileID: 97558729632397309}
   m_Layer: 2
   m_Name: "m\xF6hren"
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15738,7 +15741,7 @@ GameObject:
   - component: {fileID: 8248067451116297624}
   m_Layer: 2
   m_Name: acker_senk1
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15821,7 +15824,7 @@ GameObject:
   - component: {fileID: 2108251086862039848}
   m_Layer: 2
   m_Name: blaetter
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16003,7 +16006,7 @@ GameObject:
   - component: {fileID: 1401899015936649223}
   m_Layer: 2
   m_Name: Cube.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16183,7 +16186,7 @@ GameObject:
   - component: {fileID: 6264086217770500731}
   m_Layer: 2
   m_Name: cow (4)
-  m_TagString: cow
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16238,7 +16241,7 @@ GameObject:
   - component: {fileID: 5584380951126242030}
   m_Layer: 2
   m_Name: eyes.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16321,7 +16324,7 @@ GameObject:
   - component: {fileID: 5121629487493190689}
   m_Layer: 2
   m_Name: Cube.013
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16404,7 +16407,7 @@ GameObject:
   - component: {fileID: 6665407545003172921}
   m_Layer: 2
   m_Name: boobs.003
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16485,6 +16488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IncomeDisplay_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 2408358204831068870, guid: 394380a0d89be39488d5b0cb3699836a, type: 3}
+      propertyPath: m_TagString
+      value: city
+      objectReference: {fileID: 0}
     - target: {fileID: 2993505570409325939, guid: 394380a0d89be39488d5b0cb3699836a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -16529,6 +16536,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4149830658705220410, guid: 394380a0d89be39488d5b0cb3699836a, type: 3}
+      propertyPath: m_TagString
+      value: city
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147993270400224267, guid: 394380a0d89be39488d5b0cb3699836a, type: 3}
+      propertyPath: m_TagString
+      value: city
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 394380a0d89be39488d5b0cb3699836a, type: 3}
 --- !u!1 &324557251483394798 stripped
@@ -16556,6 +16571,10 @@ PrefabInstance:
     - target: {fileID: 4761894812828548835, guid: 315afd5a3bc531645b4bb2789f8a0866, type: 3}
       propertyPath: m_Name
       value: Income Icon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761894812828548835, guid: 315afd5a3bc531645b4bb2789f8a0866, type: 3}
+      propertyPath: m_TagString
+      value: city
       objectReference: {fileID: 0}
     - target: {fileID: 4761894812828548847, guid: 315afd5a3bc531645b4bb2789f8a0866, type: 3}
       propertyPath: m_RootOrder
@@ -16751,6 +16770,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b4ee12e7529a6047ae39fc47fa31979, type: 3}
+      propertyPath: m_TagString
+      value: city
+      objectReference: {fileID: 0}
     - target: {fileID: 1502877291743220047, guid: 8b4ee12e7529a6047ae39fc47fa31979, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -16936,6 +16959,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8b4ee12e7529a6047ae39fc47fa31979, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b4ee12e7529a6047ae39fc47fa31979, type: 3}
+      propertyPath: m_TagString
+      value: city
       objectReference: {fileID: 0}
     - target: {fileID: 1502877291743220047, guid: 8b4ee12e7529a6047ae39fc47fa31979, type: 3}
       propertyPath: m_Layer
