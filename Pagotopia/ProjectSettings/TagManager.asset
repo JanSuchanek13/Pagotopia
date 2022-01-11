@@ -24,6 +24,7 @@ TagManager:
   - energy
   - Upgrade
   - village
+  - influence_icon
   layers:
   - Default
   - TransparentFX
