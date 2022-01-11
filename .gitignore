@@ -60,6 +60,3 @@ Pagotopia/crashlytics-build.properties
 
 Pagotopia/echo .DS_Store >> ~/.gitignore_global
 Pagotopia/git config --global core.excludesfile ~/.gitignore_global
-Pagotopia/ProjectSettings/ProjectVersion.txt
-Pagotopia/ProjectSettings/ProjectSettings.asset
-Pagotopia/Packages/packages-lock.json

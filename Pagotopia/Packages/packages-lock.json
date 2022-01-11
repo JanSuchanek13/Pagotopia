@@ -10,13 +10,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
+<<<<<<< Updated upstream
+      "version": "1.11.2",
+=======
       "version": "1.15.4",
+>>>>>>> Stashed changes
       "depth": 0,
       "source": "registry",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "2.0.0",
-        "com.unity.services.core": "1.0.1"
-      },
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
@@ -51,6 +52,8 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
+=======
     "com.unity.mathematics": {
       "version": "1.2.5",
       "depth": 1,
@@ -65,6 +68,7 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+>>>>>>> Stashed changes
     "com.unity.postprocessing": {
       "version": "3.1.1",
       "depth": 0,
@@ -74,6 +78,8 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
+=======
     "com.unity.render-pipelines.core": {
       "version": "12.1.2",
       "depth": 1,
@@ -120,6 +126,7 @@
         "com.unity.searcher": "4.9.1"
       }
     },
+>>>>>>> Stashed changes
     "com.unity.sysroot": {
       "version": "0.1.19-preview",
       "depth": 1,
