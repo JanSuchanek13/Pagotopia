@@ -30,7 +30,7 @@ public class StatsManager : MonoBehaviour
     public float smallestAvailableValue;
     public int tileCounter = 0;
     private float _baseStatValue;
-    private float _globalCostOfLiving;
+    private float _globalCostOfLiving = 0f;
     private float _startingMoney;
     public float _energyProductionRate;
     public float _happinessProductionRate;
@@ -57,7 +57,7 @@ public class StatsManager : MonoBehaviour
     {
         _startingMoney = GetComponent<NewGameManager>().startingMoneyValue;
         availableMoney = _startingMoney;
-        _globalCostOfLiving = GetComponent<NewGameManager>().baseCostOfLivingPerMinute / 50f / 60f; // this accounts for the base-tile of Pagotopia
+        //_globalCostOfLiving = GetComponent<NewGameManager>().baseCostOfLivingPerMinute / 50f / 60f; // this is being done when pago gets built
 
         // basic stat values:
         _baseStatValue = GetComponent<NewGameManager>().baseStatValue; // this is used to stop overgrowth
@@ -93,9 +93,11 @@ public class StatsManager : MonoBehaviour
             happinessValue += _happinessProductionRate - _globalCostOfLiving;
             environmentValue += _environmentProductionRate - _globalCostOfLiving;
             availableMoney -= upkeep;
+            
             // checks if enough resources are available to build village:
             float[] currentAvailableResources = { energyValue, happinessValue, environmentValue };
             smallestAvailableValue = Mathf.Min(currentAvailableResources); // returns the lowest available resource value
+            
             // updates Displays for current available money and tiles placed:
             numericalMoneyDisplay.text = availableMoney.ToString("F0");
         }

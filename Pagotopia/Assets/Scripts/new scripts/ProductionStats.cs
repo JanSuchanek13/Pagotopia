@@ -49,9 +49,24 @@ public class ProductionStats : MonoBehaviour
             tierLevel++; // now: tier II
             _productionValue += _sceneManager.GetComponent<NewGameManager>().tier2ProductionValuePerMinute / 50f / 60f;
             _sceneManager.GetComponent<StatsManager>().upkeep += _sceneManager.GetComponent<NewGameManager>().tier2ProductionCostPerMinute / 50 / 60;
-            //TierII.GetComponent<MeshRenderer>().enabled = true;
-            TierII.SetActive(true);
 
+            if (CompareTag("energy"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateEnergyProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().energyValue += (_oneTimePayOff / 2);
+            }
+            if (CompareTag("happiness"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateHappinessProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().happinessValue += (_oneTimePayOff / 2);
+            }
+            if (CompareTag("environment"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateEnvironmentProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().environmentValue += (_oneTimePayOff / 2);
+            }
+
+            TierII.SetActive(true);
             upgrade_Sound.Play();
             Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
             SensorArray2.SetActive(true);
@@ -66,7 +81,23 @@ public class ProductionStats : MonoBehaviour
             tierLevel++; // now: tier III
             _productionValue += _sceneManager.GetComponent<NewGameManager>().tier3ProductionValuePerMinute / 50f / 60f;
             _sceneManager.GetComponent<StatsManager>().upkeep += _sceneManager.GetComponent<NewGameManager>().tier3ProductionCostPerMinute / 50 / 60;
-            //TierIII.GetComponent<MeshRenderer>().enabled = true;
+            
+            if (CompareTag("energy"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateEnergyProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().energyValue += (_oneTimePayOff / 2);
+            }
+            if (CompareTag("happiness"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateHappinessProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().happinessValue += (_oneTimePayOff / 2);
+            }
+            if (CompareTag("environment"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateEnvironmentProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().environmentValue += (_oneTimePayOff / 2);
+            }
+
             TierIII.SetActive(true);
 
             upgrade_Sound.Play();
