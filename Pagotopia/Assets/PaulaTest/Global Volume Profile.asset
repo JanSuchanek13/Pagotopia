@@ -16,7 +16,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.2856766, g: 0.22530259, b: 0.5754717, a: 1}
+    m_Value: {r: 0.16522883, g: 0.12344251, b: 0.3584906, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -25,12 +25,12 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.076
+    m_Value: 0.197
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.35
+    m_Value: 0.48
     min: 0.01
     max: 1
   rounded:
@@ -52,12 +52,12 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: -16
+    m_Value: -7.9
     min: -100
     max: 100
   tint:
     m_OverrideState: 1
-    m_Value: -17
+    m_Value: -9
     min: -100
     max: 100
 --- !u!114 &-6662975033685632695
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.072
+    m_Value: 0.049
     min: 0
     max: 1
 --- !u!114 &-6267575540716444660
@@ -166,7 +166,7 @@ MonoBehaviour:
     showEyeDropper: 1
   balance:
     m_OverrideState: 1
-    m_Value: -12
+    m_Value: -2.3
     min: -100
     max: 100
 --- !u!114 &-1483848994873383145
@@ -202,24 +202,24 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.6
+    m_Value: 0.78
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 1.39
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.168
+    m_Value: 1
     min: 0
     max: 1
   clamp:
     m_OverrideState: 1
-    m_Value: 64106
+    m_Value: 64106.8
     min: 0
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.6650944, b: 0.8207153, a: 1}
+    m_Value: {r: 0.80938613, g: 0.759434, b: 1, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -278,13 +278,13 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.9343947, y: 0.8916812, z: 1, w: 0.22058825}
+    m_Value: {x: 0.9203444, y: 0.7772932, z: 1, w: 0.42324713}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.95158446, z: 0.9161728, w: 0.018382352}
+    m_Value: {x: 1, y: 0.95158446, z: 0.9161728, w: -0.056854077}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 0.67506707, y: 0.77669966, z: 1, w: -0.09191177}
+    m_Value: {x: 0.67506707, y: 0.77669966, z: 1, w: 0.0063169315}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb4b772797da9440885e8bd939e9560, type: 3}
   m_Name: ColorCurves
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   master:
     m_OverrideState: 1
@@ -335,10 +335,10 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1.3329452
-          outSlope: 1.3329452
+          time: 0.98542804
+          value: 0.96590906
+          inSlope: 1.5596598
+          outSlope: 1.5596598
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -366,8 +366,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.591623
-          value: 0.7790055
+          time: 0.61202186
+          value: 0.7689394
           inSlope: 1.4389756
           outSlope: 1.4389756
           tangentMode: 0
@@ -397,8 +397,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.74345547
-          value: 0.97790056
+          time: 0.708561
+          value: 1
           inSlope: 1.7858069
           outSlope: 1.7858069
           tangentMode: 0
@@ -428,8 +428,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.65183246
-          value: 0.9281768
+          time: 0.5883424
+          value: 0.9583333
           inSlope: 0.98489964
           outSlope: 0.98489964
           tangentMode: 0
@@ -507,26 +507,26 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.05
+    m_Value: -0.01
   contrast:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 29.7
     min: -100
     max: 100
   colorFilter:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
   hueShift:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: -1
     min: -180
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 19
+    m_Value: 10.5
     min: -100
     max: 100
 --- !u!114 &6400432190015652997
@@ -548,12 +548,12 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.208
+    m_Value: 0.337
     min: 0
     max: 1
   response:
     m_OverrideState: 1
-    m_Value: 0.407
+    m_Value: 0.323
     min: 0
     max: 1
   texture:
