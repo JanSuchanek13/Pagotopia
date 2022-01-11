@@ -6,6 +6,12 @@ public class RotorRotator : MonoBehaviour
 {
     #region variables
     [Header("Rotator Settings:")]
+    [SerializeField] bool X_Axis = false;
+    [SerializeField] bool Y_Axis = true;
+    [SerializeField] bool Z_Axis = false;
+    private int x = 0;
+    private int y = 0;
+    private int z = 0;
     [SerializeField] float minRotationSpeed = 0f;
     [SerializeField] float maxRotationSpeed = 200f;
     [SerializeField] float minDelayBeforeNewSpeed = 5f;
@@ -29,6 +35,19 @@ public class RotorRotator : MonoBehaviour
             StartCoroutine("FaceNewDirection");
         }
         StartCoroutine("NewRotationSpeed");
+
+        if (X_Axis)
+        {
+            x += 1;
+        }
+        if (Y_Axis)
+        {
+            y += 1;
+        }
+        if (Z_Axis)
+        {
+            z += 1;
+        }
     }
 
     IEnumerator FaceNewDirection()
@@ -45,7 +64,7 @@ public class RotorRotator : MonoBehaviour
     }
     void FixedUpdate()
     {
-        transform.Rotate(new Vector3(0, 1, 0), randomSpeed * Time.deltaTime, Space.Self);
+        transform.Rotate(new Vector3(x, y, z), randomSpeed * Time.deltaTime, Space.Self);
 
         // play sound if wheel is moving:
         // (accellerate sound according to rotation-speed)
