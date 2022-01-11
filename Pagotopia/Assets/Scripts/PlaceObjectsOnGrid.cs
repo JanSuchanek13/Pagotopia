@@ -7,6 +7,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
     //new var
     public GameObject upgradeMapTile;
     [SerializeField] Transform parentForCells;
+    [SerializeField] AudioSource errorSound;
 
     //old var
     public Transform City;
@@ -127,16 +128,19 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                         if (onMousePrefab != null && !curObject.CompareTag("Upgrade")) // tile gets placed
                         {
                             //Kosten ermitteln
-                            float _constructionCost = sceneManager.GetComponent<NewGameManager>().baseProductionConstructionCost;
+                            float constructionCostVillage = sceneManager.GetComponent<NewGameManager>().baseVillageConstructionCost;
+                            float constructionCostProduction = sceneManager.GetComponent<NewGameManager>().baseProductionConstructionCost;
 
-                            if (sceneManager.GetComponent<StatsManager>().availableMoney <= _constructionCost && !curObject.CompareTag("village")) // do you have enough money?
+                            if (sceneManager.GetComponent<StatsManager>().availableMoney <= constructionCostProduction && !curObject.CompareTag("village")) // do you have enough money?
                             {
                                 Debug.Log("zu wenig geld");
+                                errorSound.Play();
                                 break;
                             }
-                            if (sceneManager.GetComponent<StatsManager>().smallestAvailableValue <= _constructionCost && curObject.CompareTag("village")) // do you have enough resources?
+                            if (sceneManager.GetComponent<StatsManager>().smallestAvailableValue <= constructionCostVillage && curObject.CompareTag("village")) // do you have enough resources?
                             {
                                 Debug.Log("zu wenig stuff");
+                                errorSound.Play();
                                 break;
                             }
 
@@ -198,6 +202,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                             }
                             else
                             {
+                                errorSound.Play();
                                 Debug.Log("nicht upgradbar");
                             }
                             
