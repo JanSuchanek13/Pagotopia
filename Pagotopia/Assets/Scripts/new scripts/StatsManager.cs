@@ -93,9 +93,13 @@ public class StatsManager : MonoBehaviour
             happinessValue += _happinessProductionRate - _globalCostOfLiving;
             environmentValue += _environmentProductionRate - _globalCostOfLiving;
             availableMoney -= upkeep;
+
             // checks if enough resources are available to build village:
             float[] currentAvailableResources = { energyValue, happinessValue, environmentValue };
-            smallestAvailableValue = Mathf.Min(currentAvailableResources); // returns the lowest available resource value
+
+            // returns the lowest available resource value:
+            smallestAvailableValue = Mathf.Min(currentAvailableResources);
+
             // updates Displays for current available money and tiles placed:
             numericalMoneyDisplay.text = availableMoney.ToString("F0");
         }
@@ -219,7 +223,7 @@ public class StatsManager : MonoBehaviour
         }
         if (giveTileCounterFeedbackToPlayer == true)
         {
-            float scale = 1 + Mathf.PingPong(Time.time * 0.2f, 1.5f - 1);
+            float scale = 1 + Mathf.PingPong(Time.time, .5f);
             tileCounterDisplay.transform.localScale = new Vector3(scale, scale, scale);
         }
     }
@@ -257,15 +261,19 @@ public class StatsManager : MonoBehaviour
         Debug.Log("increaser cooldown was reset");
     }*/
 
+
+    // gives player visual feedback about game-progression (tile-counting):
     public void TileCounterFeedbackToPlayer()
     {
         giveTileCounterFeedbackToPlayer = true;
-        Invoke("ResetIncomeFeedbackToPlayer", 1f);
+        Invoke("ResetTileCounterFeedbackToPlayer", 1f);
     }
     private void ResetTileCounterFeedbackToPlayer()
     {
         giveTileCounterFeedbackToPlayer = false;
     }
+    
+    // gives player visual feedback about income:
     public void IncomeFeedbackToPlayer() 
     {
         giveIncomeFeedbackToPlayer = true;
@@ -275,6 +283,8 @@ public class StatsManager : MonoBehaviour
     {
         giveIncomeFeedbackToPlayer = false;
     }
+
+    // all upkeep functions:
     public void UpdateCostOfLiving(float additionalCosts)
     {
         _globalCostOfLiving += additionalCosts;

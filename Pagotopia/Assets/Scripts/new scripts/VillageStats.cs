@@ -172,25 +172,21 @@ public class VillageStats : MonoBehaviour
     // called when being placed on grid:
     public void Build()
     {
-        //Debug.Log("smallest resource value is: " + _sceneManager.GetComponent<StatsManager>().smallestAvailableValue);
-        //if (_sceneManager.GetComponent<StatsManager>().smallestAvailableValue >= _constructionCost && !wasPlaced) // do you have enough resources?
-        //{
-            _tierLevel++; // now: TierI
-            wasPlaced = true;
-
-            _sceneManager.GetComponent<StatsManager>().tileCounter++;
-            _sceneManager.GetComponent<StatsManager>().energyValue -= _constructionCost;
-            _sceneManager.GetComponent<StatsManager>().happinessValue -= _constructionCost;
-            _sceneManager.GetComponent<StatsManager>().environmentValue -= _constructionCost;
-            // we could consider houses also costing MONEY instead or in addition to resources!
-            if (build_Sound != null)
+        _tierLevel++; // now: TierI
+        wasPlaced = true;
+        _sceneManager.GetComponent<StatsManager>().tileCounter++;
+        _sceneManager.GetComponent<StatsManager>().TileCounterFeedbackToPlayer();
+        _sceneManager.GetComponent<StatsManager>().energyValue -= _constructionCost;
+        _sceneManager.GetComponent<StatsManager>().happinessValue -= _constructionCost;
+        _sceneManager.GetComponent<StatsManager>().environmentValue -= _constructionCost;
+        // we could consider houses also costing MONEY instead or in addition to resources!
+        if (build_Sound != null)
             {
                 build_Sound.Play();
             }
-            StartCoroutine("GenerateIncome"); // starts money generation
-            _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
-            neighborSensorArray.SetActive(false); 
-            neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor
-        //}
+        StartCoroutine("GenerateIncome"); // starts money generation
+        _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
+        neighborSensorArray.SetActive(false);
+        neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor
     }
 }
