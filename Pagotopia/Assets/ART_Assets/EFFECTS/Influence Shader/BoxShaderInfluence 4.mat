@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BoxShaderInfluence 2
+  m_Name: BoxShaderInfluence 4
   m_Shader: {fileID: -6465566751694194690, guid: d4232ebd40300f7448de52d2195b669f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -46,9 +46,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Color_eecfebbfb9384c1ab56659198b5d594e: {r: 1, g: 0.29613832, b: 0.49693304, a: 0}
+    - Color_eecfebbfb9384c1ab56659198b5d594e: {r: 1, g: 0.7454045, b: 0.16202943, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &660369250922683616
+--- !u!114 &3833986043538589970
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

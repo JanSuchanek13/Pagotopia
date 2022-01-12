@@ -43,8 +43,10 @@ Material:
     - Vector1_8ec6c679fb4f49ba839fd6c5385f2e29: -2.58
     - Vector1_c82703724b5342d69c6c6698f60d932e: -4
     - Vector1_f1ca2259227e4751b996c07534ef683e: 0.51
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
-    - Color_eecfebbfb9384c1ab56659198b5d594e: {r: 0, g: 0.17609215, b: 1, a: 0}
+    - Color_eecfebbfb9384c1ab56659198b5d594e: {r: 0.40197787, g: 0.78353804, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7565172685814302965
 MonoBehaviour:

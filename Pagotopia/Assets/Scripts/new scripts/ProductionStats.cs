@@ -49,8 +49,23 @@ public class ProductionStats : MonoBehaviour
             tierLevel++; // now: tier II
             _productionValue += _sceneManager.GetComponent<NewGameManager>().tier2ProductionValuePerMinute / 50f / 60f;
             _sceneManager.GetComponent<StatsManager>().upkeep += _sceneManager.GetComponent<NewGameManager>().tier2ProductionCostPerMinute / 50 / 60;
-            //TierII.GetComponent<MeshRenderer>().enabled = true;
             TierII.SetActive(true);
+
+            if (CompareTag("energy"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateEnergyProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().energyValue += (_oneTimePayOff / 2);
+            }
+            if (CompareTag("happiness"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateHappinessProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().happinessValue += (_oneTimePayOff / 2);
+            }
+            if (CompareTag("environment"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateEnvironmentProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().environmentValue += (_oneTimePayOff / 2);
+            }
 
             upgrade_Sound.Play();
             Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
@@ -66,8 +81,23 @@ public class ProductionStats : MonoBehaviour
             tierLevel++; // now: tier III
             _productionValue += _sceneManager.GetComponent<NewGameManager>().tier3ProductionValuePerMinute / 50f / 60f;
             _sceneManager.GetComponent<StatsManager>().upkeep += _sceneManager.GetComponent<NewGameManager>().tier3ProductionCostPerMinute / 50 / 60;
-            //TierIII.GetComponent<MeshRenderer>().enabled = true;
             TierIII.SetActive(true);
+
+            if (CompareTag("energy"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateEnergyProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().energyValue += (_oneTimePayOff / 2);
+            }
+            if (CompareTag("happiness"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateHappinessProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().happinessValue += (_oneTimePayOff / 2);
+            }
+            if (CompareTag("environment"))
+            {
+                _sceneManager.GetComponent<StatsManager>().UpdateEnvironmentProduction(_productionValue);
+                _sceneManager.GetComponent<StatsManager>().environmentValue += (_oneTimePayOff / 2);
+            }
 
             upgrade_Sound.Play();
             Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
@@ -82,14 +112,11 @@ public class ProductionStats : MonoBehaviour
     // called when being placed on grid:
     public void Build()
     {
-            //Debug.Log("available money " + _sceneManager.GetComponent<StatsManager>().availableMoney + " construction cost " + _constructionCost + ", so I have enough money!");
             wasPlaced = true;
             build_Sound.Play();
             _sceneManager.GetComponent<StatsManager>().tileCounter++;
             _sceneManager.GetComponent<StatsManager>().availableMoney -= _constructionCost;
-            //Debug.Log("construction cost were " + _constructionCost);
             _sceneManager.GetComponent<StatsManager>().upkeep += _productionCostPerMinute;
-            //Debug.Log("upkeep shall now be " + _sceneManager.GetComponent<StatsManager>().upkeep);
             if (CompareTag("energy"))
             {
                 _sceneManager.GetComponent<StatsManager>().UpdateEnergyProduction(_productionValue);
@@ -117,6 +144,5 @@ public class ProductionStats : MonoBehaviour
             thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().baseProductionValuePerMinute;
             thisTilesCurrentProductionCost += _sceneManager.GetComponent<NewGameManager>().baseProductionCostPerMinute;
             _sceneManager.GetComponent<ToggleAreas>().UpdateShaders();
-    
     }
 }
