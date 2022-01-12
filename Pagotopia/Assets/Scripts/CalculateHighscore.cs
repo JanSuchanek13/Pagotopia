@@ -11,6 +11,7 @@ public class CalculateHighscore : MonoBehaviour
     GameObject ProsEntry;
     GameObject EnvEntry;
     GameObject HapEntry;
+    GameObject MoneyEntry;
     GameObject timeEntry;
     GameObject neighborCountDisplay;
     GameObject cowCountDisplay;
@@ -180,6 +181,7 @@ public class CalculateHighscore : MonoBehaviour
 
         // shows the year
         YearsEntry = GameObject.Find("Years Entry");
+        Debug.Log(YearsEntry);
         YearsEntry.GetComponent<TextMeshProUGUI>().text = currentYear.ToString();
         // shows time played (years + days)
         timeEntry = GameObject.Find("Time Entry");
@@ -189,8 +191,8 @@ public class CalculateHighscore : MonoBehaviour
         neighborCountDisplay = GameObject.Find("neighborCount");
         neighborCountDisplay.GetComponent<TextMeshProUGUI>().text = (neighborCount * 100).ToString("0."); 
         // shows amount of cows placed --> just for fun = no effect
-        cowCountDisplay = GameObject.Find("cowCount");
-        cowCountDisplay.GetComponent<TextMeshProUGUI>().text = cowCount.ToString(); 
+        /*cowCountDisplay = GameObject.Find("cowCount");
+        cowCountDisplay.GetComponent<TextMeshProUGUI>().text = cowCount.ToString(); */
         // displays total score
         scoreEntry = GameObject.Find("ScoreCount");
         scoreEntry.GetComponent<TextMeshProUGUI>().text = score.ToString();
@@ -204,6 +206,8 @@ public class CalculateHighscore : MonoBehaviour
         HapEntry = GameObject.Find("Happiness Entry");
         HapEntry.GetComponent<TextMeshProUGUI>().text = detailHap.ToString("0.00") + " %";
 
+        MoneyEntry = GameObject.Find("Money Entry");
+        MoneyEntry.GetComponent<TextMeshProUGUI>().text = gameObject.GetComponent<StatsManager>().availableMoney.ToString();
     }
 
 }

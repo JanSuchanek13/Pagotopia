@@ -10,6 +10,7 @@ public class ActivateCell : MonoBehaviour
     [SerializeField] MeshRenderer natureShader;
     [SerializeField] MeshRenderer factoryShader;
     [SerializeField] MeshRenderer socialShader;
+    [SerializeField] MeshRenderer neighborShader;
     public bool hasEnergy;
     public bool hasFactory;
     public bool hasSocial;
@@ -74,6 +75,16 @@ public class ActivateCell : MonoBehaviour
 
 
                 break;
+            case "village":
+                neighborShader.enabled = true;
+                
+
+                break;
+            case "city":
+                neighborShader.enabled = true;
+
+
+                break;
             default:
                 //Debug.Log("Fehler");
                 break;
@@ -106,6 +117,16 @@ public class ActivateCell : MonoBehaviour
                 break;
             case "energy":
                 factoryShader.enabled = false;
+
+                break;
+            case "village":
+                neighborShader.enabled = false;
+
+
+                break;
+            case "city":
+                neighborShader.enabled = false;
+
 
                 break;
             default:

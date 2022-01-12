@@ -32,6 +32,11 @@ public class PutSelectedTileBack : MonoBehaviour
             GameObject curMaptile = SceneManager.GetComponent<PlaceObjectsOnGrid>().curObject;
             curMaptile.GetComponent<BoxCollider>().enabled = true;
             Vector3 myTrans = curMaptile.GetComponent<ClickTile>().myPos;
+
+            if(curMaptile.CompareTag("Upgrade"))
+            {
+                curMaptile.GetComponent<UpgradeScripts>().PutUpgradeBack();
+            }
             
             
             //Debug.Log(myTrans);

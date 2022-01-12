@@ -21,7 +21,10 @@ public class ClickTile : MonoBehaviour
     public void OnMouseDown()
         
     {
-        
+        if (gameObject.CompareTag("Upgrade"))
+        {
+            gameObject.GetComponent<UpgradeScripts>().PickUpgradeUp();
+        }
         Object = gameObject;
         //SceneManager = GameObject.Find("SceneManager");
         SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = false;
@@ -54,6 +57,7 @@ public class ClickTile : MonoBehaviour
             {
                 if (gameObject.CompareTag("happiness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city") || gameObject.CompareTag("Upgrade"))
                 {
+                    
                     Over = gameObject;
                     tag = Over.tag;
                     //Debug.Log("mS " + Over.GetComponent<Stats>().mainStat + "hS " + Over.GetComponent<Stats>().randomStat1 + "eS " + Over.GetComponent<Stats>().randomStat2);
@@ -176,7 +180,7 @@ public class ClickTile : MonoBehaviour
                         break;
 
                     case "city":
-                        Debug.Log("treffer");
+                        Debug.Log(collision.gameObject);
                         collision.gameObject.GetComponent<VillageStats>().influencedByNeighbors = true;
 
                         break;

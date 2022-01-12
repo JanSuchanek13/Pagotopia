@@ -5,6 +5,7 @@ using UnityEngine;
 public class ResetButtonAnimation : MonoBehaviour
 {
     float x = .1f;
+    Color newCol = Color.gray;
     private void OnMouseDown()
     {
         MoveButton();
@@ -21,6 +22,10 @@ public class ResetButtonAnimation : MonoBehaviour
         gameObject.transform.position = gameObject.transform.position + new Vector3(0, x, 0);
         gameObject.GetComponent<SphereCollider>().enabled = !gameObject.GetComponent<SphereCollider>().enabled;
 
-
+        //Farbe ändern
+        //Color switch = gameObject.GetComponent<MeshRenderer>().material;
+        Color oldCol = gameObject.GetComponent<MeshRenderer>().material.color;
+        gameObject.GetComponent<MeshRenderer>().material.color = newCol;
+        newCol = oldCol;
     }
 }
