@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 8659909799071928631}
   - component: {fileID: 5212068923224525273}
   m_Layer: 0
-  m_Name: Cell_F_new
+  m_Name: new_Cell
   m_TagString: cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,10 +223,19 @@ MonoBehaviour:
   factoryShader: {fileID: 7736423241501151575}
   socialShader: {fileID: 2568032580210748666}
   neighborShader: {fileID: 2060393950080296199}
+  _energyMaterial: {fileID: 2100000, guid: 46819994316e84c44a8ab2c58b8702bb, type: 2}
+  _happinessMaterial: {fileID: 2100000, guid: e8937b93a2effd34087e0023e5c5c541, type: 2}
+  _environmentMaterial: {fileID: 2100000, guid: 919347721ca44e746bd3b4fe3aa49d09, type: 2}
+  _neighborMaterial: {fileID: 2100000, guid: de7541a41ab876543870e01b4673d392, type: 2}
+  _PLACEDenergyMaterial: {fileID: 2100000, guid: efee960a7026ec54fa5a0e6b361d96dc, type: 2}
+  _PLACEDhappinessMaterial: {fileID: 2100000, guid: 2a4525174fcf2cc4eabd9b60b561af4a, type: 2}
+  _PLACEDenvironmentMaterial: {fileID: 2100000, guid: 78df8f1e80c13e94690bc77b091048fa, type: 2}
+  _PLACEDneighborMaterial: {fileID: 2100000, guid: fb493d10c4695a94d84a5dbc9cb7e09f, type: 2}
   hasEnergy: 0
-  hasFactory: 0
-  hasSocial: 0
-  hasNature: 0
+  hasHappiness: 0
+  hasEnvironment: 0
+  hasNeighbor: 0
+  isOccupied: 0
   placeable: {fileID: 2100000, guid: ea888df225f880e4da0fce5feeca7acb, type: 2}
   Active: 1
   neighbors: []

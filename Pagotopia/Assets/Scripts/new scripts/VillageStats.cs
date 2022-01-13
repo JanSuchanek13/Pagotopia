@@ -22,7 +22,7 @@ public class VillageStats : MonoBehaviour
     [SerializeField] AudioSource cashRegister_Sound; // Ka-Ching!
 
     [Header("(handshakes - don't touch)")]
-    private LookAt _LookAtScript;
+    //private LookAt _LookAtScript;
     public bool wasPlaced = false;
     public bool influencedByEnergy = false;
     private bool _energyAccounted = false; // prevents double-counts

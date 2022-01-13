@@ -47,7 +47,6 @@ public class StatUIDisplay : MonoBehaviour
     private void Start()
     {
         ResetStatBars();
-        //ResetBonusStatBars();
         SceneManager = GameObject.Find("SceneManager");
     }
     public void CastStatsToUI(GameObject gO)
@@ -59,65 +58,42 @@ public class StatUIDisplay : MonoBehaviour
             upgrade_UI.SetActive(true);
             _upgradeCostField.text = (SceneManager.GetComponent<NewGameManager>().upgradeCost).ToString();
         }
+
         if (gO.CompareTag("mountain"))
         {
             nameField.text = "Berg";
             tagField.text = "";
             mountain_UI.SetActive(true);
         }
+
         if (gO.CompareTag("cell"))
         {
-            nameField.text = "Baugrund";
-            tagField.text = "";
-            /*Transform _energyInfluence = gO.transform.Find("Energy_Coin");
-            //GameObject _energyInfluence = gO.transform.Find("Energy_Coin");
-            Transform _happinessInfluence = gO.transform.Find("Happiness_Coin");
-            Transform _environmentInfluence = gO.transform.Find("Environment_Coin");
-            Transform _neighborInfluence = gO.transform.Find("Neighbor_Coin");*/
+            nameField.text = "Grasland";
+            tagField.text = "Baugrund";
+            
             cell_UI.SetActive(true);
             if (gO.GetComponent<ActivateCell>().hasEnergy)
             {
                 _energyInfluenceIcon.enabled = true;
             }
-            if (gO.GetComponent<ActivateCell>().hasNature)
-            {
-                _energyInfluenceIcon.enabled = true;
-            }
-            if (gO.GetComponent<ActivateCell>().hasSocial)
-            {
-                _energyInfluenceIcon.enabled = true;
-            }
-            /*if (gO.GetComponent<ActivateCell>().hasNeighbor)
-            {
-                _energyInfluenceIcon.enabled = true;
-            }
-            if (!gO.GetComponent<ActivateCell>().hasEnergy && !gO.GetComponent<ActivateCell>().hasNature && !gO.GetComponent<ActivateCell>().hasSocial && !gO.GetComponent<ActivateCell>().hasNeighbor)
-            {
-                _noneTextField.SetActive(true);
-            }*/
-
-            /*if (_energyInfluence.transform.GetComponent<MeshRenderer>().enabled)
-            {
-                _energyInfluenceIcon.enabled = true;
-            }
-            if (_happinessInfluence.GetComponent<MeshRenderer>().enabled)
+            if (gO.GetComponent<ActivateCell>().hasHappiness)
             {
                 _happinessInfluenceIcon.enabled = true;
             }
-            if (_environmentInfluence.GetComponent<MeshRenderer>().enabled)
+            if (gO.GetComponent<ActivateCell>().hasEnvironment)
             {
                 _environmentInfluenceIcon.enabled = true;
             }
-            if (_neighborInfluence.GetComponent<MeshRenderer>().enabled)
+            if (gO.GetComponent<ActivateCell>().hasNeighbor)
             {
                 _neighborInfluenceIcon.enabled = true;
             }
-            if(!_energyInfluence.GetComponent<MeshRenderer>().enabled && !_happinessInfluence.GetComponent<MeshRenderer>().enabled && !_environmentInfluence.GetComponent<MeshRenderer>().enabled && !_neighborInfluence.GetComponent<MeshRenderer>().enabled)
+            if (!gO.GetComponent<ActivateCell>().hasEnergy && !gO.GetComponent<ActivateCell>().hasHappiness && !gO.GetComponent<ActivateCell>().hasEnvironment && !gO.GetComponent<ActivateCell>().hasNeighbor)
             {
-                // show, that no influences are present
                 _noneTextField.SetActive(true);
-            }*/
+            }
         }
+
         if (gO.CompareTag("environment"))
         {
             nameField.text = gO.name;
@@ -139,6 +115,7 @@ public class StatUIDisplay : MonoBehaviour
                 _productionCostField.text = (SceneManager.GetComponent<NewGameManager>().baseProductionConstructionCost).ToString();
             }
         }
+
         if (gO.CompareTag("energy"))
         {
             nameField.text = gO.name;
@@ -160,6 +137,7 @@ public class StatUIDisplay : MonoBehaviour
                 _productionCostField.text = (SceneManager.GetComponent<NewGameManager>().baseProductionConstructionCost).ToString();
             }
         }
+
         if (gO.CompareTag("happiness"))
         {
             nameField.text = gO.name;
@@ -175,13 +153,13 @@ public class StatUIDisplay : MonoBehaviour
                 _postBuildDisplay.SetActive(true);
                 _productionValueField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionValue).ToString();
                 _productionCostField.text = (gO.GetComponent<ProductionStats>().thisTilesCurrentProductionCost).ToString();
-            }
-            else // shows default variables for an unbuilt tile:
+            }else // shows default variables for an unbuilt tile:
             {
                 _productionValueField.text = (SceneManager.GetComponent<NewGameManager>().baseProductionValuePerMinute).ToString();
                 _productionCostField.text = (SceneManager.GetComponent<NewGameManager>().baseProductionConstructionCost).ToString();
             }
         }
+
             if (gO.CompareTag("village"))
             {
                 nameField.text = gO.name;
@@ -208,6 +186,7 @@ public class StatUIDisplay : MonoBehaviour
                     _hasNeighborsMark.SetActive(true);
                 }
             }
+
             if (gO.CompareTag("city"))
             {
                 nameField.text = "Pagotopia";

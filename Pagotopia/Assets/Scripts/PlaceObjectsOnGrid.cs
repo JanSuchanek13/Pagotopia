@@ -133,39 +133,32 @@ public class PlaceObjectsOnGrid : MonoBehaviour
 
                             if (sceneManager.GetComponent<StatsManager>().availableMoney <= constructionCostProduction && !curObject.CompareTag("village")) // do you have enough money?
                             {
-                                Debug.Log("zu wenig geld");
+                                //Debug.Log("zu wenig geld");
                                 errorSound.Play();
                                 break;
                             }
                             if (sceneManager.GetComponent<StatsManager>().smallestAvailableValue <= constructionCostVillage && curObject.CompareTag("village")) // do you have enough resources?
                             {
-                                Debug.Log("zu wenig stuff");
+                                //Debug.Log("zu wenig stuff");
                                 errorSound.Play();
                                 break;
                             }
 
-                            //Debug.Log("CCCC");
                             curObject.GetComponent<BoxCollider>().enabled = true;
-                            //curObject.GetComponent<Stats>().AddNeighborBonus();
-                            //curObject.GetComponent<Stats>().UpdateStats();
                             curObject.GetComponent<ClickTile>().setFix = true;
-
-                            
 
                             if (curObject.GetComponent<ProductionStats>() != null)
                             {
-                                curObject.GetComponent<ProductionStats>().Build(); // new 
-                            }else
+                                curObject.GetComponent<ProductionStats>().Build();
+                            }
+                            else
                             {
-                                curObject.GetComponent<VillageStats>().Build(); // new 
+                                curObject.GetComponent<VillageStats>().Build();
                             }
 
                             sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
-                            //Debug.Log("hover Info ON (tile was placed)");
-
-                            //StatsDisplay.GetComponent<StatUIDisplay>().ResetBonusStatBars();
-
-                            node.isPlaceable = false;
+                            node.isPlaceable = false; 
+                            node.obj.GetComponent<ActivateCell>().isOccupied = true; // added by felix to turn off icon when something occupies cell.
                             isOnGrid = true;
                             curObject.transform.position = node.cellPosition + new Vector3(x: 0, y: 0.1f, z: 0);
                             onMousePrefab = null;

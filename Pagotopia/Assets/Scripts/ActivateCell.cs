@@ -11,10 +11,20 @@ public class ActivateCell : MonoBehaviour
     [SerializeField] MeshRenderer factoryShader;
     [SerializeField] MeshRenderer socialShader;
     [SerializeField] MeshRenderer neighborShader;
+
+    [SerializeField] Material _energyMaterial;
+    [SerializeField] Material _happinessMaterial;
+    [SerializeField] Material _environmentMaterial;
+    [SerializeField] Material _neighborMaterial;
+    [SerializeField] Material _PLACEDenergyMaterial;
+    [SerializeField] Material _PLACEDhappinessMaterial;
+    [SerializeField] Material _PLACEDenvironmentMaterial;
+    [SerializeField] Material _PLACEDneighborMaterial;
     public bool hasEnergy;
-    public bool hasFactory;
-    public bool hasSocial;
-    public bool hasNature;
+    public bool hasHappiness;
+    public bool hasEnvironment;
+    public bool hasNeighbor;
+    public bool isOccupied = false;
 
     //old var
     [SerializeField] Material placeable;
@@ -48,46 +58,61 @@ public class ActivateCell : MonoBehaviour
         //gameObject.GetComponent<Renderer>().material = placeable;
         gameObject.GetComponent<Renderer>().enabled = true;
 
-        //liste aller benachbarten Zellen
-        string str = other.tag;
-        switch (str)
+        if (!isOccupied) // this is to check if something was built here already:
         {
-            case "factory":
-                factoryShader.enabled = true;
-                hasFactory = true;
-                //Debug.Log("factory");
+            //liste aller benachbarten Zellen
+            string str = other.tag;
+            switch (str)
+            {
+                case "energy":
+                    if (other.GetComponentInParent<ProductionStats>().wasPlaced)
+                    {
+                        factoryShader.material = _PLACEDenergyMaterial;
+                    }
+                    factoryShader.enabled = true;
+                    hasEnergy = true;
+                    break;
 
+                case "happiness":
+                    if (other.GetComponentInParent<ProductionStats>().wasPlaced)
+                    {
+                        socialShader.material = _PLACEDhappinessMaterial;
+                    }
+                    socialShader.enabled = true;
+                    hasHappiness = true;
+                    break;
 
-                break;
-            case "happiness":
-                socialShader.enabled = true;
-                hasSocial = true;
+                case "environment":
+                    if (other.GetComponentInParent<ProductionStats>().wasPlaced)
+                    {
+                        natureShader.material = _PLACEDenvironmentMaterial;
+                    }
+                    natureShader.enabled = true;
+                    hasEnvironment = true;
+                    break;
 
-                break;
-            case "environment":
-                natureShader.enabled = true;
-                hasNature = true;
+                case "village":
+                    if (other.GetComponentInParent<VillageStats>().wasPlaced)
+                    {
+                        neighborShader.material = _PLACEDneighborMaterial;
+                    }
+                    neighborShader.enabled = true;
+                    hasNeighbor = true;
+                    break;
 
-                break;
-            case "energy":
-                factoryShader.enabled = true;
-                hasEnergy = true;
+                case "city":
+                    if (other.GetComponentInParent<VillageStats>().wasPlaced)
+                    {
+                        neighborShader.material = _PLACEDneighborMaterial;
+                    }
+                    neighborShader.enabled = true;
+                    hasNeighbor = true;
+                    break;
 
-
-                break;
-            case "village":
-                neighborShader.enabled = true;
-                
-
-                break;
-            case "city":
-                neighborShader.enabled = true;
-
-
-                break;
-            default:
-                //Debug.Log("Fehler");
-                break;
+                default:
+                    //Debug.Log("Fehler");
+                    break;
+            }
         }
     }
 
