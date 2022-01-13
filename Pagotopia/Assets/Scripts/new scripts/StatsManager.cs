@@ -41,15 +41,21 @@ public class StatsManager : MonoBehaviour
     private bool giveIncomeFeedbackToPlayer = false;
     private bool giveTileCounterFeedbackToPlayer = false;
 
+    [Header("Highscore Data")]
+    public float TotalEnergyProduced;
+    public float TotalHappinessProduced;
+    public float TotalEnvironmentProduced;
+    public float TotalMoneyProduced;
+    public int TotalUpgradesPlaced;
+    public int cowCounter = 0;
+    public int efficientlyPlaced = 0;
+
     //float accelleratedDegenerationRate;
     //float degenerationThreshold;
     //float speedUpDegenerationTime;
     //float degenerationIncreaseOverTime;
     //bool degenerationWasIncreased = false;
 
-    // added to calculate score
-    public int cowCounter = 0;
-    public int efficientlyPlaced = 0;
     //public int efficiencePoints; // calculate when round ends: efficiencePoints = efficientlyPlaced * GetComponent<NewGameManager>().pointsForEfficiency;
     #endregion
 
@@ -93,6 +99,11 @@ public class StatsManager : MonoBehaviour
             happinessValue += _happinessProductionRate - _globalCostOfLiving;
             environmentValue += _environmentProductionRate - _globalCostOfLiving;
             availableMoney -= upkeep;
+
+            // Highscore-Calculation: (comment: money is updated by the "GenerateIncome" in the VillageStats-script) 
+            TotalEnergyProduced += _energyProductionRate;
+            TotalHappinessProduced += _happinessProductionRate;
+            TotalEnvironmentProduced += _environmentProductionRate;
 
             // checks if enough resources are available to build village:
             float[] currentAvailableResources = { energyValue, happinessValue, environmentValue };

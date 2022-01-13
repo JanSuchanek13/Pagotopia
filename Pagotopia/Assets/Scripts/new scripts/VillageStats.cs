@@ -58,6 +58,7 @@ public class VillageStats : MonoBehaviour
             _tierLevel++; // now: TierI
             wasPlaced = true;
             _sceneManager.GetComponent<StatsManager>().tileCounter++;
+            _sceneManager.GetComponent<StatsManager>().cowCounter++;
             StartCoroutine("GenerateIncome"); // starts money generation
             _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
             neighborSensorArray.SetActive(false);
@@ -104,30 +105,46 @@ public class VillageStats : MonoBehaviour
             //TierII.GetComponent<MeshRenderer>().enabled = true;
             TierII.SetActive(true);
             upgrade_Sound.Play();
-        }else if (_tierLevel == 2)
+            if (CompareTag("city") == true)
+            {
+                _sceneManager.GetComponent<StatsManager>().cowCounter++;
+            }
+        }
+        else if (_tierLevel == 2)
         {
             _tierLevel++; // now: tier III
             _taxesToPay += _bonusTaxes;
             //TierIII.GetComponent<MeshRenderer>().enabled = true;
             TierIII.SetActive(true);
-
             upgrade_Sound.Play();
-        }else if (_tierLevel == 3)
+            if (CompareTag("city") == true)
+            {
+                _sceneManager.GetComponent<StatsManager>().cowCounter++;
+            }
+        }
+        else if (_tierLevel == 3)
         {
             _tierLevel++; // now: tier IV
             _taxesToPay += _bonusTaxes;
             //TierIV.GetComponent<MeshRenderer>().enabled = true;
             TierIV.SetActive(true);
-
             upgrade_Sound.Play();
-        }else if (_tierLevel == 4)
+            if (CompareTag("city") == true)
+            {
+                _sceneManager.GetComponent<StatsManager>().cowCounter++;
+            }
+        }
+        else if (_tierLevel == 4)
         {
             _tierLevel++; // now: tier V
             _taxesToPay += _bonusTaxes;
             //TierV.GetComponent<MeshRenderer>().enabled = true;
             TierV.SetActive(true);
-
             upgrade_Sound.Play();
+            if (CompareTag("city") == true)
+            {
+                _sceneManager.GetComponent<StatsManager>().cowCounter++;
+            }
         }
     }
 
@@ -139,6 +156,7 @@ public class VillageStats : MonoBehaviour
         if (_sceneManager.GetComponent<VictoryScript>().gameHasEnded == false)
         {
             _sceneManager.GetComponent<StatsManager>().availableMoney += _taxesToPay;
+            _sceneManager.GetComponent<StatsManager>().TotalMoneyProduced += _taxesToPay; // for highscore-calculation
             _sceneManager.GetComponent<StatsManager>().IncomeFeedbackToPlayer();
             _sceneManager.GetComponent<StatsManager>().efficientlyPlaced += _tierLevel;
             StartCoroutine("DisplayIncome");

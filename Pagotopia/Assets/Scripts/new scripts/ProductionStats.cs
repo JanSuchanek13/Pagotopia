@@ -46,6 +46,7 @@ public class ProductionStats : MonoBehaviour
         if(tierLevel == 1)
         {
             _sceneManager.GetComponent<StatsManager>().availableMoney -= _upgradeCost;
+            _sceneManager.GetComponent<StatsManager>().TotalUpgradesPlaced++;
             tierLevel++; // now: tier II
             _productionValue += _sceneManager.GetComponent<NewGameManager>().tier2ProductionValuePerMinute / 50f / 60f;
             _sceneManager.GetComponent<StatsManager>().upkeep += _sceneManager.GetComponent<NewGameManager>().tier2ProductionCostPerMinute / 50 / 60;
@@ -78,6 +79,7 @@ public class ProductionStats : MonoBehaviour
         else if (tierLevel == 2)
         {
             _sceneManager.GetComponent<StatsManager>().availableMoney -= _upgradeCost;
+            _sceneManager.GetComponent<StatsManager>().TotalUpgradesPlaced++;
             tierLevel++; // now: tier III
             _productionValue += _sceneManager.GetComponent<NewGameManager>().tier3ProductionValuePerMinute / 50f / 60f;
             _sceneManager.GetComponent<StatsManager>().upkeep += _sceneManager.GetComponent<NewGameManager>().tier3ProductionCostPerMinute / 50 / 60;

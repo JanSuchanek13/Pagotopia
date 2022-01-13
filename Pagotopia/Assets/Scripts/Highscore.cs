@@ -66,7 +66,7 @@ public class Highscore : MonoBehaviour
 
             //neuen Score mit holen
             SceneManager = GameObject.Find("SceneManager");
-            int score = SceneManager.GetComponent<CalculateHighscore>().score;
+            int score = SceneManager.GetComponent<CalculateHighscore>().Score;
 
             //schauen ob neuer Score aufgenommen wird
             if (number < 6 || score > oldScore)
@@ -98,7 +98,7 @@ public class Highscore : MonoBehaviour
         {
             //score holen
             SceneManager = GameObject.Find("SceneManager");
-            int score = SceneManager.GetComponent<CalculateHighscore>().score;
+            int score = SceneManager.GetComponent<CalculateHighscore>().Score;
             currentScore = score;
 
 

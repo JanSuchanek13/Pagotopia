@@ -63,7 +63,7 @@ public class ToggleAreas : MonoBehaviour
     {
         foreach (Transform area in GrandGrandChildren)
         {
-            Debug.Log("geschafft");
+            //Debug.Log("geschafft");
             area.gameObject.GetComponent<MeshRenderer>().enabled = false;
 
         }

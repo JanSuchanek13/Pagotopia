@@ -38,7 +38,7 @@ public class TakeScreenshot : MonoBehaviour
         UI.SetActive(false);
 
         SceneManager = GameObject.Find("SceneManager");
-        score = SceneManager.GetComponent<CalculateHighscore>().score;
+        score = SceneManager.GetComponent<CalculateHighscore>().Score;
 
         StartCoroutine("Screenshot");
         Debug.Log("takedScreenshot");

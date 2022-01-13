@@ -5,11 +5,13 @@ public class NewGameManager : MonoBehaviour
 {
     #region variables
     [Header("General Settings:")]
-    // have metric displays of all variables
-    
     public float baseStatValue = 100f;
     public float startingMoneyValue = 1000;
-    public float pointsForEfficiency = 100f; // used in StatsManager to calculate points for efficiency at game-end
+    
+    [Header("Highscore Calculation:")] // used in CalculateHighscore to balance calculation of score
+    public float pointsForEfficiency = 100f;
+    public int pointsForUpgrades = 500;
+    public int pointsForCows = 0;
 
     [Header("Map Settings:")]
     public GameObject pagotopia;
