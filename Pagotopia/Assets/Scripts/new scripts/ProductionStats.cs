@@ -135,15 +135,16 @@ public class ProductionStats : MonoBehaviour
             }
             tierLevel++; // now: tier I
 
-            // turn off all sensor-arrays when building, and turn only tier 1 back on:
-            SensorArray1.SetActive(false);
-            SensorArray2.SetActive(false);
-            SensorArray3.SetActive(false);
-            SensorArray1.SetActive(true);
+        // turn off all sensor-arrays when building, and turn only tier 1 back on:
+        SensorArray1.SetActive(false);
+        SensorArray2.SetActive(false);
+        SensorArray3.SetActive(false);
+        SensorArray1.SetActive(true);
+        // toggle shaders, as turning off sensor-arrays alone does not fullfill the OnExit-requirements of the influencers:
+        _sceneManager.GetComponent<ToggleAreas>().UpdateShaders();
 
-            // updating tile stats to report to StatUIDisplay:
-            thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().baseProductionValuePerMinute;
+        // updating tile stats to report to StatUIDisplay:
+        thisTilesCurrentProductionValue += _sceneManager.GetComponent<NewGameManager>().baseProductionValuePerMinute;
             thisTilesCurrentProductionCost += _sceneManager.GetComponent<NewGameManager>().baseProductionCostPerMinute;
-            _sceneManager.GetComponent<ToggleAreas>().UpdateShaders();
     }
 }

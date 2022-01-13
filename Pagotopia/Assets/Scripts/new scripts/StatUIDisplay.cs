@@ -69,13 +69,34 @@ public class StatUIDisplay : MonoBehaviour
         {
             nameField.text = "Baugrund";
             tagField.text = "";
-            Transform _energyInfluence = gO.transform.Find("Energy_Icon");
-            Transform _happinessInfluence = gO.transform.Find("Happiness_Icon");
-            Transform _environmentInfluence = gO.transform.Find("Environment_Icon");
-            Transform _neighborInfluence = gO.transform.Find("Neighbor_Icon");
+            /*Transform _energyInfluence = gO.transform.Find("Energy_Coin");
+            //GameObject _energyInfluence = gO.transform.Find("Energy_Coin");
+            Transform _happinessInfluence = gO.transform.Find("Happiness_Coin");
+            Transform _environmentInfluence = gO.transform.Find("Environment_Coin");
+            Transform _neighborInfluence = gO.transform.Find("Neighbor_Coin");*/
             cell_UI.SetActive(true);
+            if (gO.GetComponent<ActivateCell>().hasEnergy)
+            {
+                _energyInfluenceIcon.enabled = true;
+            }
+            if (gO.GetComponent<ActivateCell>().hasNature)
+            {
+                _energyInfluenceIcon.enabled = true;
+            }
+            if (gO.GetComponent<ActivateCell>().hasSocial)
+            {
+                _energyInfluenceIcon.enabled = true;
+            }
+            /*if (gO.GetComponent<ActivateCell>().hasNeighbor)
+            {
+                _energyInfluenceIcon.enabled = true;
+            }
+            if (!gO.GetComponent<ActivateCell>().hasEnergy && !gO.GetComponent<ActivateCell>().hasNature && !gO.GetComponent<ActivateCell>().hasSocial && !gO.GetComponent<ActivateCell>().hasNeighbor)
+            {
+                _noneTextField.SetActive(true);
+            }*/
 
-            if (_energyInfluence.GetComponent<MeshRenderer>().enabled)
+            /*if (_energyInfluence.transform.GetComponent<MeshRenderer>().enabled)
             {
                 _energyInfluenceIcon.enabled = true;
             }
@@ -95,7 +116,7 @@ public class StatUIDisplay : MonoBehaviour
             {
                 // show, that no influences are present
                 _noneTextField.SetActive(true);
-            }
+            }*/
         }
         if (gO.CompareTag("environment"))
         {

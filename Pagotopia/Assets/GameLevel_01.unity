@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f8dec89ec618b8b409c6d81f890c24a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 27cbcea2d6003c24d8a0b9a1cbaa45ff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24406,7 +24406,7 @@ MonoBehaviour:
   errorSound: {fileID: 34755705}
   City: {fileID: 3397043243984468544, guid: dae37b76afd9eed4881d095bb7d248e1, type: 3}
   gridCellPrefab: {fileID: 2955194374348223477, guid: 6fdfc899ef51da54389b442050931a38, type: 3}
-  cube: {fileID: 4938624039965981638, guid: 1e7ab65565fc3e446bae72f04f6cd647, type: 3}
+  cube: {fileID: 4938624039965981638, guid: ab5f9851c64861440b4d65bebee9d5e8, type: 3}
   onMousePrefab: {fileID: 0}
   smoothMousePosition: {x: 0, y: 0, z: 0}
   height: 7
@@ -28675,7 +28675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &3559564230384194904
 CanvasRenderer:
   m_ObjectHideFlags: 0
