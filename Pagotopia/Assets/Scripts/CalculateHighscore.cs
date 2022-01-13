@@ -16,6 +16,7 @@ public class CalculateHighscore : MonoBehaviour
     GameObject neighborCountDisplay;
     GameObject cowCountDisplay;
     GameObject scoreEntry;
+    GameObject UpgradeEntry;
 
     float startTime;
     float days;
@@ -188,8 +189,12 @@ public class CalculateHighscore : MonoBehaviour
         timeEntry.GetComponent<TextMeshProUGUI>().text = years.ToString("0.") + " years, " + currentDay + " days";
         // shows how efficiently neighbors were placed
         // ex.: 13 should show as 130 to be more impressive
-        neighborCountDisplay = GameObject.Find("neighborCount");
-        neighborCountDisplay.GetComponent<TextMeshProUGUI>().text = (neighborCount * 100).ToString("0."); 
+        neighborCountDisplay = GameObject.Find("efficiency Count");
+        neighborCountDisplay.GetComponent<TextMeshProUGUI>().text = (neighborCount * 100).ToString("0.");
+
+        UpgradeEntry = GameObject.Find("Upgrade Count");
+        //UpgradeEntry.GetComponent<TextMeshProUGUI>().text = usedUpdates; //hierfür gibt es noch keine Variable die ich einsetzen könnte
+
         // shows amount of cows placed --> just for fun = no effect
         /*cowCountDisplay = GameObject.Find("cowCount");
         cowCountDisplay.GetComponent<TextMeshProUGUI>().text = cowCount.ToString(); */
@@ -208,6 +213,17 @@ public class CalculateHighscore : MonoBehaviour
 
         MoneyEntry = GameObject.Find("Money Entry");
         MoneyEntry.GetComponent<TextMeshProUGUI>().text = gameObject.GetComponent<StatsManager>().availableMoney.ToString();
+
+        //Test 
+        YearsEntry.GetComponent<TextMeshProUGUI>().text = "Test";
+        timeEntry.GetComponent<TextMeshProUGUI>().text = "Test";
+        neighborCountDisplay.GetComponent<TextMeshProUGUI>().text = "Test";
+        UpgradeEntry.GetComponent<TextMeshProUGUI>().text = "Test";
+        scoreEntry.GetComponent<TextMeshProUGUI>().text = "Test";
+        ProsEntry.GetComponent<TextMeshProUGUI>().text = "Test";
+        EnvEntry.GetComponent<TextMeshProUGUI>().text = "Test";
+        HapEntry.GetComponent<TextMeshProUGUI>().text = "Test";
+        MoneyEntry.GetComponent<TextMeshProUGUI>().text = "Test";
     }
 
 }
