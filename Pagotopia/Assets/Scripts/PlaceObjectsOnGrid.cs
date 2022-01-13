@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlaceObjectsOnGrid : MonoBehaviour
 {
     //new var
     public GameObject upgradeMapTile;
     [SerializeField] Transform parentForCells;
     [SerializeField] AudioSource errorSound;
+    int Rocks;
 
     //old var
     public Transform City;
@@ -43,8 +45,15 @@ public class PlaceObjectsOnGrid : MonoBehaviour
         StatsDisplay = GameObject.Find("Stats_UI");
         sceneManager = GameObject.Find("SceneManager");
 
+        Rocks = sceneManager.GetComponent<NewGameManager>().mountainCount;
+        Debug.Log(Rocks);
+
+        width = (int)Mathf.Sqrt(sceneManager.GetComponent<NewGameManager>().cellCount);
+        height = (int)Mathf.Sqrt(sceneManager.GetComponent<NewGameManager>().cellCount);
+        Debug.Log(width);
+
         CreateGrid();
-        plane = new Plane(inNormal: Vector3.up, inPoint: transform.position);
+        plane = new Plane(inNormal: Vector3.up, inPoint: transform.position); 
     }
 
     // Update is called once per frame
@@ -275,7 +284,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
 
 
         //set rocks on random positions
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < Rocks; i++)
         {
             //random position
             int r_width = Random.Range(0, width);

@@ -7,7 +7,9 @@ public class NewGameManager : MonoBehaviour
     [Header("General Settings:")]
     public float baseStatValue = 100f;
     public float startingMoneyValue = 1000;
-    
+    public int cellCount = 48;
+    public int mountainCount = 5;
+
     [Header("Highscore Calculation:")] // used in CalculateHighscore to balance calculation of score
     public float pointsForEfficiency = 100f;
     public int pointsForUpgrades = 500;

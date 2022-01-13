@@ -66,6 +66,15 @@ public class ToggleAreas : MonoBehaviour
             //Debug.Log("geschafft");
             area.gameObject.GetComponent<MeshRenderer>().enabled = false;
 
+
+        }
+
+        foreach (Transform child in cells)
+        {
+            child.gameObject.GetComponent<ActivateCell>().hasEnergy = false;
+            child.gameObject.GetComponent<ActivateCell>().hasEnvironment = false;
+            child.gameObject.GetComponent<ActivateCell>().hasHappiness = false;
+            child.gameObject.GetComponent<ActivateCell>().hasNeighbor = false;
         }
     }
 }
