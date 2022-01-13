@@ -127,30 +127,29 @@ public class ActivateCell : MonoBehaviour
         string str = other.tag;
         switch (str)
         {
-            case "factory":
-                factoryShader.enabled = false;
-
-
-                break;
             case "happiness":
                 socialShader.enabled = false;
+                hasHappiness = false;
 
                 break;
             case "environment":
                 natureShader.enabled = false;
+                hasEnvironment = false;
 
                 break;
             case "energy":
                 factoryShader.enabled = false;
+                hasEnergy = false;
 
                 break;
             case "village":
                 neighborShader.enabled = false;
-
+                hasNeighbor = false;
 
                 break;
             case "city":
                 neighborShader.enabled = false;
+                hasNeighbor = false;
 
 
                 break;

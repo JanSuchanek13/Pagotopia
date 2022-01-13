@@ -271,20 +271,32 @@ public class PlaceObjectsOnGrid : MonoBehaviour
         nodes[width / 2, height / 2].activeFix = true;
         City.GetComponent<ClickTile>().setFix = true;
 
+        middle.GetComponent<ActivateCell>().isOccupied = true; //damit keine Münzen auf Pago angezeigt werden
+
 
         //set rocks on random positions
         for (int i = 0; i < 5; i++)
         {
+            //random position
             int r_width = Random.Range(0, width);
             int r_height = Random.Range(0, height);
+
+            //random rotation
+            int randomOrientation = Random.Range(1, 4);
+            Vector3 rot = transform.rotation.eulerAngles;
+            rot = new Vector3(rot.x, rot.y - ((randomOrientation - 1) * 90), rot.z);
+
             //Node random_cell = nodes[Random.Range(0, width), Random.Range(0, height)];
             //Debug.Log(nodes[r_width, r_height].isPlaceable);
             if (nodes[r_width, r_height].isPlaceable)
             {
-                Instantiate(cube, (nodes[r_width, r_height].cellPosition), Quaternion.identity);
+                Vector3 spawnPos = nodes[r_width, r_height].cellPosition + new Vector3(0, 0.1f, 0);
+                Instantiate(cube, spawnPos, Quaternion.Euler(rot));
                 nodes[r_width, r_height].isPlaceable = false;
                 nodes[r_width, r_height].activeFix = true;
                 //Debug.Log("im a rock");
+
+                nodes[r_width, r_height].obj.GetComponent<ActivateCell>().isOccupied = true; //damit keine Münzen auf Bergen angezeigt werden
             }
             else //if cell is not placeable, set stone counter to before value
             {

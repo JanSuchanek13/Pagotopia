@@ -44,7 +44,10 @@ public class ClickTile : MonoBehaviour
                 {
                     Over = gameObject;
                     StatsDisplay = GameObject.Find("Stats_UI");
-                    StatsDisplay.GetComponentInParent<StatUIDisplay>().CastStatsToUI(Over);
+                    if (StatsDisplay == isActiveAndEnabled)
+                    {
+                        StatsDisplay.GetComponentInParent<StatUIDisplay>().CastStatsToUI(Over);
+                    }
                 }
             }
     }
@@ -53,11 +56,14 @@ public class ClickTile : MonoBehaviour
     private void OnMouseExit()
     {
         SceneManager.GetComponent<PlaceObjectsOnGrid>().upgradeMapTile = null;//für upgrade funktion, damit man weiß welches GO geupdatet werden soll
-        if (gameObject.CompareTag("happiness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city") || gameObject.CompareTag("Upgrade") || gameObject.CompareTag("cell") || gameObject.CompareTag("mountain"))
+        if (StatsDisplay == isActiveAndEnabled)
         {
-            if (SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled == true)
+            if (gameObject.CompareTag("happiness") || gameObject.CompareTag("environment") || gameObject.CompareTag("energy") || gameObject.CompareTag("village") || gameObject.CompareTag("city") || gameObject.CompareTag("Upgrade") || gameObject.CompareTag("cell") || gameObject.CompareTag("mountain"))
             {
-                StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
+                if (SceneManager.GetComponent<NewGameManager>().hoverInfoEnabled == true)
+                {
+                    StatsDisplay.GetComponent<StatUIDisplay>().ResetStatBars();
+                }
             }
         }
     }
@@ -67,7 +73,7 @@ public class ClickTile : MonoBehaviour
     {
         if (collision.CompareTag("village") || collision.CompareTag("city"))
         {
-            if (setFix == true)
+            if (setFix == true && collision.gameObject.GetComponent<VillageStats>() != null)
             {
                 string str = gameObject.tag;
                 switch (str)
