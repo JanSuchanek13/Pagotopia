@@ -7,6 +7,7 @@ public class ToggleAreas : MonoBehaviour
     public Transform cells;
     List<Transform> Children = new List<Transform>();
     List<Transform> GrandChildren = new List<Transform>();
+    List<Transform> GrandGrandChildren = new List<Transform>();
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +31,22 @@ public class ToggleAreas : MonoBehaviour
             foreach (Transform grandchild in Children[i])
             {
                 GrandChildren.Add(grandchild.transform);
+
             }
             
         }
-     
+
+        for (int i = 0; i < GrandChildren.Count; i++)
+        {
+            //Debug.Log("How many: " + Children.Count);
+
+            foreach (Transform grandgrandchild in GrandChildren[i])
+            {
+                GrandGrandChildren.Add(grandgrandchild.transform);
+
+            }
+
+        }
     }
 
     public void toggle()
@@ -48,7 +61,7 @@ public class ToggleAreas : MonoBehaviour
 
     public void UpdateShaders()
     {
-        foreach (Transform area in GrandChildren)
+        foreach (Transform area in GrandGrandChildren)
         {
             Debug.Log("geschafft");
             area.gameObject.GetComponent<MeshRenderer>().enabled = false;
