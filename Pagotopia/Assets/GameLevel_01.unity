@@ -12007,8 +12007,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 126.55469, y: -18.3}
-  m_SizeDelta: {x: 395.3921, y: 84.4053}
+  m_AnchoredPosition: {x: 166.56116, y: -17}
+  m_SizeDelta: {x: 475.405, y: 222.7909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880833791
 MonoBehaviour:
@@ -12030,7 +12030,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/43
+  m_text: 40/43
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 48907670034c14ece8c89bc5c2111e14, type: 2}
   m_sharedMaterial: {fileID: -5505245118170645589, guid: 48907670034c14ece8c89bc5c2111e14, type: 2}
@@ -24891,7 +24891,7 @@ MonoBehaviour:
   startingMoneyValue: 1000
   pointsForEfficiency: 100
   pointsForUpgrades: 500
-  pointsForCows: 0
+  pointsForCows: 1
   pagotopia: {fileID: 0}
   baseVillageConstructionCost: 10
   baseCostOfLivingPerMinute: 50
@@ -24908,7 +24908,7 @@ MonoBehaviour:
   tier3ProductionValuePerMinute: 50
   tier3ProductionCostPerMinute: 100
   developerMode: 0
-  quickWin: 0
+  quickWin: 1
   cameraZoomSpeed: 400
   cameraMaxZoom: 15
   cameraMinZoom: 70

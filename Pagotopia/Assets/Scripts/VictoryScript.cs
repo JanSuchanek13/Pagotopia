@@ -73,7 +73,7 @@ public class VictoryScript : MonoBehaviour
         }
 
         // checks for real winning condition
-        if (StatsManager.tileCounter >= 43 && gameHasEnded == false)
+        if (StatsManager.tileCounter >= 44 && gameHasEnded == false) // 44 as weird bug ending one tile early appears...
         {
             Winner();
             gameHasEnded = true;
