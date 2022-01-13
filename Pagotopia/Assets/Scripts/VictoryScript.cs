@@ -6,10 +6,11 @@ public class VictoryScript : MonoBehaviour
     // winning and loosing the game are handled here
     // in general you win by having placed all 48 tiles
     // loosing early by dropping a stat to zero is called by "NeedsManager"-script
-
+    #region variables
     GameObject SceneManager;
     StatsManager StatsManager;
     NewGameManager GameManager;
+    int cellCount;
 
     // input Podest Models to deactivate them
     [SerializeField] GameObject podest1;
@@ -28,18 +29,20 @@ public class VictoryScript : MonoBehaviour
     public GameObject youLostLogo; // public in case i want to turn off with a button
     [SerializeField] AudioSource youLostSound;
 
-
     //[SerializeField] AudioSource windSound; // this may be cool for after loosing: just a dry wind blowing
     [SerializeField] AudioSource ambienteSound; // to turn off music
     public GameObject endGame_UI; // public so the "OpenHighscore_UI()" (from BUTTONS) can call it to close it
 
     public bool gameHasEnded = false; // public so the "NeedsManager" can read this information 
+    #endregion
 
     void Awake()
     {
         SceneManager = GameObject.Find("SceneManager");
         GameManager = SceneManager.GetComponent<NewGameManager>();
         StatsManager = SceneManager.GetComponent<StatsManager>();
+
+        cellCount = (GameManager.cellCount - GameManager.mountainCount); 
     }
 
 
@@ -73,7 +76,7 @@ public class VictoryScript : MonoBehaviour
         }
 
         // checks for real winning condition
-        if (StatsManager.tileCounter >= 44 && gameHasEnded == false) // 44 as weird bug ending one tile early appears...
+        if (StatsManager.tileCounter >= cellCount && gameHasEnded == false) // 44 as weird bug ending one tile early appears...
         {
             Winner();
             gameHasEnded = true;

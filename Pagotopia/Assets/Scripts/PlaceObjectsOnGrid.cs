@@ -152,6 +152,7 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                                 errorSound.Play();
                                 break;
                             }
+                            node.obj.GetComponent<ActivateCell>().isOccupied = true; // added by felix to turn off icon when something occupies cell. //try1
 
                             curObject.GetComponent<BoxCollider>().enabled = true;
                             curObject.GetComponent<ClickTile>().setFix = true;
@@ -166,8 +167,8 @@ public class PlaceObjectsOnGrid : MonoBehaviour
                             }
 
                             sceneManager.GetComponent<NewGameManager>().hoverInfoEnabled = true;
-                            node.isPlaceable = false; 
-                            node.obj.GetComponent<ActivateCell>().isOccupied = true; // added by felix to turn off icon when something occupies cell.
+                            node.obj.GetComponent<ActivateCell>().isOccupied = true; // added by felix to turn off icon when something occupies cell. //try2
+                            node.isPlaceable = false;
                             isOnGrid = true;
                             curObject.transform.position = node.cellPosition + new Vector3(x: 0, y: 0.1f, z: 0);
                             onMousePrefab = null;

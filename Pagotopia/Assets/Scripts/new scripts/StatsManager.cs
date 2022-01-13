@@ -40,6 +40,7 @@ public class StatsManager : MonoBehaviour
     Color envImgBaseColor;
     private bool giveIncomeFeedbackToPlayer = false;
     private bool giveTileCounterFeedbackToPlayer = false;
+    int cellCount;
 
     [Header("Highscore Data")]
     public float TotalEnergyProduced;
@@ -61,6 +62,8 @@ public class StatsManager : MonoBehaviour
 
     void Start()
     {
+        cellCount = (GetComponent<NewGameManager>().cellCount - GetComponent<NewGameManager>().mountainCount);
+
         _startingMoney = GetComponent<NewGameManager>().startingMoneyValue;
         availableMoney = _startingMoney;
         _globalCostOfLiving = GetComponent<NewGameManager>().baseCostOfLivingPerMinute / 50f / 60f; // this accounts for the base-tile of Pagotopia
@@ -91,7 +94,7 @@ public class StatsManager : MonoBehaviour
     // this updates the game stats at a rate of 50/s:
     void FixedUpdate()
     {
-        numericalTileCounterDisplay.text = tileCounter.ToString() + " / 43"; // victory condition is checked by VictoryScript
+        numericalTileCounterDisplay.text = tileCounter.ToString() + " / " + cellCount.ToString(); // victory condition is checked by VictoryScript
 
         if (GetComponent<VictoryScript>().gameHasEnded == false)
         {
