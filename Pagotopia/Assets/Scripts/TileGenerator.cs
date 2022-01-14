@@ -9,9 +9,9 @@ public class TileGenerator : MonoBehaviour
 
     public GameObject[] arrayOfAllTilePrefabs;
 
-    [SerializeField] Transform parent_tile_1;
-    [SerializeField] Transform parent_tile_2;
-    [SerializeField] Transform parent_tile_3;
+    //[SerializeField] Transform parent_tile_1;
+    //[SerializeField] Transform parent_tile_2;
+    //[SerializeField] Transform parent_tile_3;
 
     public Transform spawnPos1;
     public Transform spawnPos2;
@@ -49,7 +49,7 @@ public class TileGenerator : MonoBehaviour
         rot = new Vector3(rot.x, rot.y - ((randomOrientation - 1) * 90), rot.z);
 
         randomInt = Random.Range(0, arrayOfAllTilePrefabs.Length);
-        tile1 = Instantiate(arrayOfAllTilePrefabs[randomInt], spawnPos1.position, Quaternion.Euler(rot), parent_tile_1);
+        tile1 = Instantiate(arrayOfAllTilePrefabs[randomInt], spawnPos1.position, Quaternion.Euler(rot));
     }
     public void GenerateTile2()
     {
@@ -58,7 +58,7 @@ public class TileGenerator : MonoBehaviour
         rot = new Vector3(rot.x, rot.y - ((randomOrientation - 1) * 90), rot.z);
 
         randomInt = Random.Range(0, arrayOfAllTilePrefabs.Length);
-        tile2 = Instantiate(arrayOfAllTilePrefabs[randomInt], spawnPos2.position, Quaternion.Euler(rot), parent_tile_2);
+        tile2 = Instantiate(arrayOfAllTilePrefabs[randomInt], spawnPos2.position, Quaternion.Euler(rot));
     }
     public void GenerateTile3()
     {
@@ -67,7 +67,7 @@ public class TileGenerator : MonoBehaviour
         rot = new Vector3(rot.x, rot.y - ((randomOrientation - 1) * 90), rot.z);
 
         randomInt = Random.Range(0, arrayOfAllTilePrefabs.Length);
-        tile3 = Instantiate(arrayOfAllTilePrefabs[randomInt], spawnPos3.position, Quaternion.Euler(rot), parent_tile_3);
+        tile3 = Instantiate(arrayOfAllTilePrefabs[randomInt], spawnPos3.position, Quaternion.Euler(rot));
     }
 
     public void DestroyRemainingTiles()
