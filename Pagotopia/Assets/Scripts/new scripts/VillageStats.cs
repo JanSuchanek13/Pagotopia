@@ -65,6 +65,10 @@ public class VillageStats : MonoBehaviour
             _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
             neighborSensorArray.SetActive(false);
             neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor
+        }else
+        {
+            int randomPosition = Random.Range(0, _sceneManager.GetComponent<NewGameManager>().arrayOfAllStreetNames.Length);
+            thisStreetsName = _sceneManager.GetComponent<NewGameManager>().arrayOfAllStreetNames[randomPosition];
         }
     }
 
@@ -193,8 +197,8 @@ public class VillageStats : MonoBehaviour
     public void Build()
     {
         //streetNumber = _sceneManager.GetComponent<StatsManager>().streetNumberCounter + 1;
-        int randomPosition = Random.Range(0, _sceneManager.GetComponent<NewGameManager>().arrayOfAllStreetNames.Length);
-        thisStreetsName = _sceneManager.GetComponent<NewGameManager>().arrayOfAllStreetNames[randomPosition];
+        //int randomPosition = Random.Range(0, _sceneManager.GetComponent<NewGameManager>().arrayOfAllStreetNames.Length);
+        //thisStreetsName = _sceneManager.GetComponent<NewGameManager>().arrayOfAllStreetNames[randomPosition];
         //randomDegreesRotation = Random.Range(-360f, 360f);
         //yield return new WaitForSeconds(Random.Range(minDelayBeforeNewDirection, maxDelayBeforeNewDirection));
         //StartCoroutine("FaceNewDirection");

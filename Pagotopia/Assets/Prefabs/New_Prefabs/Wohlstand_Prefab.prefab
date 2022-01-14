@@ -10980,7 +10980,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 8
+    maxNumParticles: 16
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -11184,9 +11184,9 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 123.37
       mode: 2
-      spread: 0.7
+      spread: 0
       speed:
         serializedVersion: 2
         minMaxState: 0
