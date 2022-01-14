@@ -41,6 +41,7 @@ public class StatsManager : MonoBehaviour
     private bool giveIncomeFeedbackToPlayer = false;
     private bool giveTileCounterFeedbackToPlayer = false;
     int cellCount;
+    //public int streetNumberCounter = 0;
 
     [Header("Highscore Data")]
     public float TotalEnergyProduced;

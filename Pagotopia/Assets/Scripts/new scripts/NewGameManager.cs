@@ -19,6 +19,7 @@ public class NewGameManager : MonoBehaviour
     public GameObject pagotopia;
 
     [Header("Village-Tile Settings:")]
+    public string[] arrayOfAllStreetNames;
     public float baseVillageConstructionCost = 10f;
     public float baseCostOfLivingPerMinute = 25f;
     public float baseTaxesGeneratedPerMinute = 100;

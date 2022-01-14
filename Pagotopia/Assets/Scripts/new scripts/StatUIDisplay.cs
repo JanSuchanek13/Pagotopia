@@ -170,7 +170,7 @@ public class StatUIDisplay : MonoBehaviour
             if (gO.CompareTag("village"))
             {
                 //nameField.text = gO.name; // untill we figure out how to make actualy corresponding not (clone) names
-                nameField.text = "Woerlitzer Platz 1"; // this is the adress of the Umweltbundesamt in Dessau
+                nameField.text = gO.GetComponent<VillageStats>().thisStreetsName.ToString();//"Woerlitzer Platz 1"; // this is the adress of the Umweltbundesamt in Dessau
                 tagField.text = "Gemeinde";
 
                 villageFacility_UI.SetActive(true);

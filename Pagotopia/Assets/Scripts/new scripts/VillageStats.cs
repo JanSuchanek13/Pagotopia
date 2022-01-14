@@ -40,6 +40,8 @@ public class VillageStats : MonoBehaviour
     public float _costOfLiving;
     public float _taxesToPay;
     public int _tierLevel;
+    public string thisStreetsName;
+    //public int streetNumber;
     #endregion
 
     void Awake()
@@ -170,7 +172,7 @@ public class VillageStats : MonoBehaviour
         incomeDisplay.SetActive(true);
 
         cashRegister_Sound.Play();
-        _currentIncomeDisplay.text = _taxesToPay.ToString();
+        _currentIncomeDisplay.text = _taxesToPay.ToString("0.");
         //altDisplay.GetComponent<TextMesh>().text = _taxesToPay.ToString();
 
         // turns all MeshRenderers in the children of "incomeDisplay" on & off:
@@ -190,6 +192,13 @@ public class VillageStats : MonoBehaviour
     // called when being placed on grid:
     public void Build()
     {
+        //streetNumber = _sceneManager.GetComponent<StatsManager>().streetNumberCounter + 1;
+        int randomPosition = Random.Range(0, _sceneManager.GetComponent<NewGameManager>().arrayOfAllStreetNames.Length);
+        thisStreetsName = _sceneManager.GetComponent<NewGameManager>().arrayOfAllStreetNames[randomPosition];
+        //randomDegreesRotation = Random.Range(-360f, 360f);
+        //yield return new WaitForSeconds(Random.Range(minDelayBeforeNewDirection, maxDelayBeforeNewDirection));
+        //StartCoroutine("FaceNewDirection");
+
         _tierLevel++; // now: TierI
         wasPlaced = true;
         _sceneManager.GetComponent<StatsManager>().tileCounter++;
