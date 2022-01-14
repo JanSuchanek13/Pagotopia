@@ -217,15 +217,15 @@ public class CalculateHighscore : MonoBehaviour
 
         // shows points for energy produced:
         _energyProducedEntry = GameObject.Find("Energy Entry");
-        _energyProducedEntry.GetComponent<TextMeshProUGUI>().text = _energyPoints.ToString("0.00");
+        _energyProducedEntry.GetComponent<TextMeshProUGUI>().text = _energyPoints.ToString("0.");
 
         // shows points for happiness produced:
         _happinessProducedEntry = GameObject.Find("Happiness Entry");
-        _happinessProducedEntry.GetComponent<TextMeshProUGUI>().text = _happinessPoints.ToString("0.00");
+        _happinessProducedEntry.GetComponent<TextMeshProUGUI>().text = _happinessPoints.ToString("0.");
 
         // shows points for environment produced:
         _environmentProducedEntry = GameObject.Find("Environment Entry");
-        _environmentProducedEntry.GetComponent<TextMeshProUGUI>().text = _environmentPoints.ToString("0.00");
+        _environmentProducedEntry.GetComponent<TextMeshProUGUI>().text = _environmentPoints.ToString("0.");
 
         // shows points for money produced:
         _moneyProducedEntry = GameObject.Find("Money Entry");

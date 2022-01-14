@@ -16,6 +16,7 @@ public class StatUIDisplay : MonoBehaviour
     [SerializeField] GameObject mountain_UI;
     [SerializeField] TextMeshProUGUI nameField;
     [SerializeField] TextMeshProUGUI tagField;
+    
     [Header("Production TMPro-Fields:")]
     [SerializeField] TextMeshProUGUI _productionTypeField;
     [SerializeField] TextMeshProUGUI _productionTierField;
@@ -25,6 +26,7 @@ public class StatUIDisplay : MonoBehaviour
     [SerializeField] Image energyIcon;
     [SerializeField] Image happinessIcon;
     [SerializeField] Image environmentIcon;
+    
     [Header("Village TMPro-Fields:")]
     [SerializeField] TextMeshProUGUI _villageTierField;
     [SerializeField] TextMeshProUGUI _villageIncomeField;
@@ -33,8 +35,10 @@ public class StatUIDisplay : MonoBehaviour
     [SerializeField] GameObject _hasHappinessMark;
     [SerializeField] GameObject _hasEnvironmentMark;
     [SerializeField] GameObject _hasNeighborsMark;
+    
     [Header("Upgrade TMPro-Fields:")]
     [SerializeField] TextMeshProUGUI _upgradeCostField;
+    
     [Header("Cell TMPro-Fields:")]
     [SerializeField] Image _energyInfluenceIcon;
     [SerializeField] Image _happinessInfluenceIcon;
@@ -96,7 +100,8 @@ public class StatUIDisplay : MonoBehaviour
 
         if (gO.CompareTag("environment"))
         {
-            nameField.text = gO.name;
+            //nameField.text = gO.name; // untill we figure out how to make actualy corresponding not (clone) names
+            nameField.text = "Naturreservat";
             tagField.text = "Natur";
 
             productionFacility_UI.SetActive(true);
@@ -118,7 +123,8 @@ public class StatUIDisplay : MonoBehaviour
 
         if (gO.CompareTag("energy"))
         {
-            nameField.text = gO.name;
+            //nameField.text = gO.name; // untill we figure out how to make actualy corresponding not (clone) names
+            nameField.text = "Solar- und Windkraftanlage";
             tagField.text = "Energie";
 
             productionFacility_UI.SetActive(true);
@@ -140,8 +146,9 @@ public class StatUIDisplay : MonoBehaviour
 
         if (gO.CompareTag("happiness"))
         {
-            nameField.text = gO.name;
-            tagField.text = "Versorgung"; // lebensqualitaet, Gemeinde, 
+            //nameField.text = gO.name; // untill we figure out how to make actualy corresponding not (clone) names
+            nameField.text = "Markt";
+            tagField.text = "Wohlstand"; // lebensqualitaet, Gemeinde, 
 
             productionFacility_UI.SetActive(true);
             _productionTypeField.text = tagField.text;
@@ -162,8 +169,9 @@ public class StatUIDisplay : MonoBehaviour
 
             if (gO.CompareTag("village"))
             {
-                nameField.text = gO.name;
-                tagField.text = "Dorf";
+                //nameField.text = gO.name; // untill we figure out how to make actualy corresponding not (clone) names
+                nameField.text = "Woerlitzer Platz 1"; // this is the adress of the Umweltbundesamt in Dessau
+                tagField.text = "Gemeinde";
 
                 villageFacility_UI.SetActive(true);
                 _villageTierField.text = gO.GetComponent<VillageStats>()._tierLevel + " / 5";
@@ -190,7 +198,7 @@ public class StatUIDisplay : MonoBehaviour
             if (gO.CompareTag("city"))
             {
                 nameField.text = "Pagotopia";
-                tagField.text = ""; // "\n" to add another line 
+                tagField.text = "Gemeinde"; // "\n" to add another line 
 
                 villageFacility_UI.SetActive(true);
                 _villageTierField.text = (gO.GetComponent<VillageStats>()._tierLevel).ToString() + " / 5";
