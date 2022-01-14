@@ -206,5 +206,6 @@ public class VillageStats : MonoBehaviour
         _sceneManager.GetComponent<StatsManager>().UpdateCostOfLiving(_costOfLiving);
         neighborSensorArray.SetActive(false);
         neighborSensorArray.SetActive(true); // tells all adjacent tiles they now have a neighbor
+        _sceneManager.GetComponent<ToggleAreas>().UpdateShaders();
     }
 }
