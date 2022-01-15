@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Credits_UI.unity
     guid: ec8fc8f66b21c024b9a6a76330b4655d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Tutorial_1.unity
     guid: 849c6794cecc1b841a3d014086001d64
-  - enabled: 1
+  - enabled: 0
     path: Assets/Level_1.unity
     guid: 8074d7f5d0f927b4593e758fe52afa2f
   - enabled: 1
