@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.259958, g: 0.24424425, b: 0.27492356, a: 0.1}
+  m_IndirectSpecularColor: {r: 0.054954167, g: 0.048602235, b: 0.06143081, a: 0.1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -301,7 +301,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1054425153}
-  m_RootOrder: 31
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &121242916
 GameObject:
@@ -1152,8 +1152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ca13f210547bb48b94ae3023418e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personSpawnPosition: {fileID: 100843289}
-  person: {fileID: 8057009442672135781, guid: 42ef48e751f48464b8c31c007888ab88, type: 3}
+  spawnPosition: {fileID: 0}
+  objectToSpawn: {fileID: 0}
+  spawnCounter: 0
 --- !u!1 &444479521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,6 +1942,8 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194230}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2013,6 +2016,56 @@ Transform:
   m_Father: {fileID: 1412896505}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 40, y: 30, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: c55feea91801c32489bc97d3e9f8ed18, type: 2}
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &969933043
 GameObject:
   m_ObjectHideFlags: 0
@@ -4241,9 +4294,39 @@ MonoBehaviour:
   standardClick: {fileID: 1690215664}
   exitClick: {fileID: 0}
   doorClose: {fileID: 0}
+  ambientSound: {fileID: 0}
+  kickingSound: {fileID: 0}
+  mooh: {fileID: 0}
   soundOfPaper: {fileID: 1690215663}
   pauseScreen_UI: {fileID: 0}
   areYouSure_UI: {fileID: 1339734359}
+  pop_up_screen_1: {fileID: 0}
+  pop_up_screen_2: {fileID: 0}
+  jan: {fileID: 0}
+  sophie: {fileID: 0}
+  paula: {fileID: 0}
+  felix: {fileID: 0}
+  credits_PopUp: {fileID: 0}
+  developerName_TextField: {fileID: 0}
+  developerSkills_TextField: {fileID: 0}
+  getNewSetOfTiles_Button: {fileID: 0}
+  blinkIntervall: 0.3
+  numberOfPages: 9
+  tutorial_page_0: {fileID: 0}
+  tutorial_page_1: {fileID: 0}
+  tutorial_page_2: {fileID: 0}
+  tutorial_page_3: {fileID: 0}
+  tutorial_page_4: {fileID: 0}
+  tutorial_page_5: {fileID: 0}
+  tutorial_page_6: {fileID: 0}
+  tutorial_page_7: {fileID: 0}
+  tutorial_page_8: {fileID: 0}
+  forwardButton: {fileID: 0}
+  backwardButton: {fileID: 0}
+  errorSound: {fileID: 0}
+  tutorial_page_counter: {fileID: 0}
+  highscore_UI: {fileID: 0}
+  highscore_UI_Buttons: {fileID: 0}
 --- !u!4 &1690215662
 Transform:
   m_ObjectHideFlags: 0
@@ -4628,6 +4711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setFix: 0
   Over: {fileID: 0}
+  myPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1742473015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4643,9 +4727,39 @@ MonoBehaviour:
   standardClick: {fileID: 0}
   exitClick: {fileID: 0}
   doorClose: {fileID: 0}
+  ambientSound: {fileID: 0}
+  kickingSound: {fileID: 0}
+  mooh: {fileID: 0}
   soundOfPaper: {fileID: 0}
   pauseScreen_UI: {fileID: 0}
   areYouSure_UI: {fileID: 0}
+  pop_up_screen_1: {fileID: 0}
+  pop_up_screen_2: {fileID: 0}
+  jan: {fileID: 0}
+  sophie: {fileID: 0}
+  paula: {fileID: 0}
+  felix: {fileID: 0}
+  credits_PopUp: {fileID: 0}
+  developerName_TextField: {fileID: 0}
+  developerSkills_TextField: {fileID: 0}
+  getNewSetOfTiles_Button: {fileID: 0}
+  blinkIntervall: 0.3
+  numberOfPages: 9
+  tutorial_page_0: {fileID: 0}
+  tutorial_page_1: {fileID: 0}
+  tutorial_page_2: {fileID: 0}
+  tutorial_page_3: {fileID: 0}
+  tutorial_page_4: {fileID: 0}
+  tutorial_page_5: {fileID: 0}
+  tutorial_page_6: {fileID: 0}
+  tutorial_page_7: {fileID: 0}
+  tutorial_page_8: {fileID: 0}
+  forwardButton: {fileID: 0}
+  backwardButton: {fileID: 0}
+  errorSound: {fileID: 0}
+  tutorial_page_counter: {fileID: 0}
+  highscore_UI: {fileID: 0}
+  highscore_UI_Buttons: {fileID: 0}
 --- !u!4 &1742473016
 Transform:
   m_ObjectHideFlags: 0
